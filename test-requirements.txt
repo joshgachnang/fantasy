@@ -1,0 +1,5 @@
+flake8==2.2.3
+mock==1.0.1
+pep8==1.5.7
+pyflakes==0.8.1
+responses==0.2.2

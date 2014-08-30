@@ -1,0 +1,681 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Hoyer The Destroyed - Free Fantasy Football -  ESPN</title>
+<!-- N7-1169:2775-->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta property="og:description" content="Play Fantasy Football for free on ESPN! Expert analysis, live scoring, mock drafts, and more." />
+<meta property="og:image" content="http://g.espncdn.com/s/ffllm/14/images/Icon-200.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="ESPN Fantasy Football - Play For Free" />
+<meta name="twitter:image" content="http://g.espncdn.com/s/ffllm/14/images/ffl-twitter-480.png" />
+<meta name="twitter:site:id" content="33615152" />
+<meta name="twitter:app:id:iphone" content="555376968" />
+<meta name="twitter:app:id:ipad" content="555376968" />
+<meta name="twitter:app:id:googleplay" content="com.espn.fantasy.lm.football" /><meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate, proxy-revalidate, maxage=0">
+<meta http-equiv="Expires" content="-1">
+
+
+		<script type="text/javascript">
+		/* omniture ad tracking v0.1 24Jun08 */
+		var anAds;
+		anAds="";
+		function anPassAds(str) {
+			anAds=anAds?anAds+",ads;"+str+";;;event38=1":"ads;"+str+";;;event38=1";
+		}
+		</script>
+<link rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=fantasy_reset.r1.css,base.r234.css,modules.r422.css,global_header.r38.css,modules/global_nav.r52.css,modules/insider_enhanced.200910131831.css,registration/facebook.button.v2.css,modules/browser-alert.r7.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=espn.teams.r3.css" type="text/css" media="screen" charset="utf-8">
+<style type="text/css">
+#content{width:990px !important;}
+#header{width:990px !important;}
+#nav-wrapper-container{width:990px !important;}
+#nav-main ul.top li .wrapper{width:984px !important;}
+#content.container { padding: 0; }
+</style>
+<style type="text/css">
+</style>
+
+<link rel="stylesheet" type="text/css" href="http://g.espncdn.com/ffl/static/css/main?v=57028102711">
+<link rel="stylesheet" type="text/css" href="http://g.espncdn.com/ffl/static/css/everyDay?v=431">
+<script type="text/javascript" src="http://g.espncdn.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://g.espncdn.com/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://g.espncdn.com/libs/swfobject/2.2/swfobject.js"></script>
+<script type="text/javascript" charset="iso-8859-1" src="http://a.espncdn.com/combiner/c/?js=plugins/json2.r3.js,plugins/teacrypt.js,plugins/jquery.metadata.js,plugins/jquery.bgiframe.r3.js,plugins/jquery.easing.1.3.js,plugins/jquery.hoverIntent.js,plugins/jquery.jcarousel.js,plugins/jquery.tinysort.r4.js,plugins/jquery.pubsub.r5.js,plugins/ba-debug-0.4.js,espn.l10n.r12.js,flashObjWrapper.r7.js,espn.core.duo.r54.js,stub.search.r9.js,espn.nav.mega.r33.js,espn.storage.r6.js,espn.p13n.r15.js,espn.video.r67.js,registration/staticLogin.r12.06102014.js,registration/espn.overlay.stub.r3-18.js,espn.insider.r5.js,espn.espn360.stub.r9.js,espn.myHeadlines.stub.r13.js,espn.gallery.0628.js,espn.geo.r1.js,avatar-uploader.js"></script>
+<script type="text/javascript" src="http://g.espncdn.com/libs/prototype/1.6.0.2/prototype.js"></script>
+<script type="text/javascript">
+
+com = { espn: {
+	env: {
+		av: navigator.appVersion,
+		ua: navigator.userAgent,
+		an: navigator.appName,
+		platform: navigator.platform,
+		IE: "Microsoft Internet Explorer",
+		NS: "Netscape",
+		MAC: "MacPPC",
+
+		host: "games.espn.go.com",
+		context: "clubhouse"
+	},
+	listeners: {},
+	games: {
+		gameRoot: "ffl",
+		leagueId: 844419,
+		seasonId: 2013,
+		toTeamId: 8,
+		fromTeamId: 8,
+		scoringPeriodId: 18,
+		currentScoringPeriodId: 18,
+		leagueType: 0
+	}
+}};
+
+com.espn.games.isLeagueManager = false;com.espn.games.isLeagueCreator = false;com.espn.games.isLeagueMember = true;com.espn.games.userLoggedIn = true;com.espn.games.username = 'pcsforeducation';
+var GAMEROOT = "ffl";var host = "games.espn.go.com";var gameRoot = "ffl";var leagueId = 844419;var teamId = 8;</script><script type="text/javascript" src="http://g.espncdn.com/ffl/static/js/libraries?v=117525"></script>
+<script type="text/javascript" src="http://g.espncdn.com/ffl/static/js/everyDay?v=20162232"></script>
+<script type="text/javascript">
+</script>
+<script type="text/javascript"></script>
+<link rel="alternate" title="League Feed" href="/ffl/leaguefeed?leagueId=844419&teamId=8" type="application/rss+xml">
+<meta name="apple-itunes-app" content="app-id=555376968, app-argument=http://games.espn.go.com/ffl/clubhouse?leagueId=844419&teamId=8&seasonId=2013"><meta property="al:ios:url" content="espnffl://applinks"><meta property="al:ios:app_store_id" content="555376968"><meta property="al:ios:app_name" content="ESPN Fantasy Football"><meta property="al:android:url" content="espnffl://applinks"><meta property="al:android:package" content="com.espn.espnfantasyfootball"><meta property="al:android:app_name" content="ESPN Fantasy Football">
+		<script type="text/javascript">
+			/* Redirect to an alternate version of the page */
+			(function(){
+				if (!document.querySelectorAll || !window.matchMedia) return false;
+				var links = document.querySelectorAll('link[rel="alternate"][type="text/html"][media][href]');
+				for (var l=links.length-1; l>=0; --l) {
+					if (window.matchMedia(links[l].getAttribute('media')).matches) {
+						window.location = links[l].getAttribute('href');
+					}
+				}
+			})();
+		</script>
+</head><body class="trans-fantasy context-clubhouse games-ad-300">
+<!--[if IE 6]><div class="ie ie6"><![endif]-->
+<!--[if IE 7]><div class="ie ie7"><![endif]-->
+<!--[if IE 8]><div class="ie ie8"><![endif]-->
+<div class="bg-elements">
+<table class="maincontainertbl" cellpadding="0" cellspacing="0"><tr><td class="maincontainertblcell" valign="top" id="maincontainertblcell"><div id="header" class="container">
+<!-- ////////// start: Transitional Header ////////// --><div class="top-bar">
+<!-- begin uni login -->
+<script type="text/javascript">
+var returnURL = document.location.href;
+var anCV = "";
+var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign In','signout':'Sign Out','heliumdown':'Login Temporarily Unavailable','activateinsider':'Activate Insider'};
+</script>
+
+
+<form id="form-memberarea">
+<input type="hidden" name="language" id="language" value="en"/>
+<input type="hidden" name="affiliateName" id="memberAreaAffiliateName" value="espn_fantgames"/>
+<input type="hidden" name="regFormId" id="regFormId" value="espn_ffl"/>
+</form>
+<div class="signin" id="signin"></div>
+<script>espn.memberservices.welcome();</script><div class="nav-edition editions">
+<label>EDITIONS:</label>
+<ul class="main">
+	<li class="e-usa"><a href="http://espn.go.com/" name="&amp;lpos=editionsnav&amp;lid=usa">USA</a></li>
+	<li class="e-deportes"><a href="http://www.espn.com?country-view=us&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=deportes" class="{langPref:'spanish'}">DEPORTES</a></li>
+	<li class="last dropdown">
+	<ul class="">
+	<li class="selected">More</li>
+        <li><a href="http://www.espn.com?country-view=ar&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=argentina">Argentina</a></li>
+	<li><a href="http://www.espn.com.au" name="&amp;lpos=editionsnav&amp;lid=australia">Australia</a></li>
+	<li><a href="http://www.espn.com.br" name="&amp;lpos=editionsnav&amp;lid=brazil">Brazil</a></li>
+        <li><a href="http://www.espn.com?country-view=co&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=colombia">Colombia</a></li>
+        <li><a href="http://www.espn.com?country-view=mx&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=mexico">Mexico</a></li>
+	<li><a href="http://www.espn.co.uk/" name="&amp;lpos=editionsnav&amp;lid=uk">United Kingdom</a></li>
+        <li><a href="http://www.espn.com?country-view=ve&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=venezuela">Venezuela</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<div class="nav-edition">
+<label>CITIES:</label>
+<ul class="main">
+	<li class="e-boston"><a href="http://espn.go.com/boston/" name="&amp;lpos=citynav&amp;lid=boston">BOSTON</a></li>
+	<li class="e-chicago"><a href="http://espn.go.com/chicago/" name="&amp;lpos=citynav&amp;lid=chicago">CHICAGO</a></li>
+	<li class="e-dallas"><a href="http://espn.go.com/dallas/" name="&amp;lpos=citynav&amp;lid=dallas">DALLAS</a></li>
+	<li class="e-losangeles"><a href="http://espn.go.com/los-angeles/" name="&amp;lpos=citynav&amp;lid=losangeles">LOS ANGELES</a></li>
+	<li class="last e-newyork"><a href="http://espn.go.com/new-york/" name="&amp;lpos=citynav&amp;lid=newyork">NEW YORK</a></li>
+</ul>
+</div></div>
+<div class="espn-logo">
+<h1>
+<a href="http://espn.go.com" class="espn">ESPN</a>
+<img src="http://g.espncdn.com/s/ffllm/14/images/shell/bgHead_leaguemanager.png" height="69">
+</h1>
+</div>
+<div class="presby">
+
+<!-- begin ad tag (tile=1) -->
+<script language="JavaScript" type="text/javascript">
+var adSegments = espn.core.ad_segments();
+var pipedAdSegments = adSegments.replace(/;/g, "|").substring(0,adSegments.length-1);
+var adURI = "espn.us.com.games/football" + ";pgn=HoyerTheDestroyed;pgtyp=clubhouse;lang=en;gm=ffl;pos=SponsoredByLogoHeader;mnr=f;" + adSegments + "u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=HoyerTheDestroyed|pgtyp=clubhouse|lang=en|gm=ffl|pos=SponsoredByLogoHeader|mnr=f|" + pipedAdSegments + ";dcopt=ist;sz=150x45;tile=1;ord=2574444" + "?";
+document.write('<script language="JavaScript" src="http://ad.Doubleclick.net/adj/' + adURI + '" type="text/javascript"><\/script>');
+</script><noscript><a href="http://ad.doubleclick.net/jump/espn.us.com.games/football;pgn=HoyerTheDestroyed;pgtyp=clubhouse;lang=en;gm=ffl;pos=SponsoredByLogoHeader;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=HoyerTheDestroyed|pgtyp=clubhouse|lang=en|gm=ffl|pos=SponsoredByLogoHeader|mnr=f|;dcopt=ist;sz=150x45;tile=1;ord=2574444" target="_blank"><img src="http://ad.doubleclick.net/ad/espn.us.com.games/football;pgn=HoyerTheDestroyed;pgtyp=clubhouse;lang=en;gm=ffl;pos=SponsoredByLogoHeader;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=HoyerTheDestroyed|pgtyp=clubhouse|lang=en|gm=ffl|pos=SponsoredByLogoHeader|mnr=f|;dcopt=ist;sz=150x45;tile=1;ord=2574444" border="0" alt=""></a></noscript>
+<!-- End ad tag -->
+
+</div>	  <div id="shop">
+	  	<a class="shop-btn" href="http://espnshop.com/entry.point?target=Z&amp;source=ESPN_HPHEADERLINK:SHOPBUTTONHEADER:6_1_10" name="&lpos=sitenavdefault&lid=sitenav_shopbutton">Shop</a>
+	  </div>
+	  <div id="nav-main-search">
+<form id="searchBox" name="searchBox" action="http://search.espn.go.com/results" method="get" accept-charset="utf-8" class="clearfix">
+<div class="clearfix">
+<input autocomplete="off" class="text ui-autocomplete-input" type="text" placeholder="Search" name="searchString" id="searchString" role="textbox" aria-autocomplete="list" aria-haspopup="true"><input type="hidden" name="page" id="page" value="null">
+<input type="hidden" name="fromForm" value="true">
+<input class="submit" type="submit" value="">
+</div>
+</form>
+</div>
+</div>
+<div id="subheader"><div id="content-wrapper">
+<div id="content" class="container">
+<div>
+
+<!--[if lte IE 6]>
+<div class="span-6" id="browser-alert-wrapper" style="display: none;">
+	<div class="mod-container mod-no-header-footer browser-alert">
+		<div class="mod-content">
+			<div class="gradient-container">
+				<h1><span>Your Web Browser</span> is no longer supported</h1>
+				<p>To experience everything that ESPN.com has to offer, we recommend that you upgrade to a newer version of your web browser. Click the upgrade button to the right or <a href="http://espn.go.com/espn/news/story?id=5630562">learn more</a>.</p>
+				<ul>
+					<li><a class="btn-upgrade" href="'+browserUrl+'">Upgrade</a></li>
+					<li><a class="btn-faq" href="http://espn.go.com/espn/news/story?id=5630562">FAQs</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	(function($) {
+		  setTimeout(function () {
+				var $alertWrapper = $('#browser-alert-wrapper'),
+					  browserAlertOptOut = espn.cookie.get('browseralert');
+				if (browserAlertOptOut != 'true') {
+					  $("<a class=\"btn-close\" href=\"#\">Close</a>").bind('click', function (e) {
+							$alertWrapper.hide();
+							espn.cookie.set('browseralert','true',30);
+							return false;
+					  }).appendTo('.gradient-container',$alertWrapper);
+					  $alertWrapper.show();
+					  espn.cookie.set('browseralert','true');
+				}
+		  },100);
+	})(jQuery);
+</script>
+<![endif]-->
+<div class="header-ad"><div class="header-ad-wrapper" style="display:inline-block">
+
+<!-- begin ad tag (tile=2) -->
+<script language="JavaScript" type="text/javascript">
+var adSegments = espn.core.ad_segments();
+var pipedAdSegments = adSegments.replace(/;/g, "|").substring(0,adSegments.length-1);
+var adURI = "espn.us.com.games/football" + ";pgn=leaders;pgtyp=clubhouse;lang=en;gm=ffl;pos=pencil_top;mnr=f;" + adSegments + "u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=leaders|pgtyp=clubhouse|lang=en|gm=ffl|pos=pencil_top|mnr=f|" + pipedAdSegments + ";dcopt=ist;sz=970x66,924x50,728x90;tile=2;ord=2574444" + "?";
+document.write('<script language="JavaScript" src="http://ad.Doubleclick.net/adj/' + adURI + '" type="text/javascript"><\/script>');
+</script><noscript><a href="http://ad.doubleclick.net/jump/espn.us.com.games/football;pgn=leaders;pgtyp=clubhouse;lang=en;gm=ffl;pos=pencil_top;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=leaders|pgtyp=clubhouse|lang=en|gm=ffl|pos=pencil_top|mnr=f|;dcopt=ist;sz=970x66,924x50,728x90;tile=2;ord=2574444" target="_blank"><img src="http://ad.doubleclick.net/ad/espn.us.com.games/football;pgn=leaders;pgtyp=clubhouse;lang=en;gm=ffl;pos=pencil_top;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=leaders|pgtyp=clubhouse|lang=en|gm=ffl|pos=pencil_top|mnr=f|;dcopt=ist;sz=970x66,924x50,728x90;tile=2;ord=2574444" border="0" alt=""></a></noscript>
+<!-- End ad tag -->
+
+</div></div><div class="nav-main-breadcrumbs-row" style="height: 28px;">
+<div class="nav-main-breadcrumbs">
+<a href="http://espn.go.com">ESPN</a> &raquo; <a href="http://games.espn.go.com/ffl/frontpage">Free Fantasy Football</a> &raquo; <a href="/ffl/leagueoffice?leagueId=844419">Colledge Rox</a> &raquo; <a title="Hoyer The Destroyed (Josh Gachnang)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=8&amp;seasonId=2013" target="_top">Hoyer The Destroyed</a></div>
+<div class="playerSearchDiv"><form class="playerSearchForm" name="playerSearch" id="playerSearch" action="/ffl/freeagency" onsubmit="return playerSuggester.submitSelectedPlayer();" method="GET"><div><input type="hidden" name="leagueId" value="844419"><input type="hidden" name="teamId" value="8"><input type="hidden" name="avail" value="-1"><input type="hidden" name="slotCategoryGroup" value="-1">Find a Player: <input class="playerSearchNameInput" type="text" id="playerName" name="search" onkeyup="playerSuggester.handleKeyUp(event, this.value);" value="Last Name" style="color:#999;" onfocus="playerSuggester.focus();" onblur="playerSuggester.blur();"></div></form><div style="margin: 0px;"><div id="playerSuggestions" style="display: none;" onmouseover="playerSuggester.suggestDivOver();" onmouseout="playerSuggester.suggestDivOut();"></div></div></div><script type="text/javascript">playerSearchObj=new Object();playerSearchObj.varName = "playerSuggester";playerSearchObj.suggestDiv = "playerSuggestions";playerSearchObj.inputField = "playerName";playerSearchObj.cssPrefix = "";playerSearchObj.statId = null;playerSearchObj.chartSplitType = null;var playerSuggester = new PlayerSuggester(playerSearchObj);</script><div class="comparePlayersLinkDiv"><a id="comparePlayersLauncher" href="" instance="_comparePlayers" content="ajax#/ffl/playertable/prebuilt/compareplayers?leagueId=844419&teamId=8&playerCompare=true" class="flexpop" modal="true" fpopStyle="modal">Compare Players</a> (<span id="comparePlayersCount">0</span>)</div><div class="clear"></div></div>
+<div class="games-nav"><ul id="games-tabs"><li class=" "><a href="/ffl/leagueoffice?leagueId=844419&seasonId=2013">League</a></li><li class="games-on "><a href="/ffl/clubhouse?leagueId=844419&teamId=8&seasonId=2013">My Team</a></li><li class=" "><a href="/ffl/freeagency?leagueId=844419&teamId=8&seasonId=2013">Players</a></li><li class=" "><a href="/ffl/standings?leagueId=844419&seasonId=2013">Standings</a></li><li class=" "><a href="/ffl/scoreboard?leagueId=844419&seasonId=2013">Scoreboard</a></li><li class=" games-teams-btn"><a aria-haspopup="true" href="#">Teams</a><div class="clear"></div><ul id="games-tabs1"><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=1&amp;seasonId=2013">Return to Glory <span class="alt-info">(PACK)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=2&amp;seasonId=2013">Team Jericho <span class="alt-info">(JERK)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=3&amp;seasonId=2013">Team Ulrich <span class="alt-info">(ULRI)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=4&amp;seasonId=2013">Flying Wombats <span class="alt-info">(FLWT)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=5&amp;seasonId=2013">Team Anna <span class="alt-info">(ANNA)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=6&amp;seasonId=2013">Death By Snoo Snoo <span class="alt-info">(SNOO)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=7&amp;seasonId=2013">I'm the Best <span class="alt-info">(Best)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=8&amp;seasonId=2013">Hoyer The Destroyed <span class="alt-info">(HOYR)</span></a></li></ul></li><li class="games-myfntsyteam-btn" style="position: absolute; left: 849px;"><a href="#" aria-haspopup="true">My Fantasy Teams<img height="4" align="top" width="7" border="0" src="http://g.espncdn.com/s/ffllm/14/images/shell/yellow_dropdwn_arrow.png"/></a><div class="clear"></div><ul id="games-tabs2" style="left: -73px;"><li><a href="/ffl/tools/editmyteams?leagueId=844419" class="edit-list-option">Edit This List</a></li><li><a href="/ffl/clubhouse?leagueId=634821&teamId=11&seasonId=2014">Whore Island Ocelots<br><span class="alt-info">WII ARE WHAT'S UP DOC</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&teamId=8&seasonId=2014">Johnny Superbowl<br><span class="alt-info">Colledge Rox</span></a></li><li><a href="/ffl/clubhouse?leagueId=1268962&teamId=8&seasonId=2014">Mingo Unchained<br><span class="alt-info">Dusty's Rusty Rangers</span></a></li><li><a href="/ffl/clubhouse?leagueId=902760&teamId=11&seasonId=2014">Turn Down For Watt<br><span class="alt-info">Slashertraxx14</span></a></li><li><a href="/ffl/clubhouse?leagueId=1441295&teamId=2&seasonId=2014">Team Gachnang<br><span class="alt-info">while(atCAE){doWork = false;}</span></a></li></ul></li></ul></div><div class="gamesmain container">
+<div class="games-innercol">
+<div class="games-innercol2">
+<div class="games-ad300"><div class="vid-frame"><div class="mod-container mod-no-footer mod-open"><div class="mod-header"><h4>VIDEO</h4></div><div class="mod-content"><div class="col-full"><p><iframe width="260" scrolling="no" height="200" frameborder="0" src="http://espn.go.com/videohub/video/iframe?id=6746690&width=260&height=145&hidePlaylist=true&autostart=false&autoAdvance=true&resize=no&showDescription=true&hidePlaylist=true&siteSection=embed%3Affl%3Aclubhouse"></iframe></div></div></div></div></div>
+<div class="games-nav subnav"><ul id="games-subnav-links"><li class="games-on"><a href="/ffl/clubhouse?leagueId=844419&teamId=8" >Roster</a></li><li class=""><a href="/ffl/trophycase?leagueId=844419&teamId=8" >Trophies</a></li><li class=""><a href="/ffl/schedule?leagueId=844419&teamId=8" >Schedule</a></li><li class=""><a href="/ffl/recentactivity?leagueId=844419&teamId=8&activityType=2" >TranLog</a></li><li class=""><a href="/ffl/activestats?leagueId=844419&teamId=8" >Roster Summary</a></li></ul></div><div ><div class="games-topcol games-topcol-expand"><div class="games-univ-mod1"><a style="border:none; width:151; height:129.0;" href="/ffl/tools/teamsettings?leagueId=844419&teamId=8"><img style="border:none" src="http://i.imgur.com/jZF0VM7.jpg" width=151 height=129.0 /></a><p><strong>Daryn</strong><br><br></p></div><div class="games-univ-mod2"><div class="games-univ-mod3"><h3 class="team-name">Hoyer The Destroyed <em>(HOYR)</em></h3><ul><li><a href="/ffl/leagueoffice?leagueId=844419"><strong>Colledge Rox</strong></a></li><div class="clear"></div></ul><ul><li class="per-info"><a href="http://games.espn.go.com/uber-challenge/entry?userID=416618271&seasonID=2013" target="_new">Josh Gachnang</a></li><div class="clear"></div></ul><div class="clear"></div></div><div class="games-univ-mod4"><h4><strong>Record:</strong> 11-3 <em>(3rd)</em></h4><a class="games-schedule" href="/ffl/schedule?leagueId=844419&teamId=8">Schedule</a></div><div class="clear"></div></div><div class="games-univ-mod2 univ-bottom-mod2"><div class="games-univ-mod5"><ul><li class="games-firstlist"><strong>Final Matchup:</strong> vs <a title="Flying Wombats (Dan Siegler)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=4&amp;seasonId=2013" target="_top">Wombats</a> (<a href="/ffl/boxscorequick?leagueId=844419&teamId=8&scoringPeriodId=17&seasonId=2013&view=scoringperiod&version=quick">Box</a>)</li><li class="games-btm-area"><ul><li><strong>Acquisitions:</strong> 31</li><li><strong>Trades:</strong> 0</li></ul></li></ul></div><div class="games-univ-mod5 univ-right-mod5"></div><div class="clear"></div></div><div class="clear"></div><div class="games-dates-mod">&nbsp;</div></div><div class="clear"></div><div class="games-bottomcol"><div class="games-fullcol"><div class="games-alert-mod alert-mod2 games-beige-alert" style="width:;">You are currently viewing <a href="/ffl/history?leagueId=844419"><b>league history</b></a> pages from the <b>2013</b> season. <a href="/ffl/leagueoffice?leagueId=844419&seasonId=2014"><b>Click here to return to the 2014 League Office.</b></a></div><br />
+
+
+<div class="games-alert-mod alert-mod2 games-blue-alert games-alert-tilt tilt-callout">
+<div class="alertgraphic"><img src="http://g.espncdn.com/s/ffllm/14/images/tilt-85x35.png" style="margin: 0 30px 0 15px;" /></div>
+<div class="alerttext">Use Tilt to Collect Your Dues!</div><div style="float:left;display:inline;margin-left:15px;"><a class="button-tilt" href="http://espn.tilt.com?leagueId=844419&teamId=8&isLeagueCreator=false">Collect League Dues</a></div>
+<div style="clear:both;"></div></div>
+
+<script type="text/javascript">
+
+var rosterManager, initPncRows, pncInitPlayersAndSlots;
+jQuery(document).ready(function() {
+
+
+
+RosterManager.SLOT_CATEGORY_ID_BENCH = 20;
+RosterManager.SLOT_CATEGORY_ID_IR = 21;
+RosterManager.BENCH_FULL_ABBREV = 'Bench';
+RosterManager.BENCH_ABBREV = 'BE';
+RosterManager.BUTTONS_IMAGE = 'http://g.espncdn.com/s/ffllm/14/';
+RosterManager.BUTTON_CLASS = 'pncButton';
+RosterManager.BUTTON_CLASS_PLACEHOLDER = 'pncButtonPH';
+RosterManager.BUTTON_CLASS_MOVE = 'pncButtonMove';
+RosterManager.BUTTON_CLASS_MOVE_SELECTED = 'pncButtonMoveSelected';
+RosterManager.BUTTON_CLASS_HERE = 'pncButtonHere';
+RosterManager.BUTTON_CLASS_DROP = 'pncButtonDrop2';
+RosterManager.BUTTON_CLASS_DROPPED = 'pncButtonDropped';
+RosterManager.BUTTON_CLASS_LOCKED = 'pncButtonLocked';
+RosterManager.BUTTON_CLASS_UNDROPPABLE = 'pncButtonUndroppable';
+RosterManager.BUTTON_CLASS_ACTIVATE = 'pncButtonActivate';
+RosterManager.BUTTON_CLASS_ACTIVATE_2 = 'pncButtonActivate2';
+RosterManager.BUTTON_CLASS_ACTIVATE_SELECTED = 'pncButtonActivateSelected';
+
+	RosterManager.BUTTON_CLASS_TO_IR = 'pncButtonToIR';
+	RosterManager.BUTTON_CLASS_TO_IR_2 = 'pncButtonToIR2'
+	RosterManager.BUTTON_CLASS_TO_IR_SELECTED = 'pncButtonToIRSelected';
+
+RosterManager.EDIT_CELL_PREFIX = 'pncEditSlot_';
+RosterManager.ROW_PREFIX = 'pncPlayerRow_';
+RosterManager.ROW_CLASSNAME = 'pncPlayerRow';
+RosterManager.SLOT_CELL_PREFIX = 'pncSlot_';
+RosterManager.EMPTY_ROW_ID = 'pncEmptyRow';
+RosterManager.EMPTY_ROW_CLASS = 'emptyRow';
+// INITIALIZED IN format/playerTable or playertable/buildtable
+//RosterManager.PLAYERS_GROUPED_BY_STAT_CAT = false;
+RosterManager.STAT_CATS = null;
+RosterManager.SAVE_URL = '/pnc/saveRoster';
+RosterManager.LAST_SAVED_CELL_ID = 'rosterManagerLastSaved';
+RosterManager.UNDO_STACK_DIV = 'undoStackDiv';
+RosterManager.UNDO_STACK_MOVE_CLASS = 'undoStackMove';
+RosterManager.UNDO_BUTTON_ID = 'pncTopUndoButton';
+RosterManager.RESET_BUTTON_ID = 'pncTopResetButton';
+RosterManager.BUTTON_CLASS_DISABLED = 'pncTopButtonTextDisabled';
+RosterManager.ROSTER_SAVING_SPINNER_COUNT = 2;
+RosterManager.ROSTER_SAVING_SPINNER_ID = 'rosterSavingSpinner';
+RosterManager.PNC_STATUS_ID = 'pncStatusDiv';
+RosterManager.SAVE_STATUS_DETAILS_CLASSNAME = 'pncSaveStatusDiv';
+RosterManager.SAVE_STATUS_DETAILS_CLASSNAME_OVER = 'pncSaveStatusDivOver';
+RosterManager.ROSTER_SAVE_STATUS_COUNT = 2;
+RosterManager.ROSTER_SAVE_STATUS_ID = 'rosterSaveStatus';
+RosterManager.ROSTER_SAVE_STATUS_CLASS = 'rosterSaveStatus';
+RosterManager.ROSTER_SAVE_SUCCESS_RESPONSE = 'Success';
+RosterManager.ROSTER_SAVE_REDIRECT_RESPONSE = 'Redirect: ';
+RosterManager.ROSTER_SAVE_SIGNIN_RESPONSE = 'Signin: ';
+RosterManager.CONFIRM_URL = '/ffl/confirm?leagueId=844419&teamId=8&scoringPeriodId=18&redir=%2Fffl%2Fclubhouse%3FleagueId%3D844419%26teamId%3D8%26scoringPeriodId%3D18&redirCancel=%2Fffl%2Fclubhouse%3FleagueId%3D844419%26teamId%3D8';
+RosterManager.SIGNIN_URL = 'http://games.espn.go.com/ffl/clubhouse?leagueId=844419&teamId=8&seasonId=2013';
+RosterManager.ROSTER_SAVE_SUCCESS_CLASS = 'rosterSavedSuccess';
+RosterManager.ROSTER_SAVE_FAILED_CLASS = 'rosterSavedFailed';
+RosterManager.ROSTER_MOVE_SAVED_CLASS = 'rosterMoveSaved';
+RosterManager.TABLE_ROW_BG_CLASSES = ["playerTableBgRow0", "playerTableBgRow1"];
+RosterManager.SLOT_CHANGED_CLASS = 'slotChanged';
+RosterManager.IR_ROW_CLASS = 'irRow';
+RosterManager.UNDO_STACK_DIV_CLASSNAME = 'undoStackDiv';
+RosterManager.UNDO_STACK_DIV_CLASSNAME_OVER = 'undoStackDivOver';
+RosterManager.UNSAVED_CHANGES_CONFIRM = "You have unsaved changes to your roster. Unsaved changes will be lost if you continue without saving.";
+RosterManager.UNSAVED_CHANGES_CONFIRM_FULL = "Are you sure you want to navigate away from this page?\n\nYou have unsaved changes to your roster. Unsaved changes will be lost if you continue without saving.\n\nPress OK to continue, or Cancel to stay on the current page.";
+RosterManager.SAVE_CHANGES_BUTTON_COUNT = 2;
+RosterManager.SAVE_CHANGES_BUTTON_ID = 'pncSaveRoster';
+RosterManager.SAVE_NECESSARY_CLASS = 'pncTopButtonActive';
+RosterManager.NO_MOVES_MADE_DIV = 'noMovesMadeMessage';
+RosterManager.MODE_ROSTER = 0;
+RosterManager.MODE_IR = 1;
+RosterManager.MODE_DROP = 2;
+RosterManager.MAX_ROSTER_SIZE = 21;
+RosterManager.DROPPED_PLAYER_ROW_ID = 'droppedPlayer_';
+RosterManager.TRANSACTION_CODE_MOVE = 1;
+RosterManager.TRANSACTION_CODE_DROP = 3;
+RosterManager.ACTIVATE_ERROR_ROSTER_SIZE = 1;
+RosterManager.ACTIVATE_ERROR_SLOT_LIMIT = 2;
+RosterManager.SLOT_LIMIT_UNLIMITED = 99;
+RosterManager.ROSTER_SIZE_NOTE_DIV = 'rosterSizeNote';
+RosterManager.ROSTER_OVERSIZE_NOTE_MESSAGE = 'Your roster exceeds the allowed maximum. You will need to drop players to save these moves.';
+RosterManager.ROSTER_ERROR_DIV_ID = 'clubhouseRosterErrorsDiv';
+RosterManager.PLAYER_SELECTED_HIGHLIGHT_CLASS = 'pncPlayerRowSelected';
+RosterManager.PLAYER_HOVER_HIGHLIGHT_CLASS = 'pncPlayerRowMoveHover';
+RosterManager.PLAYER_CHANGED_HIGHLIGHT_CLASS = 'pncPlayerRowRecentUpdate';
+RosterManager.PLAYER_CHANGED_HIGHLIGHT_DURATION = 1423;
+RosterManager.INELIGIBLE_SLOT_CLASS = 'ineligibleSlot';
+
+
+RosterManager.MANAGE_IR_ON_CLUBHOUSE = true
+
+RosterManager.SLOT_LIMITS = new Object();
+RosterManager.SLOT_ABBREVS = new Object();
+
+RosterManager.STATUS_IDLE = 0;
+RosterManager.STATUS_AUTOMATING_CHANGES = 1;RosterManager.SLOT_LIMITS[0] = 4; RosterManager.SLOT_ABBREVS[0] = "QB";
+RosterManager.SLOT_LIMITS[1] = 0; RosterManager.SLOT_ABBREVS[1] = "TQB";
+RosterManager.SLOT_LIMITS[2] = 8; RosterManager.SLOT_ABBREVS[2] = "RB";
+RosterManager.SLOT_LIMITS[4] = 8; RosterManager.SLOT_ABBREVS[4] = "WR";
+RosterManager.SLOT_LIMITS[6] = 3; RosterManager.SLOT_ABBREVS[6] = "TE";
+RosterManager.SLOT_LIMITS[8] = 0; RosterManager.SLOT_ABBREVS[8] = "DT";
+RosterManager.SLOT_LIMITS[9] = 0; RosterManager.SLOT_ABBREVS[9] = "DE";
+RosterManager.SLOT_LIMITS[10] = 0; RosterManager.SLOT_ABBREVS[10] = "LB";
+RosterManager.SLOT_LIMITS[12] = 0; RosterManager.SLOT_ABBREVS[12] = "CB";
+RosterManager.SLOT_LIMITS[13] = 0; RosterManager.SLOT_ABBREVS[13] = "S";
+RosterManager.SLOT_LIMITS[16] = 3; RosterManager.SLOT_ABBREVS[16] = "D/ST";
+RosterManager.SLOT_LIMITS[17] = 1000; RosterManager.SLOT_ABBREVS[17] = "K";
+RosterManager.SLOT_LIMITS[18] = 1000; RosterManager.SLOT_ABBREVS[18] = "P";
+RosterManager.SLOT_LIMITS[19] = 1000; RosterManager.SLOT_ABBREVS[19] = "HC";
+
+
+	var mode = RosterManager.MODE_ROSTER;
+	rosterManager = new RosterManager('rosterManager', mode);
+	rosterManager.scoringPeriodId =  18;
+	window.onbeforeunload = function() {
+		if (rosterManager.rosterSaver.saveNecessary()) return RosterManager.UNSAVED_CHANGES_CONFIRM;
+	};
+
+	pncInitPlayersAndSlots();
+	var statCats = new Array();
+	for (var playerId in rosterManager.players) {
+		var statCatId = rosterManager.getPlayerById(playerId).statCategoryId;
+		if (statCatId != null && !statCats.contains(statCatId)) statCats.push(statCatId);
+	}
+	RosterManager.STAT_CATS = statCats;
+
+	initPncRows = function() {
+		var playerRows = new Array();
+		var docTables = document.getElementsByTagName('table');
+
+		for (var i = 0; i < docTables.length; i++) {
+			var tbl	= docTables[i];
+			if (tbl.className && tbl.className.indexOf('playerTableTable') >= 0) {
+				for (var j = 0; j < tbl.rows.length; j++) {
+					var tblRow = tbl.rows[j];
+					if (tblRow.className && tblRow.className.indexOf('pncPlayerRow') >= 0) playerRows.push(tblRow);
+				}
+			}
+		}
+
+		for (var i = 0; i < playerRows.length; i++) {
+			var playerRow = playerRows[i];
+			var isEmpty = (!playerRow.id || playerRow.id.indexOf('plyr') < 0);
+			if (!isEmpty) {
+				var playerId = parseInt(playerRow.id.substring('plyr'.length));
+				var thisPlayer = rosterManager.getPlayerById(playerId);
+				if (thisPlayer) {
+					var slotId = thisPlayer.currentSlot.slotId;
+					playerRow.id = RosterManager.ROW_PREFIX + slotId;
+					var slotFound = false;
+					var editFound = false;
+					for (var j = 0; j < playerRow.childNodes.length; j++) {
+						var cell = playerRow.childNodes[j];
+						if (cell.className && cell.className.indexOf('playerSlot') >= 0) {
+							cell.id = RosterManager.SLOT_CELL_PREFIX + slotId;
+							slotFound = true;
+
+						} else if (cell.className && cell.className.indexOf('playerEditSlot') >= 0) {
+							cell.id = RosterManager.EDIT_CELL_PREFIX + slotId;
+							editFound = true;
+						}
+						if (slotFound && editFound) break;
+
+					}
+				}
+			} else if (playerRow.id.indexOf(RosterManager.EMPTY_ROW_ID) < 0) {
+				var slotId = -1;
+				for (var j = 0; j < playerRow.childNodes.length; j++) {
+					var cell = playerRow.childNodes[j];
+					if (cell.className && cell.className.indexOf('playerSlot') >= 0) {
+						var cn = cell.className;
+						var slotCategoryId = parseInt(cn.substring('slot_'.length, cn.indexOf(' ')));
+						var slots = rosterManager.getSlotsBySlotCategoryId(slotCategoryId);
+						for (var k = 0; k < slots.length; k++) {
+							var slot = slots[k];
+							if (slot.isEmpty && !slot.rowInited) {
+								slotId = slot.slotId;
+								playerRow.id = RosterManager.ROW_PREFIX + slotId;
+								cell.id = RosterManager.SLOT_CELL_PREFIX + slotId;
+								slot.rowInited = true;
+								break;
+							}
+						}
+
+					} else if (slotId > -1 && cell.className && cell.className.indexOf('playerEditSlot') >= 0) {
+						cell.id = RosterManager.EDIT_CELL_PREFIX + slotId;
+					}
+				}
+			}
+		}
+	};
+	if (!rosterManager.isNonTableDisplay()) {
+		rosterManager.benchManager.initializeBenchRowPrototypes();
+		initPncRows();
+		rosterManager.initButtons();
+	}
+	rosterManager.rosterSaver.showIfSaveNecessary();
+});</script><div id="playerTableContainerDiv" class="playerTableContainerDiv">
+<script type="text/javascript">
+updateScoringPeriodNav = function() {
+	var scoringPeriodNavString = "<ul><li><h3>Set Your Lineup:</h3></li><li><a href=\"javascript:players('leagueId=844419&teamId=8&seasonId=2013&scoringPeriodId=17&view=overview&context=clubhouse&ajaxPath=playertable/prebuilt/manageroster&managingIr=false&droppingPlayers=false&asLM=false');\">Week 17</a></li><li class=\"date-on\"><div>Offseason</div></li></ul>";
+	var scoringPeriodNav = jQuery('.games-dates-mod');
+	if(scoringPeriodNav != null && scoringPeriodNav.length > 0)
+		scoringPeriodNav.html(scoringPeriodNavString);
+
+};
+updateScoringPeriodNav();
+</script>
+
+<form name="playerTableFramedForm" id="playerTableFramedForm" method="post"  action="clubhouse?leagueId=844419&teamId=8&scoringPeriodId=18&r=1497748" style="padding-top: 0px; margin-top: 0px;"><input type="hidden" name="incoming" value="1"><input type="hidden" name="leagueId" value="844419"><input type="hidden" name="teamId" value="8"><input type="hidden" name="scoringPeriodId" value="18"><input type="hidden" name="trans" value="null"><input type="hidden" value="" name="rostermove"><br clear="all" style="line-height: 12px"><table width="970px" cellpadding="0" cellspacing="0" border="0" id="playertableFrameOuterShell"><tr><td valign="bottom" class="playerTableTabsCell clubhousePlayerTableTabsCell"><div id="playerTableHeader"><ul><li id="current"><a href="#" onclick="players('leagueId=844419&teamId=8&seasonId=2013&view=overview&context=clubhouse&ajaxPath=playertable/prebuilt/manageroster&managingIr=false&droppingPlayers=false&asLM=false');return false;";>Overview</a></li><li ><a href="#" onclick="players('leagueId=844419&teamId=8&seasonId=2013&view=stats&context=clubhouse&ajaxPath=playertable/prebuilt/manageroster&managingIr=false&droppingPlayers=false&asLM=false');return false;";>Stats</a></li></ul><span style="display: none;" class="playerTableTabSpinner" id="playerTableTabSpinner"><img src="http://g.espncdn.com/s/ffllm/14/images/playerTableTabLoad.gif" /></span></div></td><td align="right" valign="top" class="playerTableSubmitCell"></td></tr></table><table width="970px" cellpadding="0" cellspacing="0" border="0" class="playertableFrameBorder"><tr><td colspan="2" class="playertableFrameInnerShell"><table class="playerTableTable tableBody" cellpadding="0" cellspacing="1" border="0" id="playertable_0"><tr class="playerTableBgRowHead tableHead playertableSectionHeader"><th colspan="2" class="playertableSectionHeaderFirst">STARTERS</th><td class="sectionLeadingSpacer"></td><th colspan="4">2013 SEASON</th><td class="sectionLeadingSpacer"></td><th colspan="5">Offseason</th></tr><tr class="playerTableBgRowSubhead tableSubHead"><td width="65px">SLOT</td><td>PLAYER, TEAM POS</td><td class="sectionLeadingSpacer"></td><td class="playertableData" title="Position Rank">PRK</td><td class="playertableStat appliedPoints" title="Fantasy Points">PTS</td><td class="playertableStat appliedPoints" title="Average Fantasy Points Per Game">AVG</td><td class="playertableStat appliedPoints" title="Fantasy Points">LAST</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints" title="ESPN Projection">PROJ</td><td class="playertableData" title="Opponent Rank">OPRK</td><td class="playertableData" title="Percent Started">%ST</td><td class="playertableData" title="Percent Owned">%OWN</td><td class="playertableData" title="Change in Percent Owned">+/-</td></tr><tr id="plyr14877" class="pncPlayerRow playerTableBgRow0"><td id="slot_14877" class="slot_0 playerSlot" style="font-weight: bold;">QB</td><td class="playertablePlayerName" id="playername_14877" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="14877" teamId="8" seasonId="2013" cache="true">Nick Foles</a>, Phi&nbsp;QB</td><td class="sectionLeadingSpacer"></td><td class="playertableData">13</td><td class="playertableStat appliedPoints">282.6</td><td class="playertableStat appliedPoints">17.7</td><td class="playertableStat appliedPoints">17.4</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>67.2</nobr></td><td class="playertableData"><nobr>88.4</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr11278" class="pncPlayerRow playerTableBgRow1"><td id="slot_11278" class="slot_2 playerSlot" style="font-weight: bold;">RB</td><td class="playertablePlayerName" id="playername_11278" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="11278" teamId="8" seasonId="2013" cache="true">Matt Forte</a>, Chi&nbsp;RB</td><td class="sectionLeadingSpacer"></td><td class="playertableData">3</td><td class="playertableStat appliedPoints">266.3</td><td class="playertableStat appliedPoints">16.6</td><td class="playertableStat appliedPoints">34.5</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>98.9</nobr></td><td class="playertableData"><nobr>100.0</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr9588" class="pncPlayerRow playerTableBgRow0"><td id="slot_9588" class="slot_2 playerSlot" style="font-weight: bold;">RB</td><td class="playertablePlayerName" id="playername_9588" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="9588" teamId="8" seasonId="2013" cache="true">Reggie Bush</a>, Det&nbsp;RB</td><td class="sectionLeadingSpacer"></td><td class="playertableData">11</td><td class="playertableStat appliedPoints">186</td><td class="playertableStat appliedPoints">11.6</td><td class="playertableStat appliedPoints">12.5</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>83.5</nobr></td><td class="playertableData"><nobr>100.0</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr13983" class="pncPlayerRow playerTableBgRow1"><td id="slot_13983" class="slot_4 playerSlot" style="font-weight: bold;">WR</td><td class="playertablePlayerName" id="playername_13983" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="13983" teamId="8" seasonId="2013" cache="true">A.J. Green</a>, Cin&nbsp;WR</td><td class="sectionLeadingSpacer"></td><td class="playertableData">4</td><td class="playertableStat appliedPoints">210.9</td><td class="playertableStat appliedPoints">13.2</td><td class="playertableStat appliedPoints">12.1</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>97.8</nobr></td><td class="playertableData"><nobr>100.0</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr15705" class="pncPlayerRow playerTableBgRow0"><td id="slot_15705" class="slot_4 playerSlot" style="font-weight: bold;">WR</td><td class="playertablePlayerName" id="playername_15705" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="15705" teamId="8" seasonId="2013" cache="true">Josh Gordon</a>, Cle&nbsp;WR</td><td class="sectionLeadingSpacer"></td><td class="playertableData">2</td><td class="playertableStat appliedPoints">228.2</td><td class="playertableStat appliedPoints">14.3</td><td class="playertableStat appliedPoints">8.2</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>64.0</nobr></td><td class="playertableData"><nobr>100.0</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr1231" class="pncPlayerRow playerTableBgRow1"><td id="slot_1231" class="slot_6 playerSlot" style="font-weight: bold;">TE</td><td class="playertablePlayerName" id="playername_1231" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="1231" teamId="8" seasonId="2013" cache="true">Tony Gonzalez</a>, Atl&nbsp;TE</td><td class="sectionLeadingSpacer"></td><td class="playertableData">4</td><td class="playertableStat appliedPoints">136.7</td><td class="playertableStat appliedPoints">8.5</td><td class="playertableStat appliedPoints">5.6</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>89.2</nobr></td><td class="playertableData"><nobr>100.0</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr9838" class="pncPlayerRow playerTableBgRow0"><td id="slot_9838" class="slot_23 playerSlot" style="font-weight: bold;">FLEX</td><td class="playertablePlayerName" id="playername_9838" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="9838" teamId="8" seasonId="2013" cache="true">Marques Colston</a>, NO&nbsp;WR</td><td class="sectionLeadingSpacer"></td><td class="playertableData">27</td><td class="playertableStat appliedPoints">125.8</td><td class="playertableStat appliedPoints">7.9</td><td class="playertableStat appliedPoints">6.7</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>77.6</nobr></td><td class="playertableData"><nobr>99.5</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr60026" class="pncPlayerRow playerTableBgRow1"><td id="slot_60026" class="slot_16 playerSlot" style="font-weight: bold;">D/ST</td><td class="playertablePlayerName" id="playername_60026" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="60026" teamId="8" seasonId="2013" cache="true">Seahawks D/ST</a>&nbsp;D/ST</td><td class="sectionLeadingSpacer"></td><td class="playertableData">2</td><td class="playertableStat appliedPoints">245.4</td><td class="playertableStat appliedPoints">15.3</td><td class="playertableStat appliedPoints">17.4</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>92.2</nobr></td><td class="playertableData"><nobr>100.0</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr11923" class="pncPlayerRow playerTableBgRow0"><td id="slot_11923" class="slot_17 playerSlot" style="font-weight: bold;">K</td><td class="playertablePlayerName" id="playername_11923" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="11923" teamId="8" seasonId="2013" cache="true">Steven Hauschka</a>, Sea&nbsp;K</td><td class="sectionLeadingSpacer"></td><td class="playertableData">4</td><td class="playertableStat appliedPoints">158</td><td class="playertableStat appliedPoints">9.9</td><td class="playertableStat appliedPoints">9</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>67.6</nobr></td><td class="playertableData"><nobr>82.8</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr8513" class="pncPlayerRow playerTableBgRow1"><td id="slot_8513" class="slot_18 playerSlot" style="font-weight: bold;">P</td><td class="playertablePlayerName" id="playername_8513" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="8513" teamId="8" seasonId="2013" cache="true">Dustin Colquitt</a>, KC&nbsp;P</td><td class="sectionLeadingSpacer"></td><td class="playertableData">8</td><td class="playertableStat appliedPoints">108.6</td><td class="playertableStat appliedPoints">6.8</td><td class="playertableStat appliedPoints">1.8</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>71.4</nobr></td><td class="playertableData"><nobr>80.6</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr30026" class="pncPlayerRow playerTableBgRow0"><td id="slot_30026" class="slot_19 playerSlot" style="font-weight: bold;">HC</td><td class="playertablePlayerName" id="playername_30026" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="30026" teamId="8" seasonId="2013" cache="true">Seahawks Coach</a>&nbsp;HC</td><td class="sectionLeadingSpacer"></td><td class="playertableData">2</td><td class="playertableStat appliedPoints">84.7</td><td class="playertableStat appliedPoints">5.3</td><td class="playertableStat appliedPoints">6.7</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>97.2</nobr></td><td class="playertableData"><nobr>100.0</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr class="playerTableBgRowHead tableHead playertableSectionHeader"><th colspan="2" class="playertableSectionHeaderFirst">BENCH</th><td class="sectionLeadingSpacer"></td><th colspan="4">2013 SEASON</th><td class="sectionLeadingSpacer"></td><th colspan="5">Offseason</th></tr><tr class="playerTableBgRowSubhead tableSubHead"><td width="65px">SLOT</td><td>PLAYER, TEAM POS</td><td class="sectionLeadingSpacer"></td><td class="playertableData" title="Position Rank">PRK</td><td class="playertableStat appliedPoints" title="Fantasy Points">PTS</td><td class="playertableStat appliedPoints" title="Average Fantasy Points Per Game">AVG</td><td class="playertableStat appliedPoints" title="Fantasy Points">LAST</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints" title="ESPN Projection">PROJ</td><td class="playertableData" title="Opponent Rank">OPRK</td><td class="playertableData" title="Percent Started">%ST</td><td class="playertableData" title="Percent Owned">%OWN</td><td class="playertableData" title="Change in Percent Owned">+/-</td></tr><tr id="plyr10452" class="pncPlayerRow playerTableBgRow0"><td id="slot_10452" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_10452" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="10452" teamId="8" seasonId="2013" cache="true">Adrian Peterson</a>, Min&nbsp;RB</td><td class="sectionLeadingSpacer"></td><td class="playertableData">8</td><td class="playertableStat appliedPoints">205.2</td><td class="playertableStat appliedPoints">12.8</td><td class="playertableStat appliedPoints">0</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>69.0</nobr></td><td class="playertableData"><nobr>100.0</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr2330" class="pncPlayerRow playerTableBgRow1"><td id="slot_2330" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_2330" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="2330" teamId="8" seasonId="2013" cache="true">Tom Brady</a>, NE&nbsp;QB</td><td class="sectionLeadingSpacer"></td><td class="playertableData">12</td><td class="playertableStat appliedPoints">286.5</td><td class="playertableStat appliedPoints">17.9</td><td class="playertableStat appliedPoints">10.9</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>72.2</nobr></td><td class="playertableData"><nobr>100.0</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr5941" class="pncPlayerRow playerTableBgRow0"><td id="slot_5941" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_5941" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="5941" teamId="8" seasonId="2013" cache="true">Wes Welker</a>, Den&nbsp;WR</td><td class="sectionLeadingSpacer"></td><td class="playertableData">23</td><td class="playertableStat appliedPoints">137.3</td><td class="playertableStat appliedPoints">8.6</td><td class="playertableStat appliedPoints">0</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>54.9</nobr></td><td class="playertableData"><nobr>96.1</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr14189" class="pncPlayerRow playerTableBgRow1"><td id="slot_14189" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_14189" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="14189" teamId="8" seasonId="2013" cache="true">Jordan Cameron</a>, Cle&nbsp;TE</td><td class="sectionLeadingSpacer"></td><td class="playertableData">6</td><td class="playertableStat appliedPoints">134.5</td><td class="playertableStat appliedPoints">8.4</td><td class="playertableStat appliedPoints">6.9</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>37.3</nobr></td><td class="playertableData"><nobr>85.9</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr15996" class="pncPlayerRow playerTableBgRow0"><td id="slot_15996" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_15996" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="15996" teamId="8" seasonId="2013" cache="true">Zac Stacy</a>, StL&nbsp;RB</td><td class="sectionLeadingSpacer"></td><td class="playertableData">18</td><td class="playertableStat appliedPoints">157.4</td><td class="playertableStat appliedPoints">9.8</td><td class="playertableStat appliedPoints">3.8</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>54.9</nobr></td><td class="playertableData"><nobr>95.5</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr10636" class="pncPlayerRow playerTableBgRow1"><td id="slot_10636" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_10636" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="10636" teamId="8" seasonId="2013" cache="true">Mason Crosby</a>, GB&nbsp;K</td><td class="sectionLeadingSpacer"></td><td class="playertableData">7</td><td class="playertableStat appliedPoints">154.5</td><td class="playertableStat appliedPoints">9.7</td><td class="playertableStat appliedPoints">9.8</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>39.6</nobr></td><td class="playertableData"><nobr>53.3</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr15501" class="pncPlayerRow playerTableBgRow0"><td id="slot_15501" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_15501" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="15501" teamId="8" seasonId="2013" cache="true">Bobby Rainey</a>, TB&nbsp;RB</td><td class="sectionLeadingSpacer"></td><td class="playertableData">40</td><td class="playertableStat appliedPoints">95.9</td><td class="playertableStat appliedPoints">5.6</td><td class="playertableStat appliedPoints">4.4</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>16.8</nobr></td><td class="playertableData"><nobr>52.7</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr10713" class="pncPlayerRow playerTableBgRow1"><td id="slot_10713" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_10713" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="10713" teamId="8" seasonId="2013" cache="true">Pierre Thomas</a>, NO&nbsp;RB</td><td class="sectionLeadingSpacer"></td><td class="playertableData">23</td><td class="playertableStat appliedPoints">136.5</td><td class="playertableStat appliedPoints">8.5</td><td class="playertableStat appliedPoints">8.3</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>16.2</nobr></td><td class="playertableData"><nobr>57.5</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr60033" class="pncPlayerRow playerTableBgRow0"><td id="slot_60033" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_60033" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="60033" teamId="8" seasonId="2013" cache="true">Ravens D/ST</a>&nbsp;D/ST</td><td class="sectionLeadingSpacer"></td><td class="playertableData">7</td><td class="playertableStat appliedPoints">186.1</td><td class="playertableStat appliedPoints">11.6</td><td class="playertableStat appliedPoints">13.6</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>36.7</nobr></td><td class="playertableData"><nobr>58.1</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr9761" class="pncPlayerRow playerTableBgRow1"><td id="slot_9761" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_9761" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopHeight="357px" fpopWidth="490px" tab="null" leagueId="844419" playerId="9761" teamId="8" seasonId="2013" cache="true">Delanie Walker</a>, Ten&nbsp;TE</td><td class="sectionLeadingSpacer"></td><td class="playertableData">12</td><td class="playertableStat appliedPoints">94.6</td><td class="playertableStat appliedPoints">5.9</td><td class="playertableStat appliedPoints">2.9</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData"><nobr>16.3</nobr></td><td class="playertableData"><nobr>30.6</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="pncEmptyRow" class="pncPlayerRow emptyRow"><td class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td>&nbsp;</td><td class="sectionLeadingSpacer"></td><td class="playertableData">--</td><td class="playertableStat appliedPoints">--</td><td class="playertableStat appliedPoints">--</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData">--</td><td class="playertableData">--</td><td class="playertableData">--</td></tr></table></td></tr></table></form><br /><script type="text/javascript">pncInitPlayersAndSlots = function() {rosterManager.createSlot({slotCategoryId: 0, fullAbbrev: "QB", abbrev: "QB"});rosterManager.createSlot({slotCategoryId: 2, fullAbbrev: "RB", abbrev: "RB"});rosterManager.createSlot({slotCategoryId: 2, fullAbbrev: "RB", abbrev: "RB"});rosterManager.createSlot({slotCategoryId: 4, fullAbbrev: "WR", abbrev: "WR"});rosterManager.createSlot({slotCategoryId: 4, fullAbbrev: "WR", abbrev: "WR"});rosterManager.createSlot({slotCategoryId: 6, fullAbbrev: "TE", abbrev: "TE"});rosterManager.createSlot({slotCategoryId: 16, fullAbbrev: "D/ST", abbrev: "D/ST"});rosterManager.createSlot({slotCategoryId: 17, fullAbbrev: "K", abbrev: "K"});rosterManager.createSlot({slotCategoryId: 18, fullAbbrev: "P", abbrev: "P"});rosterManager.createSlot({slotCategoryId: 19, fullAbbrev: "HC", abbrev: "HC"});rosterManager.createSlot({slotCategoryId: 20, fullAbbrev: "Bench", abbrev: "BE"});rosterManager.createSlot({slotCategoryId: 20, fullAbbrev: "Bench", abbrev: "BE"});rosterManager.createSlot({slotCategoryId: 20, fullAbbrev: "Bench", abbrev: "BE"});rosterManager.createSlot({slotCategoryId: 20, fullAbbrev: "Bench", abbrev: "BE"});rosterManager.createSlot({slotCategoryId: 20, fullAbbrev: "Bench", abbrev: "BE"});rosterManager.createSlot({slotCategoryId: 20, fullAbbrev: "Bench", abbrev: "BE"});rosterManager.createSlot({slotCategoryId: 20, fullAbbrev: "Bench", abbrev: "BE"});rosterManager.createSlot({slotCategoryId: 20, fullAbbrev: "Bench", abbrev: "BE"});rosterManager.createSlot({slotCategoryId: 20, fullAbbrev: "Bench", abbrev: "BE"});rosterManager.createSlot({slotCategoryId: 20, fullAbbrev: "Bench", abbrev: "BE"});rosterManager.createSlot({slotCategoryId: 23, fullAbbrev: "FLEX", abbrev: "FLEX"});rosterManager.createPlayer({playerId: 14877, firstName: "Nick", lastName: "Foles", initialSlotCategoryId: 0, eligibleSlotCategoryIds: [0, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 0, leafSlotCategoryId: 0});rosterManager.createPlayer({playerId: 11278, firstName: "Matt", lastName: "Forte", initialSlotCategoryId: 2, eligibleSlotCategoryIds: [2, 23, 20], locked: true, droppable: false, onUndroppableList: true,immovable: false, statCategoryId: 1, leafSlotCategoryId: 2});rosterManager.createPlayer({playerId: 9588, firstName: "Reggie", lastName: "Bush", initialSlotCategoryId: 2, eligibleSlotCategoryIds: [2, 23, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 1, leafSlotCategoryId: 2});rosterManager.createPlayer({playerId: 13983, firstName: "A.J.", lastName: "Green", initialSlotCategoryId: 4, eligibleSlotCategoryIds: [4, 23, 20], locked: true, droppable: false, onUndroppableList: true,immovable: false, statCategoryId: 2, leafSlotCategoryId: 4});rosterManager.createPlayer({playerId: 15705, firstName: "Josh", lastName: "Gordon", initialSlotCategoryId: 4, eligibleSlotCategoryIds: [4, 23, 20], locked: true, droppable: false, onUndroppableList: true,immovable: false, statCategoryId: 2, leafSlotCategoryId: 4});rosterManager.createPlayer({playerId: 1231, firstName: "Tony", lastName: "Gonzalez", initialSlotCategoryId: 6, eligibleSlotCategoryIds: [6, 23, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 2, leafSlotCategoryId: 6});rosterManager.createPlayer({playerId: 9838, firstName: "Marques", lastName: "Colston", initialSlotCategoryId: 23, eligibleSlotCategoryIds: [4, 23, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 2, leafSlotCategoryId: 4});rosterManager.createPlayer({playerId: 60026, firstName: "Seahawks", lastName: "D/ST", initialSlotCategoryId: 16, eligibleSlotCategoryIds: [16, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 4, leafSlotCategoryId: 16});rosterManager.createPlayer({playerId: 11923, firstName: "Steven", lastName: "Hauschka", initialSlotCategoryId: 17, eligibleSlotCategoryIds: [17, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 5, leafSlotCategoryId: 17});rosterManager.createPlayer({playerId: 8513, firstName: "Dustin", lastName: "Colquitt", initialSlotCategoryId: 18, eligibleSlotCategoryIds: [18, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 6, leafSlotCategoryId: 18});rosterManager.createPlayer({playerId: 30026, firstName: "Seahawks", lastName: "Coach", initialSlotCategoryId: 19, eligibleSlotCategoryIds: [19, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 7, leafSlotCategoryId: 19});rosterManager.createPlayer({playerId: 10452, firstName: "Adrian", lastName: "Peterson", initialSlotCategoryId: 20, eligibleSlotCategoryIds: [2, 23, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 1, leafSlotCategoryId: 2});rosterManager.createPlayer({playerId: 2330, firstName: "Tom", lastName: "Brady", initialSlotCategoryId: 20, eligibleSlotCategoryIds: [0, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 0, leafSlotCategoryId: 0});rosterManager.createPlayer({playerId: 5941, firstName: "Wes", lastName: "Welker", initialSlotCategoryId: 20, eligibleSlotCategoryIds: [4, 23, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 2, leafSlotCategoryId: 4});rosterManager.createPlayer({playerId: 14189, firstName: "Jordan", lastName: "Cameron", initialSlotCategoryId: 20, eligibleSlotCategoryIds: [6, 23, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 2, leafSlotCategoryId: 6});rosterManager.createPlayer({playerId: 15996, firstName: "Zac", lastName: "Stacy", initialSlotCategoryId: 20, eligibleSlotCategoryIds: [2, 23, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 1, leafSlotCategoryId: 2});rosterManager.createPlayer({playerId: 10636, firstName: "Mason", lastName: "Crosby", initialSlotCategoryId: 20, eligibleSlotCategoryIds: [17, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 5, leafSlotCategoryId: 17});rosterManager.createPlayer({playerId: 15501, firstName: "Bobby", lastName: "Rainey", initialSlotCategoryId: 20, eligibleSlotCategoryIds: [2, 23, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 1, leafSlotCategoryId: 2});rosterManager.createPlayer({playerId: 10713, firstName: "Pierre", lastName: "Thomas", initialSlotCategoryId: 20, eligibleSlotCategoryIds: [2, 23, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 1, leafSlotCategoryId: 2});rosterManager.createPlayer({playerId: 60033, firstName: "Ravens", lastName: "D/ST", initialSlotCategoryId: 20, eligibleSlotCategoryIds: [16, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 4, leafSlotCategoryId: 16});rosterManager.createPlayer({playerId: 9761, firstName: "Delanie", lastName: "Walker", initialSlotCategoryId: 20, eligibleSlotCategoryIds: [6, 23, 20], locked: true, droppable: false, onUndroppableList: false,immovable: false, statCategoryId: 2, leafSlotCategoryId: 6});};</script><script type="text/javascript">RosterManager.PLAYERS_GROUPED_BY_STAT_CAT = false;RosterManager.NON_TABLE_VIEW = false;</script></div></div></div><div class="games-footercol"><div class="faqft_bg"><div class="faqft_header"><a href="/ffl/content?page=fflrulesindex2014" target="_blank"><div class="faqft_hdimage_fh"></div></a><div id="faqft_moreless_btn" class="games-external-btn faqft_moreless_btn" onclick="showHideFAQs();">Expand Help Topics+</div><div class="faqft_hdimage_hl"></div></div><div id="faq_qlinks" class="faq_qlinks"style="display:none;"><ul><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=i-cannot-remember-my-user-name-and-or-password&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_clubhouse@i-cannot-remember-my-user-name-and-or-password">I cannot remember my user name and/or password.  What can I do?</a></li><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=is-espn-fantasy-football-really-free&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_clubhouse@is-espn-fantasy-football-really-free">Is ESPN Fantasy Football really free?</a></li><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=Is-there-a-limit-to-how-many-free-leagues-I-am-able-to-own-or-create&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_clubhouse@Is-there-a-limit-to-how-many-free-leagues-I-am-able-to-own-or-create">Is there a limit to how many free leagues I am able to own or create?</a></li></ul><ul><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=what-are-lm-powers-and-who-has-them&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_clubhouse@what-are-lm-powers-and-who-has-them">What are LM powers and who has them?</a></li><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=whats-new-in-2014&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_clubhouse@whats-new-in-2014">What's new in 2014?</a></li><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=where-can-i-learn-more-about-how-to-play-espn-fantasy-football&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_clubhouse@where-can-i-learn-more-about-how-to-play-espn-fantasy-football">Where can I learn more about how to play ESPN Fantasy Football?</a></li></ul></ul><div class="clear"></div><div class="faqft_ft"><img src="http://games-ak.espn.go.com/s/lm/images/arrow.jpg"><a style="text-decoration:none;" href="/ffl/content?page=fflrulesfaq2014" target="_blank">MORE FAQ'S</a></div></div></div>
+<script type="text/javascript">
+function showHideFAQs() {
+	if (jQuery('#faq_qlinks').is(':visible')) {
+		jQuery('#faq_qlinks').hide();
+		jQuery("#faqft_moreless_btn").html("Expand Help Topics +");
+	} else {
+		jQuery('#faq_qlinks').show();
+		jQuery("#faqft_moreless_btn").html("Collapse Help Topics -");
+	}
+}
+</script><div class="OUTBRAIN" data-src="http://games.espn.go.com/ffl/clubhouse?leagueId=844419&teamId=8&seasonId=2013" data-widget-id="AR_9" data-ob-template="espn" style="width:956px;"></div><script type="text/javascript" async="async" src="http://widgets.outbrain.com/outbrain.js"></script></div></div>
+<br><br>
+</div>
+</div>
+</div>
+<!-- ////////// start: Transitional Footer ////////// -->
+<!--start transitional elements wrapper -->
+<div class="transitional-elements">
+<!--[if IE 6]><div class="ie6"><![endif]-->
+<!--[if IE 7]><div class="ie7"><![endif]-->
+<!--[if IE 8]><div class="ie8"><![endif]-->
+<div id="trans-footer" class="container">
+<p><strong><a href="http://www.espn.com">ESPN.com</a></strong>  |  <a href="https://r.espn.go.com/espn/memberServices">Member Services</a> | <a href="http://games.espn.go.com/frontpage">Fantasy Games</a> | <a href="http://games.espn.go.com/ffl/content?page=fflrulesindex2013">Help</a> | <a href="http://preferences.truste.com/2.0/?type=espn&affiliateId=148" onclick="window.open('http://preferences.truste.com/2.0/?type=espn&affiliateId=148','popup','width=986,height=878,scrollbars=yes,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">Interest-Based Ads</a> | <a href="http://games.espn.go.com/ffl/feedback">Give Us Your Feedback</a></p>
+
+<p>Call <strong>1-888-549-ESPN</strong> for help on all things Fantasy</p>
+
+<p>Copyright &copy;2014 ESPN Internet Ventures.  <a href="http://disneytermsofuse.com/">Terms of Use</a>  and <a href="http://disney.go.com/corporate/privacy/pp_espn.html">Privacy Policy and Safety Information/Your California Privacy Rights</a> are applicable to this site.<br><br>Officially Licensed Product of NFL PLAYERS. Visit <a href="http://www.nflplayers.com" target="new">www.nflplayers.com</a>.</p></div>
+<!-- end transitional elements wrapper -->
+<!--[if lte IE 8]></div><![endif]-->
+</div>
+<!-- ////////// end: Transitional Footer ////////// -->
+</div>
+<div id="nav-wrapper" class="container">
+<div id="nav-wrapper-container">
+<div id="nav-main">
+<p><!-- begin site nav --></p>
+<ul class="top" id="nav-main-list"><!-- start: Menuitem :: MyTAB -->
+<li class="last myespn" id="menu-myespn"><a class="myespn" ref="#">MyESPN</a></li>
+<!-- start: Menuitem :: NFL -->
+<li class="sport-menu default t-nfl" data-sportid="28" id="menu-nfl"><a href="http://espn.go.com/nfl/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nfl">NFL</a></li>
+<!-- start: Menuitem :: MLB -->
+<li class="sport-menu default t-mlb" data-sportid="10" id="menu-mlb"><a href="http://espn.go.com/mlb/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_mlb">MLB</a></li>
+<!-- start: Menuitem :: NBA -->
+<li class="sport-menu default t-nba" data-sportid="46" id="menu-nba"><a href="http://espn.go.com/nba/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nba">NBA</a></li>
+<!-- start: Menuitem :: NHL -->
+<li class="sport-menu default t-nhl" data-sportid="90" id="menu-nhl"><a href="http://espn.go.com/nhl/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nhl">NHL</a></li>
+<!-- start: Menuitem :: NCAA FB -->
+<li class="sport-menu default t-ncf" data-sportid="23" id="menu-ncf"><a href="http://espn.go.com/college-football/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_ncf">NCAAF</a></li>
+<!-- start: Menuitem :: NCAA BB -->
+<li class="sport-menu default t-ncb" data-sportid="41" id="menu-ncb"><a href="http://espn.go.com/mens-college-basketball/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_ncb">NCAAM</a></li>
+<!-- start: Menuitem :: NASCAR -->
+<li class="sport-menu default t-nascar" data-sportid="2020" id="menu-nascar"><a href="http://espn.go.com/racing/nascar/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nascar">NASCAR</a></li>
+<!-- start: Menuitem :: SOCCER -->
+<li class="sport-menu default t-soccer" data-sportid="600" id="menu-soccer"><a href="http://espnfc.us/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_soccer">SOCCER</a></li>
+<!-- start: Menuitem :: GOLF -->
+<li class="sport-menu t-golf" data-sportid="1106" id="menu-golf" style="display: none;"><a href="http://espn.go.com/golf/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_golfl">GOLF</a></li>
+<!-- start: Menuitem :: TENNIS -->
+<li class="sport-menu t-tennis" data-sportid="850" id="menu-tennis"><a href="http://espn.go.com/tennis/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_tennis">TENNIS</a></li>
+<!-- start: Menuitem :: BOXING-->
+<li class="sport-menu t-boxing" data-sportid="1000" id="menu-boxing" style="display: none;"><a href="http://espn.go.com/boxing/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_boxing">BOXING</a></li>
+<!-- start: Menuitem :: MMA -->
+<li class="sport-menu t-mma" data-sportid="3301" id="menu-mma" style="display: none;"><a href="http://espn.go.com/mma/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_mma">MMA</a></li>
+<!-- start: Menuitem :: ALL SPORTS -->
+<li class="nav-allsports t-allsports" id="menu-allsports"><a href="http://espn.go.com/sports/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_allsports">MORE</a></li>
+<!-- start: Menuitem :: INSIDER -->
+<li class="sport-menu t-insider" id="menu-insider" style="display: none;"><a href="http://insider.espn.go.com/insider/index" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_insider">INSIDER</a></li>
+<!-- start: Menuitem :: SPORTSNATION -->
+<li class="sport-menu t-sportsnation" id="menu-sportsnation" style="display: none;"><a href="http://espn.go.com/sportsnation/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_sportsnation">SN</a></li>
+<!-- start: Menuitem :: RADIO & MORE -->
+<li class="right-menu two-line last t-radio" id="menu-radio"><a href="http://espn.go.com/espnradio/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_radioandmore">RADIO<span>&amp; MORE</span></a></li>
+<!-- start: Menuitem :: espnW & PLAYBOOK -->
+<li class="right-menu two-line t-page2" id="menu-page2"><a href="http://espn.go.com/espnw/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_espnwandxgames" target="_blank">espnW<span>&amp; X GAMES</span></a></li>
+<!-- start: Menuitem :: FANTASY & GAMES -->
+<li class="right-menu two-line t-fantasy selected" id="menu-fantasy"><a href="http://games.espn.go.com/frontpage" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_fantasy">FANTASY<span>&amp; GAMES</span></a></li>
+<!-- start: Menuitem :: WATCH -->
+<li class="right-menu t-watch" id="menu-watch"><a href="http://espn.go.com/video/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_watch">WATCH</a></li>
+</ul>
+<!-- end site nav --></div>
+<div class="nav-main-secondary">
+<ul>
+<div class="nav-main-secondary"><ul><div class="nav-main-secondary">
+<ul>
+<li class="subnav-frontpage"><a href="http://games.espn.go.com/frontpage/football">Fantasy Football</a></li>
+<li class="subnav-create"><a href="http://games.espn.go.com/ffl/welcome">Join a League</a></li>
+<li class="subnav-mock"><a href="http://games.espn.go.com/ffl/livedraftlobby">Live Draft Lobby</a></li>
+<li class="subnav-mock"><a href="http://games.espn.go.com/ffl/mockdraftlobby">Mock Draft Lobby</a></li>
+<li class="subnav-draftkit"><a href="http://games.espn.go.com/frontpage/ffldraftkit">Draft Kit</a></li>
+<!-- <li class="subnav-tools-projections-sortable"><a href="http://games.espn.go.com/ffl/tools/projections?seasonId=2013">Weekly Projections</a></li> -->
+<li class="subnav-tools-season-projections"><a href="http://games.espn.go.com/ffl/tools/projections?display=alt">Projections</a></li>
+<li class="subnav-resources-playernews"><a href="http://games.espn.go.com/ffl/livedraftresults">ADP</a></li>
+<!-- <li class="subnav-addeddropped"><a href="http://games.espn.go.com/ffl/addeddropped">Added/Dropped</a></li> -->
+<!-- <li><a href="http://games.espn.go.com/frontpage/fantasyRankings">Weekly Rankings</a></li>-->
+<li class="subnav-scoring"><a href="http://games.espn.go.com/ffl/leaders?leagueId=844419">Scoring Leaders</a></li>
+<!--<li class="subnav-resources-playernews"><a href="http://games.espn.go.com/ffl/resources/playernews">Player News</a></li>-->
+<!--<li class="subnav-pa"><a href="http://games.espn.go.com/ffl/pointsagainst?leagueId=844419">Points Against</a></li>-->
+<li class="subnav-apps"><a href="http://espn.go.com/mobile/products/products?id=8244799">Apps</a></li>
+<!--<li class="subnav-forum"><a href="http://games.espn.go.com/frontpage/forums#!/category/1313609200-908-35">Forums</a></li>-->
+<!--<li class="subnav-leaderboards"><a href="http://games.espn.go.com/ffl/resources/leaderboard?leagueId=844419">Leaderboards</a></li>-->
+<li class="subnav-faq"><a href="http://games.espn.go.com/ffl/content?page=fflrulesfaq2014">FAQ</a></li>
+<li class="subnav-toolkit"><a href="http://games.espn.go.com/ffl/fantasyfootballtoolkit?leagueId=844419">Toolkit</a></li>
+<li class="expandable"><a href="javascript:void(0);"><span>More</span></a>
+<div>
+<dl style="border:none;">
+<dd><a href="https://w1.buysub.com/pubs/ES/ESP/2014_FantasyFootballGuide.jsp?cds_page_id=137362&cds_mag_code=ESP&id=1402340759599&lsid=41601405595017238&vid=1&cds_response_key=FFG2014P9">Fantasy Football Draft Guide</a></dd>
+<!--<dd><a href="http://games.espn.go.com/frontpage/ffldraftkit">Draft Kit</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/fantasyfootballtoolkit?leagueId=844419">Toolkit</a></dd>-->
+<dd><a href="http://espn.go.com/fantasy/football/story/_/page/NFLDK2K14cheatsheetcentral/2014-fantasy-football-cheat-shappseets-player-rankings-draft-board-standard-ppr">Cheat Sheet Central</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/tools/undroppables">Undroppables</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/pointsagainst?leagueId=844419">Points Against</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/resources/playernews">Player News</a></dd>
+<!-- <dd><a href="http://games.espn.go.com/ffl/pointsagainst?leagueId=844419">Points Against</a></dd> -->
+<dd><a href="http://games.espn.go.com/ffl/tools/statcorrections">Stat Corrections</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/livedraftresults">Average Draft Position</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/resources/leaderboard?leagueId=844419">Leaderboards</a></dd>
+<dd><a href="http://insider.espn.go.com/insider/fantasy/football/valuecalculator">Custom Dollar Value Generator<img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>
+<dd><a href="http://games.espn.go.com/ffl/content?page=fflrulesindex2014">Rules</a></dd>
+<!--<dd><a href="http://insider.espn.go.com/insider/fantasy/football/rosteradvisor/index">Roster Advisor <img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>-->
+<dd><a href="http://insider.espn.go.com/insider/eliminator/survivalguide">Eliminator Survivor Guide <img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>
+<dd><a href="http://espn.go.com/fantasy/football/story/_/id/9547260/fantasy-football-tools-espn-insiders">Fantasy Football Insider Tools <img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>
+<dd><a href="http://games.espn.go.com/frontpage/forums#!/category/1313609200-908-35">Forums</a></dd>
+
+</dl>
+</div>
+</li>
+</ul>
+</div></ul></div></ul>
+</div>
+<script>espn.core.init.nav();</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</td></tr></table>
+</div>
+
+
+<!-- SiteCatalyst code version: H.21.3 Copyright 1997-2010 Omniture, Inc. http://www.omniture.com -->
+<script type="text/javascript">
+	var undef = 'undefined'
+	,s_account="wdgespfantasy"
+	,omniPageName = "fantasy:football:ffl:clubhouse"
+
+	,insiderStatus = ""
+	,anGen = ""
+	,anYear = ""
+	,anDateString = ""
+	,anLoginStatus = ""
+	,callOmniture = function(){
+		/*-- core story s_omni properties --*/
+		if (typeof anCV != "undefined"){anParseLoginBarInfo(anCV);}
+		s_omni.pageName="football:ffl:clubhouse";
+		s_omni.server = window.location.host; // Server from the Host
+		s_omni.channel = "football";
+		s_omni.prop1 = "fantasy";
+		s_omni.prop4 = "game-lm-free-custom";
+		s_omni.prop5 = "football:ffl";
+		s_omni.prop11 = (insiderStatus !== null) ? insiderStatus + ":premium-no" : "premium-no";
+		s_omni.prop17 = "en";
+		s_omni.prop21 = anDateString;
+		s_omni.prop22 = anGen;
+		s_omni.prop25 = "football";
+		s_omni.prop29 = anLoginStatus;
+		s_omni.prop30 = "n";
+		s_omni.hier1 = "football:ffl:clubhouse";
+		s_omni.eVar7 = anYear + ":" + anGen + ":" + anLoginStatus + ":" + s_omni.prop11 + ":";
+		s_omni.eVar9 = "en";
+		s_omni.eVar13 = "football:ffl:clubhouse";
+		s_omni.eVar19 = "football";
+
+		if (s_omni.prop11=="anonymous:premium-yes" || s_omni.prop11=="insider-no:premium-yes" && typeof s_omni.prop4!="undefined" &&
+			(s_omni.prop4=="story" || s_omni.prop4=="blog")) {
+			if (typeof s_omni.events != "undefined" && s_omni.events!="") {
+				s_omni.events = s_omni.events+",event8" }
+			else { s_omni.events="event8" }
+		}
+		anDebugCase = "ver_15Feb11_0_";
+		/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+
+		var s_code = s_omni.t();
+		if(s_code) {
+			var sci = new Image(1,1);
+			sci.onload = function() {console.log("loaded no append")};
+			sci.src = s_code;
+		}
+
+	};
+
+
+
+	if (typeof(s_omni) === 'undefined') {
+		jQuery(function($) {
+			// we want to load the analytics files from the cache if possible - so, let's use full $.ajax() calls
+			$.ajax({
+				type:'GET',
+				url: 'http://a.espncdn.com/combiner/c?js=analytics/sOmni.js,analytics/analytics.js,analytics/externalnielsen.js',
+				dataType: 'script',
+				cache: true,
+				success: function() {
+					var lgSrc;
+					if(typeof anCV !== undef && anCV === '' && document.getElementById('form-memberarea') != null) {
+						lgSrc = 'https://r.espn.go.com/members/util/getUserInfo?cb=runOmnitureIndependently';
+						$.getScript(lgSrc); // we don't want this to be cached - so we'll use the $.getScript() method
+					} else {
+						callOmniture();
+					}
+				}
+			});
+		});
+	}
+
+
+</script>
+<!-- End SiteCatalyst code version: H.21. -->
+
+<!-- Begin comScore Tag -->
+<script type="text/javascript">
+	jQuery(function($) {
+		if(typeof window._comscore === 'undefined') {
+			window._comscore = window._comscore || [];
+			window._comscore.push({ c1: "2", c2: "3000005" });
+			jQuery.getScript((document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js");
+		}
+	});
+</script>
+<!-- End comScore Tag --></body>
+</html>
