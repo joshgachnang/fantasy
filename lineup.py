@@ -125,8 +125,8 @@ def get_players(soup):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print 'Usage: lineup.py <URL>'
+        print('Usage: lineup.py <URL>')
         sys.exit(-1)
     ps = scrape(sys.argv[1])
     for player in ps:
-        print player.name, player.position, player.team, player.slot
+        print(player.name, player.position, player.team, player.slot)

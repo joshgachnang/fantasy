@@ -24,15 +24,15 @@ class Score(object):
 
 def get_scores(soup):
     standings = []
-    matchups = soup.select('#scoreboardMatchups')[0]
-    print matchups
+    # matchups = soup.select('#scoreboardMatchups')[0]
+    # print(matchups)
     # matchups = soup.find_all('td', 'team')
 
     # print matchups
     tables = soup.find_all('div', 'scoreboardMatchups')
-    print len(tables)
+    # print(len(tables))
     for table in tables:
-        print table.attrs
+        # print table.attrs
         continue
         for row in table.find_all('tr'):
             attrs = {}

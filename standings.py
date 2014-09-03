@@ -107,6 +107,5 @@ def scrape(url):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print 'Usage: standings.py <URL>'
+        print('Usage: standings.py <URL>')
         sys.exit(-1)
-    print scrape(sys.argv[1])
