@@ -1,0 +1,807 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Colledge Rox 2013 Regular Season Final Standings - Free Fantasy Football -  ESPN</title>
+<!-- N7-1169:2775--> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta property="og:description" content="Play Fantasy Football for free on ESPN! Expert analysis, live scoring, mock drafts, and more." />
+<meta property="og:image" content="http://g.espncdn.com/s/ffllm/14/images/Icon-200.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="ESPN Fantasy Football - Play For Free" />
+<meta name="twitter:image" content="http://g.espncdn.com/s/ffllm/14/images/ffl-twitter-480.png" />
+<meta name="twitter:site:id" content="33615152" />
+<meta name="twitter:app:id:iphone" content="555376968" />
+<meta name="twitter:app:id:ipad" content="555376968" />
+<meta name="twitter:app:id:googleplay" content="com.espn.fantasy.lm.football" /><meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate, proxy-revalidate, maxage=0">
+<meta http-equiv="Expires" content="-1">
+
+
+		<script type="text/javascript">
+		/* omniture ad tracking v0.1 24Jun08 */
+		var anAds;
+		anAds="";
+		function anPassAds(str) {
+			anAds=anAds?anAds+",ads;"+str+";;;event38=1":"ads;"+str+";;;event38=1";
+		}
+		</script>
+<link rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=fantasy_reset.r1.css,base.r234.css,modules.r422.css,global_header.r38.css,modules/global_nav.r52.css,modules/insider_enhanced.200910131831.css,registration/facebook.button.v2.css,modules/browser-alert.r7.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=espn.teams.r3.css" type="text/css" media="screen" charset="utf-8">
+<style type="text/css">
+#content{width:990px !important;}
+#header{width:990px !important;}
+#nav-wrapper-container{width:990px !important;}
+#nav-main ul.top li .wrapper{width:984px !important;}
+#content.container { padding: 0; }
+</style>
+<style type="text/css">
+</style>
+
+<link rel="stylesheet" type="text/css" href="http://g.espncdn.com/ffl/static/css/main?v=57028102711">
+<script type="text/javascript" src="http://g.espncdn.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://g.espncdn.com/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://g.espncdn.com/libs/swfobject/2.2/swfobject.js"></script>
+<script type="text/javascript" charset="iso-8859-1" src="http://a.espncdn.com/combiner/c/?js=plugins/json2.r3.js,plugins/teacrypt.js,plugins/jquery.metadata.js,plugins/jquery.bgiframe.r3.js,plugins/jquery.easing.1.3.js,plugins/jquery.hoverIntent.js,plugins/jquery.jcarousel.js,plugins/jquery.tinysort.r4.js,plugins/jquery.pubsub.r5.js,plugins/ba-debug-0.4.js,espn.l10n.r12.js,flashObjWrapper.r7.js,espn.core.duo.r54.js,stub.search.r9.js,espn.nav.mega.r33.js,espn.storage.r6.js,espn.p13n.r15.js,espn.video.r67.js,registration/staticLogin.r12.06102014.js,registration/espn.overlay.stub.r3-18.js,espn.insider.r5.js,espn.espn360.stub.r9.js,espn.myHeadlines.stub.r13.js,espn.gallery.0628.js,espn.geo.r1.js,avatar-uploader.js"></script>
+<script type="text/javascript" src="http://g.espncdn.com/libs/prototype/1.6.0.2/prototype.js"></script>
+<script type="text/javascript">
+
+com = { espn: {
+	env: {
+		av: navigator.appVersion,
+		ua: navigator.userAgent,
+		an: navigator.appName,
+		platform: navigator.platform,
+		IE: "Microsoft Internet Explorer",
+		NS: "Netscape",
+		MAC: "MacPPC",
+
+		host: "games.espn.go.com",
+		context: "standings"
+	},
+	listeners: {},
+	games: {
+		gameRoot: "ffl",
+		leagueId: 844419,
+		seasonId: 2013,
+		toTeamId: -2147483648,
+		fromTeamId: 8,
+		scoringPeriodId: 18,
+		currentScoringPeriodId: 18,
+		leagueType: 0
+	}
+}};
+
+com.espn.games.isLeagueManager = false;com.espn.games.isLeagueCreator = false;com.espn.games.isLeagueMember = true;com.espn.games.userLoggedIn = true;com.espn.games.username = 'pcsforeducation';
+var GAMEROOT = "ffl";var host = "games.espn.go.com";var gameRoot = "ffl";var leagueId = 844419;var teamId = 8;</script><script type="text/javascript" src="http://g.espncdn.com/ffl/static/js/libraries?v=117525"></script>
+<script type="text/javascript">
+
+
+Sortable = Class.create();
+
+Sortable.SORT_ORDER_DESC = 'd';
+Sortable.SORT_ORDER_ASC = 'a';
+Sortable.CURRENT_SORTS = new Object();
+Sortable.prototype = {
+
+	trigger: null,
+	table: null,
+	sortBys: null,
+	sortOrders: null,
+	sortableTable: null,
+	
+	sortableIndex: null,
+	reverse: false,
+	
+	highlightRows: true,
+
+	initialize: function(props) {
+		
+		/* isReversed AND sortReplication ARE ONLY USED FOR REPRODUCING THE CURRENT SORT DYNAMICALLY */
+		
+		var _this = this;
+		
+		if (props && props.table && $(props.table)) {
+		
+			this.trigger = (props.trigger) ? $(props.trigger) : null;
+			this.table = $(props.table);
+			this.sortBys = (props.sortBys) ? props.sortBys : [];
+			this.sortOrders = (props.sortOrders) ? props.sortOrders : [];
+			this.sortableIndex = (props.sortableIndex) ? props.sortableIndex.current : new Sortable.Index().current;
+			this.highlightRows = (props.highlightRows != null) ? props.highlightRows : true;
+			
+			this.reverse = (props.allowReverse != false && this.trigger && this.trigger.sortableIndex && this.trigger.sortableIndex == this.sortableIndex)
+
+			// GET TABLES
+			this.sortableTable = new Sortable.Table(this, this.table, props.dupedSortResults);
+
+			// FOR DYNAMICALLY RECONSTRUCTING A SORT
+			var sortReplication;
+			if (props.batchReplication) {
+				sortReplication = function() { var incRevSorted = _this.table.revSorted; props.batchReplication(false); if (incRevSorted == true) {  props.batchReplication(); } };
+			} else {
+				sortReplication = function() { var incRevSorted = _this.table.revSorted; new Sortable(props.extend({ allowReverse: false })); if (incRevSorted == true) {  new Sortable(props); } };
+			}
+
+			this.table.revSorted = (props.dupedRevSorted) ? props.dupedRevSorted : (!this.reverse || this.table.revSorted != false) ? false : true;
+
+			if (this.trigger) {
+				this.trigger.sortableIndex = (!props.sortableIndex) ? new Sortable.Index().increment().current : props.sortableIndex.next;
+			}
+
+
+			// SAVE CURRENT SORT FOR RE-APPLICATION			
+			Sortable.CURRENT_SORTS[this.table] = sortReplication;
+
+		}
+	}
+
+}
+
+Sortable.Batch = Class.create();
+
+Sortable.Batch.prototype = {
+
+	sortables: null,
+	duplicateSortResults: false,
+
+	initialize: function(sortableProps, duplicateSortResults, allowReverse) {
+	
+		// allowReverse IS USED FOR REPLICATING A SORT DYNAMICALLY
+	
+		var trigger;
+		var table;
+		var sortBys;
+		var sortOrders;
+		var sortableIndex = new Sortable.Index();
+		var dupedRevSorted = undefined;
+
+		this.duplicateSortResults = (duplicateSortResults) ? duplicateSortResults : false;
+		var dupedSortResults = null;
+
+		// FOR DYNAMICALLY RECONSTRUCTING A SORT BATCH
+		var batchReplication = function(allowReverse) { new Sortable.Batch(sortableProps, duplicateSortResults, allowReverse) };
+
+		if (sortableProps) {
+
+			this.sortables = new Array(sortableProps.length);
+
+			for (var p = 0; p < sortableProps.length; p++) {
+				trigger = (sortableProps[p].trigger) ?  sortableProps[p].trigger : null;
+				table = (sortableProps[p].table) ?  sortableProps[p].table : null;
+				sortBys = (sortableProps[p].sortBys) ?  sortableProps[p].sortBys : null;
+				sortOrders = (sortableProps[p].sortOrders) ?  sortableProps[p].sortOrders : null;
+
+				if (p > 0 && this.duplicateSortResults && dupedSortResults == null) {
+					dupedSortResults = this.sortables[0].sortableTable.sortedRows;
+					if (table) dupedRevSorted = this.sortables[0].table.revSorted;
+				}
+				this.sortables[p] = new Sortable({trigger: trigger,
+									table: table,
+									sortBys: sortBys,
+									sortOrders: sortOrders,
+									dupedSortResults: dupedSortResults,
+									sortableIndex: sortableIndex,
+									batchReplication: batchReplication,
+									allowReverse: allowReverse,
+									dupedRevSorted: dupedRevSorted });			
+			}
+		}
+		
+		sortableIndex.increment();
+
+	}
+
+
+}
+
+
+Sortable.Table = Class.create();
+
+Sortable.Table.prototype = {
+
+	sortable: null,
+	table: null,
+	sortableRows: null,
+	sortedRows: null,
+	sortByCellIndices: null,
+	minRowIndex: 0,
+
+	initialize: function(sortable, table, dupedSortResults) {
+		this.sortable = sortable;
+		this.table = $(table);
+		this.sortableRows = [];
+
+		// NOTE: IN ORDER FOR dupedSortResults TO WORK, TABLES MUST BE NEARLY IDENTICAL IN STRUCTURE
+		this.sortedRows = (dupedSortResults) ? dupedSortResults : [];
+
+		this.sortByCellIndices = new Array(this.sortable.sortBys.length);
+
+		if (this.table) {
+			this.sortTable();
+		}
+
+	},
+
+	sortTable: function() {
+		var _this = this;
+		
+		var rowIndex = 0
+		var foundFirstRow = false;
+		$A(this.table.rows).each(function(row) {
+			if (Element.hasClassName(row, 'sortableRow')) {
+				if (!foundFirstRow) {
+					_this.minRowIndex = rowIndex;
+					foundFirstRow = true;
+				}
+				_this.sortableRows.push(new Sortable.Row(_this, row, rowIndex));
+			}
+			rowIndex++;
+		});
+				
+		if (!this.sortable.reverse) {
+			if (this.sortedRows.length == 0) {
+				this.sortedRows = this.sortableRows.slice(0);
+				this.sortedRows.sort(function(a, b) { return b.compare(a); });
+			}
+		} else {
+			this.sortedRows = $A(this.sortableRows).reverse(false);
+		}
+
+		var y;
+		var thisCell;
+		var rowToMove;
+		var rowColorClass;
+		var rowColorClassToRemove;
+		for (var m = 0; m < this.sortedRows.length; m++) {
+			rowToMove = this.sortableRows[this.sortedRows[m].rowIndex - this.minRowIndex].row;
+			rowToMove.parentNode.insertBefore(rowToMove, null)
+
+			rowColorClass = (m%2 == 0) ? 'evenRow' : 'oddRow';
+			rowColorClassToRemove = (m%2 == 0) ? 'oddRow' : 'evenRow';
+
+			if (!Element.hasClassName(rowToMove, rowColorClass)) {
+				Element.removeClassName(rowToMove, rowColorClassToRemove);
+				Element.addClassName(rowToMove, rowColorClass)
+			}
+
+			if (this.sortable.highlightRows) {
+				for (y = 0; y < rowToMove.cells.length; y++) {
+					thisCell = rowToMove.cells[y];
+
+					thisCell.className = thisCell.className.replace('sortableSorted', '');
+					if (Element.hasClassName(thisCell, 'sortable' + this.sortable.sortBys[0])) {
+						Element.addClassName(thisCell, 'sortableSorted');
+					}
+				}
+			}
+
+		}
+
+	}
+
+
+}
+
+Sortable.Row = Class.create();
+
+Sortable.Row.COMPARE_RESULT_GREATER_THAN = 1;
+Sortable.Row.COMPARE_RESULT_LESS_THAN = -1;
+Sortable.Row.COMPARE_RESULT_EQUAL = 0;
+
+Sortable.Row.prototype = {
+
+	sortable: null,
+	sortableTable: null,
+	row: null,
+	rowIndex: null,
+	clonedRow: null,
+	sortValues: null,
+
+	initialize: function(sortableTable, row, rowIndex) {
+		this.sortableTable = sortableTable;
+		this.row = row;
+		this.rowIndex = rowIndex;
+		this.sortValues = new Array(this.sortableTable.sortable.sortBys.length);
+
+	},
+
+	sortValueToUse: function(sortBy, cellInnerHTML) {
+		var ret;
+		
+		if (!isNaN(cellInnerHTML)) {
+			ret = Number(cellInnerHTML);
+		} else {
+			ret = cellInnerHTML;
+		}		
+		
+		return ret;
+	},
+
+	getSortValue: function(sortBy, sortByIndex) {
+
+		if (!this.sortValues[sortByIndex] || this.sortValues[sortByIndex] == undefined) {
+			if (this.sortableTable.sortByCellIndices[sortByIndex] && this.sortableTable.sortByCellIndices[sortByIndex] != undefined) {
+				var cellInnerHTML = this.row.cells[this.sortableTable.sortByCellIndices[sortByIndex]].innerHTML;
+				this.sortValues[sortByIndex] = this.sortValueToUse(sortBy, cellInnerHTML);
+			} else {
+
+				var i;
+				var sortBys = this.sortableTable.sortable.sortBys;
+				var cellInnerHTML;
+				var cell;
+				for (var n = 0; n < this.row.cells.length; n++) {
+					cell = this.row.cells[n];
+
+					if (cell.className != '') {
+						cellInnerHTML = cell.innerHTML;
+						for(i = 0; i< sortBys.length; i++) {
+							if (Element.hasClassName(cell, 'sortable' + sortBys[i])) {
+								this.sortableTable.sortByCellIndices[i] = n;
+								this.sortValues[sortByIndex] = this.sortValueToUse(sortBy, cellInnerHTML);
+								if (i == sortByIndex) { break; };
+							}
+						}
+					}
+
+					if (this.sortValues[i] && this.sortValues[i] != undefined) {
+						break;
+					}
+				}
+
+			}
+		}
+		var value = this.sortValues[sortByIndex];
+		if(typeof(value) == "string") {
+			// Strip out HTML Tags
+			var regex = /(<([^>]+)>)/ig;
+			value = parseFloat(value.replace(regex, ""));
+		}
+		return value;
+	},
+
+	compare: function(rowToCompare) {
+		var sortOrders = this.sortableTable.sortable.sortOrders;
+		var sortBys = this.sortableTable.sortable.sortBys
+		var result = Sortable.Row.COMPARE_RESULT_EQUAL;
+		var q = 0;
+		var thisSortBy;
+		for (var q=0; q < sortBys.length; q++) {
+			thisSortBy = sortBys[q];
+
+			thisSortValue = this.getSortValue(thisSortBy, q);
+			sortValueToCompare = rowToCompare.getSortValue(thisSortBy, q);
+
+			if (thisSortValue > sortValueToCompare) {
+				if (sortOrders[q] == Sortable.SORT_ORDER_DESC) {
+					result = Sortable.Row.COMPARE_RESULT_GREATER_THAN;
+				} else {
+					result = Sortable.Row.COMPARE_RESULT_LESS_THAN;
+				}
+				break;
+			} else if (thisSortValue < sortValueToCompare) {
+				if (sortOrders[q] == Sortable.SORT_ORDER_DESC) {
+					result = Sortable.Row.COMPARE_RESULT_LESS_THAN;
+				} else {
+					result = Sortable.Row.COMPARE_RESULT_GREATER_THAN;
+				}
+				break;
+			}
+		}
+		return result;
+	}
+
+}
+
+Sortable.Index = Class.create();
+Sortable.Index.CurrentIndex = 0;
+Sortable.Index.prototype = {
+	
+	current: null,
+	next: null,
+	
+	initialize: function() {
+		this.getCurrentIndex();
+		this.next = this.current + 1;
+	},
+	
+	increment: function() {
+		Sortable.Index.CurrentIndex++;
+		this.getCurrentIndex();
+		return this;
+	},
+	
+	getCurrentIndex: function() {
+		this.current = Sortable.Index.CurrentIndex;
+	}
+}
+
+</script>
+<script type="text/javascript"></script>
+<meta name="apple-itunes-app" content="app-id=555376968, app-argument=http://games.espn.go.com/ffl/standings?leagueId=844419&seasonId=2013"><meta property="al:ios:url" content="espnffl://applinks"><meta property="al:ios:app_store_id" content="555376968"><meta property="al:ios:app_name" content="ESPN Fantasy Football"><meta property="al:android:url" content="espnffl://applinks"><meta property="al:android:package" content="com.espn.espnfantasyfootball"><meta property="al:android:app_name" content="ESPN Fantasy Football">
+		<script type="text/javascript">
+			/* Redirect to an alternate version of the page */
+			(function(){
+				if (!document.querySelectorAll || !window.matchMedia) return false;
+				var links = document.querySelectorAll('link[rel="alternate"][type="text/html"][media][href]');
+				for (var l=links.length-1; l>=0; --l) {
+					if (window.matchMedia(links[l].getAttribute('media')).matches) {
+						window.location = links[l].getAttribute('href');
+					}
+				}
+			})();
+		</script>
+</head><body class="trans-fantasy context-standings games-ad-none">
+<!--[if IE 6]><div class="ie ie6"><![endif]-->
+<!--[if IE 7]><div class="ie ie7"><![endif]-->
+<!--[if IE 8]><div class="ie ie8"><![endif]-->
+<div class="bg-elements">
+<table class="maincontainertbl" cellpadding="0" cellspacing="0"><tr><td class="maincontainertblcell" valign="top" id="maincontainertblcell"><div id="header" class="container">
+<!-- ////////// start: Transitional Header ////////// --><div class="top-bar">
+<!-- begin uni login -->
+<script type="text/javascript">
+var returnURL = document.location.href;
+var anCV = "";
+var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign In','signout':'Sign Out','heliumdown':'Login Temporarily Unavailable','activateinsider':'Activate Insider'};
+</script>
+
+
+<form id="form-memberarea">
+<input type="hidden" name="language" id="language" value="en"/>
+<input type="hidden" name="affiliateName" id="memberAreaAffiliateName" value="espn_fantgames"/>
+<input type="hidden" name="regFormId" id="regFormId" value="espn_ffl"/>
+</form>
+<div class="signin" id="signin"></div>
+<script>espn.memberservices.welcome();</script><div class="nav-edition editions">
+<label>EDITIONS:</label>
+<ul class="main">
+	<li class="e-usa"><a href="http://espn.go.com/" name="&amp;lpos=editionsnav&amp;lid=usa">USA</a></li>
+	<li class="e-deportes"><a href="http://www.espn.com?country-view=us&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=deportes" class="{langPref:'spanish'}">DEPORTES</a></li>
+	<li class="last dropdown">
+	<ul class="">
+	<li class="selected">More</li>
+        <li><a href="http://www.espn.com?country-view=ar&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=argentina">Argentina</a></li>
+	<li><a href="http://www.espn.com.au" name="&amp;lpos=editionsnav&amp;lid=australia">Australia</a></li>
+	<li><a href="http://www.espn.com.br" name="&amp;lpos=editionsnav&amp;lid=brazil">Brazil</a></li>
+        <li><a href="http://www.espn.com?country-view=co&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=colombia">Colombia</a></li>
+        <li><a href="http://www.espn.com?country-view=mx&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=mexico">Mexico</a></li>
+	<li><a href="http://www.espn.co.uk/" name="&amp;lpos=editionsnav&amp;lid=uk">United Kingdom</a></li>
+        <li><a href="http://www.espn.com?country-view=ve&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=venezuela">Venezuela</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<div class="nav-edition">
+<label>CITIES:</label>
+<ul class="main">
+	<li class="e-boston"><a href="http://espn.go.com/boston/" name="&amp;lpos=citynav&amp;lid=boston">BOSTON</a></li>
+	<li class="e-chicago"><a href="http://espn.go.com/chicago/" name="&amp;lpos=citynav&amp;lid=chicago">CHICAGO</a></li>
+	<li class="e-dallas"><a href="http://espn.go.com/dallas/" name="&amp;lpos=citynav&amp;lid=dallas">DALLAS</a></li>
+	<li class="e-losangeles"><a href="http://espn.go.com/los-angeles/" name="&amp;lpos=citynav&amp;lid=losangeles">LOS ANGELES</a></li>
+	<li class="last e-newyork"><a href="http://espn.go.com/new-york/" name="&amp;lpos=citynav&amp;lid=newyork">NEW YORK</a></li>
+</ul>
+</div></div>
+<div class="espn-logo">
+<h1>
+<a href="http://espn.go.com" class="espn">ESPN</a>
+<img src="http://g.espncdn.com/s/ffllm/14/images/shell/bgHead_leaguemanager.png" height="69">
+</h1>
+</div>
+<div class="presby">
+
+<!-- begin ad tag (tile=1) -->
+<script language="JavaScript" type="text/javascript">
+var adSegments = espn.core.ad_segments();
+var pipedAdSegments = adSegments.replace(/;/g, "|").substring(0,adSegments.length-1);
+var adURI = "espn.us.com.games/football" + ";pgn=ColledgeRox2013RegularSeasonFinalStandings;pgtyp=standings;lang=en;gm=ffl;pos=SponsoredByLogoHeader;mnr=f;" + adSegments + "u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=ColledgeRox2013RegularSeasonFinalStandings|pgtyp=standings|lang=en|gm=ffl|pos=SponsoredByLogoHeader|mnr=f|" + pipedAdSegments + ";dcopt=ist;sz=150x45;tile=1;ord=6841001" + "?";
+document.write('<script language="JavaScript" src="http://ad.Doubleclick.net/adj/' + adURI + '" type="text/javascript"><\/script>');
+</script><noscript><a href="http://ad.doubleclick.net/jump/espn.us.com.games/football;pgn=ColledgeRox2013RegularSeasonFinalStandings;pgtyp=standings;lang=en;gm=ffl;pos=SponsoredByLogoHeader;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=ColledgeRox2013RegularSeasonFinalStandings|pgtyp=standings|lang=en|gm=ffl|pos=SponsoredByLogoHeader|mnr=f|;dcopt=ist;sz=150x45;tile=1;ord=6841001" target="_blank"><img src="http://ad.doubleclick.net/ad/espn.us.com.games/football;pgn=ColledgeRox2013RegularSeasonFinalStandings;pgtyp=standings;lang=en;gm=ffl;pos=SponsoredByLogoHeader;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=ColledgeRox2013RegularSeasonFinalStandings|pgtyp=standings|lang=en|gm=ffl|pos=SponsoredByLogoHeader|mnr=f|;dcopt=ist;sz=150x45;tile=1;ord=6841001" border="0" alt=""></a></noscript>
+<!-- End ad tag -->
+
+</div>	  <div id="shop">
+	  	<a class="shop-btn" href="http://espnshop.com/entry.point?target=Z&amp;source=ESPN_HPHEADERLINK:SHOPBUTTONHEADER:6_1_10" name="&lpos=sitenavdefault&lid=sitenav_shopbutton">Shop</a>
+	  </div>
+	  <div id="nav-main-search">
+<form id="searchBox" name="searchBox" action="http://search.espn.go.com/results" method="get" accept-charset="utf-8" class="clearfix">
+<div class="clearfix">
+<input autocomplete="off" class="text ui-autocomplete-input" type="text" placeholder="Search" name="searchString" id="searchString" role="textbox" aria-autocomplete="list" aria-haspopup="true"><input type="hidden" name="page" id="page" value="null">
+<input type="hidden" name="fromForm" value="true">
+<input class="submit" type="submit" value="">
+</div>
+</form>
+</div>
+</div>
+<div id="subheader"><div id="content-wrapper">
+<div id="content" class="container">
+<div>
+
+<!--[if lte IE 6]>
+<div class="span-6" id="browser-alert-wrapper" style="display: none;">
+	<div class="mod-container mod-no-header-footer browser-alert">
+		<div class="mod-content">
+			<div class="gradient-container">
+				<h1><span>Your Web Browser</span> is no longer supported</h1>
+				<p>To experience everything that ESPN.com has to offer, we recommend that you upgrade to a newer version of your web browser. Click the upgrade button to the right or <a href="http://espn.go.com/espn/news/story?id=5630562">learn more</a>.</p>
+				<ul>
+					<li><a class="btn-upgrade" href="'+browserUrl+'">Upgrade</a></li>
+					<li><a class="btn-faq" href="http://espn.go.com/espn/news/story?id=5630562">FAQs</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	(function($) {
+		  setTimeout(function () {
+				var $alertWrapper = $('#browser-alert-wrapper'),
+					  browserAlertOptOut = espn.cookie.get('browseralert');
+				if (browserAlertOptOut != 'true') {
+					  $("<a class=\"btn-close\" href=\"#\">Close</a>").bind('click', function (e) {
+							$alertWrapper.hide();
+							espn.cookie.set('browseralert','true',30);
+							return false;
+					  }).appendTo('.gradient-container',$alertWrapper);
+					  $alertWrapper.show();
+					  espn.cookie.set('browseralert','true');
+				}
+		  },100);
+	})(jQuery);
+</script>
+<![endif]-->
+<div class="header-ad"><div class="header-ad-wrapper" style="display:inline-block">
+
+<!-- begin ad tag (tile=2) -->
+<script language="JavaScript" type="text/javascript">
+var adSegments = espn.core.ad_segments();
+var pipedAdSegments = adSegments.replace(/;/g, "|").substring(0,adSegments.length-1);
+var adURI = "espn.us.com.games/football" + ";pgn=leaders;pgtyp=standings;lang=en;gm=ffl;pos=pencil_top;mnr=f;" + adSegments + "u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=leaders|pgtyp=standings|lang=en|gm=ffl|pos=pencil_top|mnr=f|" + pipedAdSegments + ";dcopt=ist;sz=970x66,924x50,728x90;tile=2;ord=6841001" + "?";
+document.write('<script language="JavaScript" src="http://ad.Doubleclick.net/adj/' + adURI + '" type="text/javascript"><\/script>');
+</script><noscript><a href="http://ad.doubleclick.net/jump/espn.us.com.games/football;pgn=leaders;pgtyp=standings;lang=en;gm=ffl;pos=pencil_top;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=leaders|pgtyp=standings|lang=en|gm=ffl|pos=pencil_top|mnr=f|;dcopt=ist;sz=970x66,924x50,728x90;tile=2;ord=6841001" target="_blank"><img src="http://ad.doubleclick.net/ad/espn.us.com.games/football;pgn=leaders;pgtyp=standings;lang=en;gm=ffl;pos=pencil_top;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=leaders|pgtyp=standings|lang=en|gm=ffl|pos=pencil_top|mnr=f|;dcopt=ist;sz=970x66,924x50,728x90;tile=2;ord=6841001" border="0" alt=""></a></noscript>
+<!-- End ad tag -->
+
+</div></div><div class="nav-main-breadcrumbs-row" style="height: 28px;">
+<div class="nav-main-breadcrumbs">
+<a href="http://espn.go.com">ESPN</a> &raquo; <a href="http://games.espn.go.com/ffl/frontpage">Free Fantasy Football</a> &raquo; <a href="/ffl/leagueoffice?leagueId=844419">Colledge Rox</a> &raquo; <a title="Hoyer The Destroyed (Josh Gachnang)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=8&amp;seasonId=2013" target="_top">Hoyer The Destroyed</a></div>
+<div class="playerSearchDiv"><form class="playerSearchForm" name="playerSearch" id="playerSearch" action="/ffl/freeagency" onsubmit="return playerSuggester.submitSelectedPlayer();" method="GET"><div><input type="hidden" name="leagueId" value="844419"><input type="hidden" name="teamId" value="8"><input type="hidden" name="avail" value="-1"><input type="hidden" name="slotCategoryGroup" value="-1">Find a Player: <input class="playerSearchNameInput" type="text" id="playerName" name="search" onkeyup="playerSuggester.handleKeyUp(event, this.value);" value="Last Name" style="color:#999;" onfocus="playerSuggester.focus();" onblur="playerSuggester.blur();"></div></form><div style="margin: 0px;"><div id="playerSuggestions" style="display: none;" onmouseover="playerSuggester.suggestDivOver();" onmouseout="playerSuggester.suggestDivOut();"></div></div></div><script type="text/javascript">playerSearchObj=new Object();playerSearchObj.varName = "playerSuggester";playerSearchObj.suggestDiv = "playerSuggestions";playerSearchObj.inputField = "playerName";playerSearchObj.cssPrefix = "";playerSearchObj.statId = null;playerSearchObj.chartSplitType = null;var playerSuggester = new PlayerSuggester(playerSearchObj);</script><div class="comparePlayersLinkDiv"><a id="comparePlayersLauncher" href="" instance="_comparePlayers" content="ajax#/ffl/playertable/prebuilt/compareplayers?leagueId=844419&teamId=8&playerCompare=true" class="flexpop" modal="true" fpopStyle="modal">Compare Players</a> (<span id="comparePlayersCount">0</span>)</div><div class="clear"></div></div>
+<div class="games-nav"><ul id="games-tabs"><li class=" "><a href="/ffl/leagueoffice?leagueId=844419&seasonId=2013">League</a></li><li class=" "><a href="/ffl/clubhouse?leagueId=844419&teamId=8&seasonId=2013">My Team</a></li><li class=" "><a href="/ffl/freeagency?leagueId=844419&teamId=8&seasonId=2013">Players</a></li><li class="games-on "><a href="/ffl/standings?leagueId=844419&seasonId=2013">Standings</a></li><li class=" "><a href="/ffl/scoreboard?leagueId=844419&seasonId=2013">Scoreboard</a></li><li class=" games-teams-btn"><a aria-haspopup="true" href="#">Teams</a><div class="clear"></div><ul id="games-tabs1"><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=1&amp;seasonId=2013">Return to Glory <span class="alt-info">(PACK)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=2&amp;seasonId=2013">Team Jericho <span class="alt-info">(JERK)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=3&amp;seasonId=2013">Team Ulrich <span class="alt-info">(ULRI)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=4&amp;seasonId=2013">Flying Wombats <span class="alt-info">(FLWT)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=5&amp;seasonId=2013">Team Anna <span class="alt-info">(ANNA)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=6&amp;seasonId=2013">Death By Snoo Snoo <span class="alt-info">(SNOO)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=7&amp;seasonId=2013">I'm the Best <span class="alt-info">(Best)</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&amp;teamId=8&amp;seasonId=2013">Hoyer The Destroyed <span class="alt-info">(HOYR)</span></a></li></ul></li><li class="games-myfntsyteam-btn" style="position: absolute; left: 849px;"><a href="#" aria-haspopup="true">My Fantasy Teams<img height="4" align="top" width="7" border="0" src="http://g.espncdn.com/s/ffllm/14/images/shell/yellow_dropdwn_arrow.png"/></a><div class="clear"></div><ul id="games-tabs2" style="left: -73px;"><li><a href="/ffl/tools/editmyteams?leagueId=844419" class="edit-list-option">Edit This List</a></li><li><a href="/ffl/clubhouse?leagueId=634821&teamId=11&seasonId=2014">Whore Island Ocelots<br><span class="alt-info">WII ARE WHAT'S UP DOC</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&teamId=8&seasonId=2014">Johnny Superbowl<br><span class="alt-info">Colledge Rox</span></a></li><li><a href="/ffl/clubhouse?leagueId=1268962&teamId=8&seasonId=2014">Mingo Unchained<br><span class="alt-info">Dusty's Rusty Rangers</span></a></li><li><a href="/ffl/clubhouse?leagueId=902760&teamId=11&seasonId=2014">Turn Down For Watt<br><span class="alt-info">Slashertraxx14</span></a></li><li><a href="/ffl/clubhouse?leagueId=1441295&teamId=2&seasonId=2014">Team Gachnang<br><span class="alt-info">while(atCAE){doWork = false;}</span></a></li></ul></li></ul></div><div class="gamesmain container">
+<div class="games-innercol">
+<div class="games-innercol2">
+<div class="games-nav subnav"><ul id="games-subnav-links"><li class="games-on"><a href="/ffl/standings?leagueId=844419" >Season Standings</a></li><li class=""><a href="/ffl/tools/finalstandings?leagueId=844419" >Final Standings</a></li></ul></div><div class="games-fullcol games-fullcol-extramargin"><div class="games-alert-mod alert-mod2 games-beige-alert" style="width:;">You are currently viewing <a href="/ffl/history?leagueId=844419"><b>league history</b></a> pages from the <b>2013</b> season. <a href="/ffl/leagueoffice?leagueId=844419&seasonId=2014"><b>Click here to return to the 2014 League Office.</b></a></div><br /><div class="games-pageheader"><div style="float:left;"></div><div style="float:left;"><h1>Colledge Rox 2013 Regular Season Final Standings</h1></div><div style="float: right;"><b>Season:</b> 
+		<select id="seasonHistoryMenu" onchange="var r = window.location.search.replace(/seasonId=[0-9]{4}/, 'seasonId='+this.options[this.selectedIndex].value);window.location = (r == window.location.search ? window.location.search+'&seasonId='+this.options[this.selectedIndex].value : r);">
+		<option  value="2014">2014</option><option selected="selected" value="2013">2013</option><option  value="2012">2012</option><option  value="2011">2011</option><option  value="2010">2010</option></select></div><div class="clear"></div></div><table width="100%" cellspacing="0" cellpadding="0"><tr>
+<td width="48%" valign="top">
+<table width="100%" border="0" cellpadding="2" cellspacing="1" class="tableBody" bgcolor="#ffffff" >
+<tr class="tableHead" bgcolor=#1d7225><td colspan="6">DARYN</td></tr><tr class="tableSubHead" bgcolor=#6dbb75><td width="50%">TEAM</td><td align="right" width="10%">W</td><td align="right" width="10%">L</td><td align="right" width="10%">T</td><td align="right" width="10%">PCT</td><td align="right" width="10%">GB</td></tr><tr class="tableBody" bgcolor=#f2f2e8><td><a title="Hoyer The Destroyed (Josh Gachnang)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=8&amp;seasonId=2013" target="_top"><b>Hoyer The Destroyed</b></a></td><td align="right" ><b>11</b></td><td align="right" ><b>3</b></td><td align="right"  ><b>0</b></td><td align="right" ><b>.786</b></td><td align="right" ><b>--</b></td></tr><tr class="tableBody" bgcolor=#f8f8f2><td><a title="Flying Wombats (Dan Siegler)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=4&amp;seasonId=2013" target="_top">Flying Wombats</a></td><td align="right" >10</td><td align="right" >4</td><td align="right"  >0</td><td align="right" >.714</td><td align="right" >1</td></tr><tr class="tableBody" bgcolor=#f2f2e8><td><a title="Team Jericho (Steve Slocum)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=2&amp;seasonId=2013" target="_top">Team Jericho</a></td><td align="right" >8</td><td align="right" >6</td><td align="right"  >0</td><td align="right" >.571</td><td align="right" >3</td></tr><tr class="tableBody" bgcolor=#f8f8f2><td><a title="I'm the Best (Allie Slocum)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=7&amp;seasonId=2013" target="_top">I'm the Best</a></td><td align="right" >8</td><td align="right" >6</td><td align="right"  >0</td><td align="right" >.571</td><td align="right" >3</td></tr><tr class="tableBody" bgcolor=#f2f2e8><td><a title="Return to Glory (Jeremy Gasser)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=1&amp;seasonId=2013" target="_top">Return to Glory</a></td><td align="right" >8</td><td align="right" >6</td><td align="right"  >0</td><td align="right" >.571</td><td align="right" >3</td></tr><tr class="tableBody" bgcolor=#f8f8f2><td><a title="Team Ulrich (Casey Ulrich)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=3&amp;seasonId=2013" target="_top">Team Ulrich</a></td><td align="right" >6</td><td align="right" >8</td><td align="right"  >0</td><td align="right" >.429</td><td align="right" >5</td></tr><tr class="tableBody" bgcolor=#f2f2e8><td><a title="Team Anna (Anna Ruhland)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=5&amp;seasonId=2013" target="_top">Team Anna</a></td><td align="right" >3</td><td align="right" >11</td><td align="right"  >0</td><td align="right" >.214</td><td align="right" >8</td></tr><tr class="tableBody" bgcolor=#f8f8f2><td><a title="Death By Snoo Snoo (Davis Bittner)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=6&amp;seasonId=2013" target="_top">Death By Snoo Snoo</a></td><td align="right" >2</td><td align="right" >12</td><td align="right"  >0</td><td align="right" >.143</td><td align="right" >9</td></tr></table>
+<br /></td><td width="2%">&nbsp;</td><td width="48%">&nbsp;</td></tr>
+</table><table width="100%" id="xstandTbl_div0" border="0" cellpadding="2" cellspacing="1" class="tableBody" bgcolor="#ffffff" >
+<tr class="tableHead" bgcolor=#1d7225><td colspan="7">DARYN</td></tr><tr class="tableSubHead" bgcolor=#6dbb75><td width="40%">TEAM, OWNER(S)</td><td align="right" width="10%"><a class="hand" onclick="new Sortable.Batch([{trigger:this,table:'xstandTbl_div0',sortBys:['PF'],sortOrders:['d']}]);">PF</a></td><td align="right" width="10%"><a class="hand" onclick="new Sortable.Batch([{trigger:this,table:'xstandTbl_div0',sortBys:['PA'],sortOrders:['d']}]);">PA</a></td><td align="right" width="10%"><a class="hand" onclick="new Sortable.Batch([{trigger:this,table:'xstandTbl_div0',sortBys:['HOME'],sortOrders:['d']}]);">HOME</a></td><td align="right" width="10%"><a class="hand" onclick="new Sortable.Batch([{trigger:this,table:'xstandTbl_div0',sortBys:['AWAY'],sortOrders:['d']}]);">AWAY</a></td><td align="right" width="10%"><a class="hand" onclick="new Sortable.Batch([{trigger:this,table:'xstandTbl_div0',sortBys:['DIV'],sortOrders:['d']}]);">DIV</a></td><td align="right" width="10%"><a class="hand" onclick="new Sortable.Batch([{trigger:this,table:'xstandTbl_div0',sortBys:['STREAK'],sortOrders:['d']}]);">STREAK</a></td></tr><tr class="evenRow bodyCopy sortableRow"><td><a title="Return to Glory (Jeremy Gasser)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=1&amp;seasonId=2013" target="_top">Return to Glory</a> (<a href="http://games.espn.go.com/uber-challenge/entry?userID=368044185&seasonID=2013" target="_new">Jeremy Gasser</a>)</td><td align="right" class="sortablePF">1517.4</td><td align="right" class="sortablePA">1460.6</td><td align="right" class="sortableHOME"><!-- .571 004000996 (for sorting) -->4-3-0</td><td align="right" class="sortableAWAY"><!-- .571 004000996 (for sorting) -->4-3-0</td><td align="right" class="sortableDIV"><!-- .571 008000993 (for sorting) -->8-6-0</td><td align="right" class="sortableSTREAK"><!-- 49 (for sorting) -->L1</td></tr><tr class="oddRow bodyCopy sortableRow"><td><a title="Team Jericho (Steve Slocum)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=2&amp;seasonId=2013" target="_top">Team Jericho</a> (<a href="http://games.espn.go.com/uber-challenge/entry?userID=412048437&seasonID=2013" target="_new">Steve Slocum</a>)</td><td align="right" class="sortablePF">1656.1</td><td align="right" class="sortablePA">1550.1</td><td align="right" class="sortableHOME"><!-- .714 005000997 (for sorting) -->5-2-0</td><td align="right" class="sortableAWAY"><!-- .429 003000995 (for sorting) -->3-4-0</td><td align="right" class="sortableDIV"><!-- .571 008000993 (for sorting) -->8-6-0</td><td align="right" class="sortableSTREAK"><!-- 53 (for sorting) -->W3</td></tr><tr class="evenRow bodyCopy sortableRow" style="font-weight:bold;"><td><a title="Hoyer The Destroyed (Josh Gachnang)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=8&amp;seasonId=2013" target="_top">Hoyer The Destroyed</a> (<a href="http://games.espn.go.com/uber-challenge/entry?userID=416618271&seasonID=2013" target="_new">Josh Gachnang</a>)</td><td align="right" class="sortablePF">1744.1</td><td align="right" class="sortablePA">1382</td><td align="right" class="sortableHOME"><!-- .857 006000998 (for sorting) -->6-1-0</td><td align="right" class="sortableAWAY"><!-- .714 005000997 (for sorting) -->5-2-0</td><td align="right" class="sortableDIV"><!-- .786 011000996 (for sorting) -->11-3-0</td><td align="right" class="sortableSTREAK"><!-- 54 (for sorting) -->W4</td></tr><tr class="oddRow bodyCopy sortableRow"><td><a title="Flying Wombats (Dan Siegler)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=4&amp;seasonId=2013" target="_top">Flying Wombats</a> (<a href="http://games.espn.go.com/uber-challenge/entry?userID=411342512&seasonID=2013" target="_new">Dan Siegler</a>)</td><td align="right" class="sortablePF">1693.9</td><td align="right" class="sortablePA">1553.4</td><td align="right" class="sortableHOME"><!-- .857 006000998 (for sorting) -->6-1-0</td><td align="right" class="sortableAWAY"><!-- .571 004000996 (for sorting) -->4-3-0</td><td align="right" class="sortableDIV"><!-- .714 010000995 (for sorting) -->10-4-0</td><td align="right" class="sortableSTREAK"><!-- 52 (for sorting) -->W2</td></tr><tr class="evenRow bodyCopy sortableRow"><td><a title="Team Ulrich (Casey Ulrich)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=3&amp;seasonId=2013" target="_top">Team Ulrich</a> (<a href="http://games.espn.go.com/uber-challenge/entry?userID=412498927&seasonID=2013" target="_new">Casey Ulrich</a>)</td><td align="right" class="sortablePF">1500.6</td><td align="right" class="sortablePA">1604.3</td><td align="right" class="sortableHOME"><!-- .429 003000995 (for sorting) -->3-4-0</td><td align="right" class="sortableAWAY"><!-- .429 003000995 (for sorting) -->3-4-0</td><td align="right" class="sortableDIV"><!-- .429 006000991 (for sorting) -->6-8-0</td><td align="right" class="sortableSTREAK"><!-- 51 (for sorting) -->W1</td></tr><tr class="oddRow bodyCopy sortableRow"><td><a title="I'm the Best (Allie Slocum)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=7&amp;seasonId=2013" target="_top">I'm the Best</a> (<a href="http://games.espn.go.com/uber-challenge/entry?userID=443740444&seasonID=2013" target="_new">Allie Slocum</a>)</td><td align="right" class="sortablePF">1605.6</td><td align="right" class="sortablePA">1606.9</td><td align="right" class="sortableHOME"><!-- .571 004000996 (for sorting) -->4-3-0</td><td align="right" class="sortableAWAY"><!-- .571 004000996 (for sorting) -->4-3-0</td><td align="right" class="sortableDIV"><!-- .571 008000993 (for sorting) -->8-6-0</td><td align="right" class="sortableSTREAK"><!-- 48 (for sorting) -->L2</td></tr><tr class="evenRow bodyCopy sortableRow"><td><a title="Team Anna (Anna Ruhland)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=5&amp;seasonId=2013" target="_top">Team Anna</a> (<a href="http://games.espn.go.com/uber-challenge/entry?userID=514715494&seasonID=2013" target="_new">Anna Ruhland</a>)</td><td align="right" class="sortablePF">1323.9</td><td align="right" class="sortablePA">1548.5</td><td align="right" class="sortableHOME"><!-- .286 002000994 (for sorting) -->2-5-0</td><td align="right" class="sortableAWAY"><!-- .143 001000993 (for sorting) -->1-6-0</td><td align="right" class="sortableDIV"><!-- .214 003000988 (for sorting) -->3-11-0</td><td align="right" class="sortableSTREAK"><!-- 47 (for sorting) -->L3</td></tr><tr class="oddRow bodyCopy sortableRow"><td><a title="Death By Snoo Snoo (Davis Bittner)" href="/ffl/clubhouse?leagueId=844419&amp;teamId=6&amp;seasonId=2013" target="_top">Death By Snoo Snoo</a> (<a href="http://games.espn.go.com/uber-challenge/entry?userID=264554202&seasonID=2013" target="_new">Davis Bittner</a>)</td><td align="right" class="sortablePF">1301.6</td><td align="right" class="sortablePA">1637.6</td><td align="right" class="sortableHOME"><!-- .143 001000993 (for sorting) -->1-6-0</td><td align="right" class="sortableAWAY"><!-- .143 001000993 (for sorting) -->1-6-0</td><td align="right" class="sortableDIV"><!-- .143 002000987 (for sorting) -->2-12-0</td><td align="right" class="sortableSTREAK"><!-- 45 (for sorting) -->L5</td></tr></table>
+<br /><div class="games-footercol"><div class="faqft_bg"><div class="faqft_header"><a href="/ffl/content?page=fflrulesindex2014" target="_blank"><div class="faqft_hdimage_fh"></div></a><div id="faqft_moreless_btn" class="games-external-btn faqft_moreless_btn" onclick="showHideFAQs();">Expand Help Topics+</div><div class="faqft_hdimage_hl"></div></div><div id="faq_qlinks" class="faq_qlinks"style="display:none;"><ul><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=when-do-standings-update&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_standings@when-do-standings-update">When do standings update?</a></li><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=why-are-some-stats-missing-or-incorrect&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_standings@why-are-some-stats-missing-or-incorrect">Why are some stats missing or incorrect?</a></li></ul><ul><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=why-cant-i-connect-to-smack-boards-espn-live-scoring&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_standings@why-cant-i-connect-to-smack-boards-espn-live-scoring">Why can't I connect to Smack Boards / ESPN live scoring?</a></li></ul><div class="clear"></div><div class="faqft_ft"><img src="http://games-ak.espn.go.com/s/lm/images/arrow.jpg"><a style="text-decoration:none;" href="/ffl/content?page=fflrulesfaq2014" target="_blank">MORE FAQ'S</a></div></div></div>
+<script type="text/javascript">
+function showHideFAQs() {
+	if (jQuery('#faq_qlinks').is(':visible')) {	
+		jQuery('#faq_qlinks').hide();
+		jQuery("#faqft_moreless_btn").html("Expand Help Topics +");
+	} else { 
+		jQuery('#faq_qlinks').show(); 
+		jQuery("#faqft_moreless_btn").html("Collapse Help Topics -");
+	}
+}
+</script><div class="OUTBRAIN" data-src="http://games.espn.go.com/ffl/standings?leagueId=844419&seasonId=2013" data-widget-id="AR_9" data-ob-template="espn" style="width:956px;"></div><script type="text/javascript" async="async" src="http://widgets.outbrain.com/outbrain.js"></script></div></div>
+<br><br>
+</div>
+</div>
+</div>
+<!-- ////////// start: Transitional Footer ////////// -->
+<!--start transitional elements wrapper -->
+<div class="transitional-elements">
+<!--[if IE 6]><div class="ie6"><![endif]-->
+<!--[if IE 7]><div class="ie7"><![endif]-->
+<!--[if IE 8]><div class="ie8"><![endif]-->
+<div id="trans-footer" class="container">
+<p><strong><a href="http://www.espn.com">ESPN.com</a></strong>  |  <a href="https://r.espn.go.com/espn/memberServices">Member Services</a> | <a href="http://games.espn.go.com/frontpage">Fantasy Games</a> | <a href="http://games.espn.go.com/ffl/content?page=fflrulesindex2013">Help</a> | <a href="http://preferences.truste.com/2.0/?type=espn&affiliateId=148" onclick="window.open('http://preferences.truste.com/2.0/?type=espn&affiliateId=148','popup','width=986,height=878,scrollbars=yes,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">Interest-Based Ads</a> | <a href="http://games.espn.go.com/ffl/feedback">Give Us Your Feedback</a></p>
+	
+<p>Call <strong>1-888-549-ESPN</strong> for help on all things Fantasy</p>
+
+<p>Copyright &copy;2014 ESPN Internet Ventures.  <a href="http://disneytermsofuse.com/">Terms of Use</a>  and <a href="http://disney.go.com/corporate/privacy/pp_espn.html">Privacy Policy and Safety Information/Your California Privacy Rights</a> are applicable to this site.<br><br>Officially Licensed Product of NFL PLAYERS. Visit <a href="http://www.nflplayers.com" target="new">www.nflplayers.com</a>.</p></div>
+<!-- end transitional elements wrapper -->
+<!--[if lte IE 8]></div><![endif]-->
+</div>
+<!-- ////////// end: Transitional Footer ////////// -->
+</div>
+<div id="nav-wrapper" class="container">
+<div id="nav-wrapper-container">
+<div id="nav-main">
+<p><!-- begin site nav --></p>
+<ul class="top" id="nav-main-list"><!-- start: Menuitem :: MyTAB -->
+<li class="last myespn" id="menu-myespn"><a class="myespn" ref="#">MyESPN</a></li>
+<!-- start: Menuitem :: NFL -->
+<li class="sport-menu default t-nfl" data-sportid="28" id="menu-nfl"><a href="http://espn.go.com/nfl/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nfl">NFL</a></li>
+<!-- start: Menuitem :: MLB -->
+<li class="sport-menu default t-mlb" data-sportid="10" id="menu-mlb"><a href="http://espn.go.com/mlb/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_mlb">MLB</a></li>
+<!-- start: Menuitem :: NBA -->
+<li class="sport-menu default t-nba" data-sportid="46" id="menu-nba"><a href="http://espn.go.com/nba/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nba">NBA</a></li>
+<!-- start: Menuitem :: NHL -->
+<li class="sport-menu default t-nhl" data-sportid="90" id="menu-nhl"><a href="http://espn.go.com/nhl/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nhl">NHL</a></li>
+<!-- start: Menuitem :: NCAA FB -->
+<li class="sport-menu default t-ncf" data-sportid="23" id="menu-ncf"><a href="http://espn.go.com/college-football/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_ncf">NCAAF</a></li>
+<!-- start: Menuitem :: NCAA BB -->
+<li class="sport-menu default t-ncb" data-sportid="41" id="menu-ncb"><a href="http://espn.go.com/mens-college-basketball/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_ncb">NCAAM</a></li>
+<!-- start: Menuitem :: NASCAR -->
+<li class="sport-menu default t-nascar" data-sportid="2020" id="menu-nascar"><a href="http://espn.go.com/racing/nascar/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nascar">NASCAR</a></li>
+<!-- start: Menuitem :: SOCCER -->
+<li class="sport-menu default t-soccer" data-sportid="600" id="menu-soccer"><a href="http://espnfc.us/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_soccer">SOCCER</a></li>
+<!-- start: Menuitem :: GOLF -->
+<li class="sport-menu t-golf" data-sportid="1106" id="menu-golf" style="display: none;"><a href="http://espn.go.com/golf/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_golfl">GOLF</a></li>
+<!-- start: Menuitem :: TENNIS -->
+<li class="sport-menu t-tennis" data-sportid="850" id="menu-tennis"><a href="http://espn.go.com/tennis/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_tennis">TENNIS</a></li>
+<!-- start: Menuitem :: BOXING-->
+<li class="sport-menu t-boxing" data-sportid="1000" id="menu-boxing" style="display: none;"><a href="http://espn.go.com/boxing/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_boxing">BOXING</a></li>
+<!-- start: Menuitem :: MMA -->
+<li class="sport-menu t-mma" data-sportid="3301" id="menu-mma" style="display: none;"><a href="http://espn.go.com/mma/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_mma">MMA</a></li>
+<!-- start: Menuitem :: ALL SPORTS -->
+<li class="nav-allsports t-allsports" id="menu-allsports"><a href="http://espn.go.com/sports/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_allsports">MORE</a></li>
+<!-- start: Menuitem :: INSIDER -->
+<li class="sport-menu t-insider" id="menu-insider" style="display: none;"><a href="http://insider.espn.go.com/insider/index" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_insider">INSIDER</a></li>
+<!-- start: Menuitem :: SPORTSNATION -->
+<li class="sport-menu t-sportsnation" id="menu-sportsnation" style="display: none;"><a href="http://espn.go.com/sportsnation/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_sportsnation">SN</a></li>
+<!-- start: Menuitem :: RADIO & MORE -->
+<li class="right-menu two-line last t-radio" id="menu-radio"><a href="http://espn.go.com/espnradio/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_radioandmore">RADIO<span>&amp; MORE</span></a></li>
+<!-- start: Menuitem :: espnW & PLAYBOOK -->
+<li class="right-menu two-line t-page2" id="menu-page2"><a href="http://espn.go.com/espnw/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_espnwandxgames" target="_blank">espnW<span>&amp; X GAMES</span></a></li>
+<!-- start: Menuitem :: FANTASY & GAMES -->
+<li class="right-menu two-line t-fantasy selected" id="menu-fantasy"><a href="http://games.espn.go.com/frontpage" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_fantasy">FANTASY<span>&amp; GAMES</span></a></li>
+<!-- start: Menuitem :: WATCH -->
+<li class="right-menu t-watch" id="menu-watch"><a href="http://espn.go.com/video/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_watch">WATCH</a></li>
+</ul>
+<!-- end site nav --></div>
+<div class="nav-main-secondary">
+<ul>
+<div class="nav-main-secondary"><ul><div class="nav-main-secondary">
+<ul>
+<li class="subnav-frontpage"><a href="http://games.espn.go.com/frontpage/football">Fantasy Football</a></li>
+<li class="subnav-create"><a href="http://games.espn.go.com/ffl/welcome">Join a League</a></li>
+<li class="subnav-mock"><a href="http://games.espn.go.com/ffl/livedraftlobby">Live Draft Lobby</a></li>
+<li class="subnav-mock"><a href="http://games.espn.go.com/ffl/mockdraftlobby">Mock Draft Lobby</a></li>
+<li class="subnav-draftkit"><a href="http://games.espn.go.com/frontpage/ffldraftkit">Draft Kit</a></li>
+<!-- <li class="subnav-tools-projections-sortable"><a href="http://games.espn.go.com/ffl/tools/projections?seasonId=2013">Weekly Projections</a></li> -->
+<li class="subnav-tools-season-projections"><a href="http://games.espn.go.com/ffl/tools/projections?display=alt">Projections</a></li>
+<li class="subnav-resources-playernews"><a href="http://games.espn.go.com/ffl/livedraftresults">ADP</a></li>
+<!-- <li class="subnav-addeddropped"><a href="http://games.espn.go.com/ffl/addeddropped">Added/Dropped</a></li> -->
+<!-- <li><a href="http://games.espn.go.com/frontpage/fantasyRankings">Weekly Rankings</a></li>-->
+<li class="subnav-scoring"><a href="http://games.espn.go.com/ffl/leaders?leagueId=844419">Scoring Leaders</a></li>
+<!--<li class="subnav-resources-playernews"><a href="http://games.espn.go.com/ffl/resources/playernews">Player News</a></li>-->
+<!--<li class="subnav-pa"><a href="http://games.espn.go.com/ffl/pointsagainst?leagueId=844419">Points Against</a></li>-->
+<li class="subnav-apps"><a href="http://espn.go.com/mobile/products/products?id=8244799">Apps</a></li>
+<!--<li class="subnav-forum"><a href="http://games.espn.go.com/frontpage/forums#!/category/1313609200-908-35">Forums</a></li>-->
+<!--<li class="subnav-leaderboards"><a href="http://games.espn.go.com/ffl/resources/leaderboard?leagueId=844419">Leaderboards</a></li>-->
+<li class="subnav-faq"><a href="http://games.espn.go.com/ffl/content?page=fflrulesfaq2014">FAQ</a></li>
+<li class="subnav-toolkit"><a href="http://games.espn.go.com/ffl/fantasyfootballtoolkit?leagueId=844419">Toolkit</a></li>
+<li class="expandable"><a href="javascript:void(0);"><span>More</span></a>   
+<div>
+<dl style="border:none;">
+<dd><a href="https://w1.buysub.com/pubs/ES/ESP/2014_FantasyFootballGuide.jsp?cds_page_id=137362&cds_mag_code=ESP&id=1402340759599&lsid=41601405595017238&vid=1&cds_response_key=FFG2014P9">Fantasy Football Draft Guide</a></dd>
+<!--<dd><a href="http://games.espn.go.com/frontpage/ffldraftkit">Draft Kit</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/fantasyfootballtoolkit?leagueId=844419">Toolkit</a></dd>-->
+<dd><a href="http://espn.go.com/fantasy/football/story/_/page/NFLDK2K14cheatsheetcentral/2014-fantasy-football-cheat-shappseets-player-rankings-draft-board-standard-ppr">Cheat Sheet Central</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/tools/undroppables">Undroppables</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/pointsagainst?leagueId=844419">Points Against</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/resources/playernews">Player News</a></dd>
+<!-- <dd><a href="http://games.espn.go.com/ffl/pointsagainst?leagueId=844419">Points Against</a></dd> -->
+<dd><a href="http://games.espn.go.com/ffl/tools/statcorrections">Stat Corrections</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/livedraftresults">Average Draft Position</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/resources/leaderboard?leagueId=844419">Leaderboards</a></dd> 
+<dd><a href="http://insider.espn.go.com/insider/fantasy/football/valuecalculator">Custom Dollar Value Generator<img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>
+<dd><a href="http://games.espn.go.com/ffl/content?page=fflrulesindex2014">Rules</a></dd>
+<!--<dd><a href="http://insider.espn.go.com/insider/fantasy/football/rosteradvisor/index">Roster Advisor <img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>-->
+<dd><a href="http://insider.espn.go.com/insider/eliminator/survivalguide">Eliminator Survivor Guide <img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>
+<dd><a href="http://espn.go.com/fantasy/football/story/_/id/9547260/fantasy-football-tools-espn-insiders">Fantasy Football Insider Tools <img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>
+<dd><a href="http://games.espn.go.com/frontpage/forums#!/category/1313609200-908-35">Forums</a></dd>
+
+</dl>  
+</div> 
+</li> 
+</ul>
+</div></ul></div></ul>
+</div>
+<script>espn.core.init.nav();</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</td></tr></table>
+</div>
+
+
+<!-- SiteCatalyst code version: H.21.3 Copyright 1997-2010 Omniture, Inc. http://www.omniture.com -->
+<script type="text/javascript">
+	var undef = 'undefined'
+	,s_account="wdgespfantasy"
+	,omniPageName = "fantasy:football:ffl:standings"
+	
+	,insiderStatus = ""
+	,anGen = ""
+	,anYear = ""
+	,anDateString = ""
+	,anLoginStatus = ""
+	,callOmniture = function(){
+		/*-- core story s_omni properties --*/
+		if (typeof anCV != "undefined"){anParseLoginBarInfo(anCV);}
+		s_omni.pageName="football:ffl:standings";
+		s_omni.server = window.location.host; // Server from the Host
+		s_omni.channel = "football";
+		s_omni.prop1 = "fantasy";
+		s_omni.prop4 = "game-lm-free-custom";
+		s_omni.prop5 = "football:ffl";
+		s_omni.prop11 = (insiderStatus !== null) ? insiderStatus + ":premium-no" : "premium-no";
+		s_omni.prop17 = "en";
+		s_omni.prop21 = anDateString;
+		s_omni.prop22 = anGen;
+		s_omni.prop25 = "football";
+		s_omni.prop29 = anLoginStatus;
+		s_omni.prop30 = "n";
+		s_omni.hier1 = "football:ffl:standings";
+		s_omni.eVar7 = anYear + ":" + anGen + ":" + anLoginStatus + ":" + s_omni.prop11 + ":";
+		s_omni.eVar9 = "en";
+		s_omni.eVar13 = "football:ffl:standings";
+		s_omni.eVar19 = "football";
+		
+		if (s_omni.prop11=="anonymous:premium-yes" || s_omni.prop11=="insider-no:premium-yes" && typeof s_omni.prop4!="undefined" &&
+			(s_omni.prop4=="story" || s_omni.prop4=="blog")) {
+			if (typeof s_omni.events != "undefined" && s_omni.events!="") {
+				s_omni.events = s_omni.events+",event8" }
+			else { s_omni.events="event8" }
+		}
+		anDebugCase = "ver_15Feb11_0_";
+		/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+		
+		var s_code = s_omni.t();
+		if(s_code) {
+			var sci = new Image(1,1);
+			sci.onload = function() {console.log("loaded no append")};
+			sci.src = s_code;
+		}
+		
+	};
+	
+
+
+	if (typeof(s_omni) === 'undefined') {
+		jQuery(function($) {
+			// we want to load the analytics files from the cache if possible - so, let's use full $.ajax() calls
+			$.ajax({
+				type:'GET',
+				url: 'http://a.espncdn.com/combiner/c?js=analytics/sOmni.js,analytics/analytics.js,analytics/externalnielsen.js',
+				dataType: 'script',
+				cache: true,
+				success: function() {
+					var lgSrc;
+					if(typeof anCV !== undef && anCV === '' && document.getElementById('form-memberarea') != null) {
+						lgSrc = 'https://r.espn.go.com/members/util/getUserInfo?cb=runOmnitureIndependently';
+						$.getScript(lgSrc); // we don't want this to be cached - so we'll use the $.getScript() method
+					} else {
+						callOmniture();
+					}
+				}
+			});
+		});
+	}
+
+
+</script>
+<!-- End SiteCatalyst code version: H.21. -->
+
+<!-- Begin comScore Tag -->
+<script type="text/javascript">
+	jQuery(function($) {
+		if(typeof window._comscore === 'undefined') {
+			window._comscore = window._comscore || [];
+			window._comscore.push({ c1: "2", c2: "3000005" });
+			jQuery.getScript((document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js");
+		}
+	});
+</script>
+<!-- End comScore Tag --></body>
+</html>

@@ -8,6 +8,7 @@ logger = logging.getLogger(__name__)
 
 
 attr_map = {
+    'NAME': 'name',
     'POS': 'position',
     'TEAM': 'team',
     'SLOT': 'slot',
@@ -28,12 +29,44 @@ class InvalidPlayerRow(ValueError):
 
 
 class Player(object):
-    def __init__(self):
-        pass
+    def __init__(self, name, position, team=None, slot=None, player_rank=None,
+                 points=None, average=None, last_points=None,
+                 projected_points=None, opponent_rank=None,
+                 percent_starting=None, percent_own=None,
+                 ownership_change=None):
+        """Create an object representing a single player
+
+        :param name: Name of the player
+        :param position: Player's position, abbreviated. e.g. 'QB'
+        :param team:
+        :param slot:
+        :param player_rank:
+        :param points:
+        :param average:
+        :param last_points:
+        :param projected_points:
+        :param opponent_rank:
+        :param pecent_starting:
+        :param percent_own:
+        :param ownership_change:
+        """
+        self.name = name
+        self.position = position
+        self.team = team
+        self.slot = slot
+        self.player_rank = player_rank
+        self.points = points
+        self.average = average
+        self.last_points = last_points
+        self.projected_points = projected_points
+        self.opponent_rank = opponent_rank
+        self.percent_starting = percent_starting
+        self.percent_own = percent_own
+        self.ownership_change = ownership_change
 
     @classmethod
     def from_content_row(cls, content_row, headers):
-        player = cls()
+        kwargs = {}
         for child, header in zip(content_row.children, headers):
             if header:
                 # Special casing for name/pos
@@ -41,17 +74,17 @@ class Player(object):
                     player_name = list(child.children)[0].string.strip()
                     if not player_name:
                         raise InvalidPlayerRow('Could not parse a player name')
-                    setattr(player, 'name', player_name)
+                    kwargs['name'] = player_name
                     pos = list(child.children)[1].split()
                     if len(pos) == 1:
-                        setattr(player, attr_map['TEAM'], None)
-                        setattr(player, attr_map['POS'], pos[0])
+                        kwargs[attr_map['TEAM']] = None
+                        kwargs[attr_map['POS']] = pos[0]
                     elif len(pos) == 3:
-                        setattr(player, attr_map['TEAM'], pos[1])
-                        setattr(player, attr_map['POS'], pos[2])
+                        kwargs[attr_map['TEAM']] = pos[1]
+                        kwargs[attr_map['POS']] = pos[2]
                 else:
-                    setattr(player, attr_map[header], child.string)
-        return player
+                    kwargs[attr_map[header]] = child.string
+        return cls(**kwargs)
 
 
 def scrape(url):

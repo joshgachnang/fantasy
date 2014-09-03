@@ -1,0 +1,476 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>while(atCAE){doWork = false;} Scoreboard: Week 1 - Free Fantasy Football -  ESPN</title>
+<!-- N7-1160:2795--> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta property="og:description" content="Play Fantasy Football for free on ESPN! Expert analysis, live scoring, mock drafts, and more." />
+<meta property="og:image" content="http://g.espncdn.com/s/ffllm/14/images/Icon-200.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="ESPN Fantasy Football - Play For Free" />
+<meta name="twitter:image" content="http://g.espncdn.com/s/ffllm/14/images/ffl-twitter-480.png" />
+<meta name="twitter:site:id" content="33615152" />
+<meta name="twitter:app:id:iphone" content="555376968" />
+<meta name="twitter:app:id:ipad" content="555376968" />
+<meta name="twitter:app:id:googleplay" content="com.espn.fantasy.lm.football" /><meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate, proxy-revalidate, maxage=0">
+<meta http-equiv="Expires" content="-1">
+
+
+		<script type="text/javascript">
+		/* omniture ad tracking v0.1 24Jun08 */
+		var anAds;
+		anAds="";
+		function anPassAds(str) {
+			anAds=anAds?anAds+",ads;"+str+";;;event38=1":"ads;"+str+";;;event38=1";
+		}
+		</script>
+<link rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=fantasy_reset.r1.css,base.r234.css,modules.r422.css,global_header.r38.css,modules/global_nav.r52.css,modules/insider_enhanced.200910131831.css,registration/facebook.button.v2.css,modules/browser-alert.r7.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=espn.teams.r3.css" type="text/css" media="screen" charset="utf-8">
+<style type="text/css">
+#content{width:990px !important;}
+#header{width:990px !important;}
+#nav-wrapper-container{width:990px !important;}
+#nav-main ul.top li .wrapper{width:984px !important;}
+#content.container { padding: 0; }
+</style>
+<style type="text/css">
+</style>
+
+<link rel="stylesheet" type="text/css" href="http://g.espncdn.com/ffl/static/css/main?v=57028102711">
+<script type="text/javascript" src="http://g.espncdn.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://g.espncdn.com/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://g.espncdn.com/libs/swfobject/2.2/swfobject.js"></script>
+<script type="text/javascript" charset="iso-8859-1" src="http://a.espncdn.com/combiner/c/?js=plugins/json2.r3.js,plugins/teacrypt.js,plugins/jquery.metadata.js,plugins/jquery.bgiframe.r3.js,plugins/jquery.easing.1.3.js,plugins/jquery.hoverIntent.js,plugins/jquery.jcarousel.js,plugins/jquery.tinysort.r4.js,plugins/jquery.pubsub.r5.js,plugins/ba-debug-0.4.js,espn.l10n.r12.js,flashObjWrapper.r7.js,espn.core.duo.r54.js,stub.search.r9.js,espn.nav.mega.r33.js,espn.storage.r6.js,espn.p13n.r15.js,espn.video.r67.js,registration/staticLogin.r12.06102014.js,registration/espn.overlay.stub.r3-18.js,espn.insider.r5.js,espn.espn360.stub.r9.js,espn.myHeadlines.stub.r13.js,espn.gallery.0628.js,espn.geo.r1.js,avatar-uploader.js"></script>
+<script type="text/javascript" src="http://g.espncdn.com/libs/prototype/1.6.0.2/prototype.js"></script>
+<script type="text/javascript">
+
+com = { espn: {
+	env: {
+		av: navigator.appVersion,
+		ua: navigator.userAgent,
+		an: navigator.appName,
+		platform: navigator.platform,
+		IE: "Microsoft Internet Explorer",
+		NS: "Netscape",
+		MAC: "MacPPC",
+
+		host: "games.espn.go.com",
+		context: "scoreboard"
+	},
+	listeners: {},
+	games: {
+		gameRoot: "ffl",
+		leagueId: 1441295,
+		seasonId: 2014,
+		toTeamId: -2147483648,
+		fromTeamId: 2,
+		scoringPeriodId: 1,
+		currentScoringPeriodId: 1,
+		leagueType: 0
+	}
+}};
+
+com.espn.games.isLeagueManager = false;com.espn.games.isLeagueCreator = false;com.espn.games.isLeagueMember = true;com.espn.games.userLoggedIn = true;com.espn.games.username = 'pcsforeducation';
+var GAMEROOT = "ffl";var host = "games.espn.go.com";var gameRoot = "ffl";var leagueId = 1441295;var teamId = 2;</script><script type="text/javascript" src="http://g.espncdn.com/ffl/static/js/libraries?v=117525"></script>
+<script type="text/javascript">
+</script>
+<script type="text/javascript"></script>
+<meta name="apple-itunes-app" content="app-id=555376968, app-argument=http://games.espn.go.com/ffl/scoreboard?leagueId=1441295&seasonId=2014"><meta property="al:ios:url" content="espnffl://applinks"><meta property="al:ios:app_store_id" content="555376968"><meta property="al:ios:app_name" content="ESPN Fantasy Football"><meta property="al:android:url" content="espnffl://applinks"><meta property="al:android:package" content="com.espn.espnfantasyfootball"><meta property="al:android:app_name" content="ESPN Fantasy Football">
+		<script type="text/javascript">
+			/* Redirect to an alternate version of the page */
+			(function(){
+				if (!document.querySelectorAll || !window.matchMedia) return false;
+				var links = document.querySelectorAll('link[rel="alternate"][type="text/html"][media][href]');
+				for (var l=links.length-1; l>=0; --l) {
+					if (window.matchMedia(links[l].getAttribute('media')).matches) {
+						window.location = links[l].getAttribute('href');
+					}
+				}
+			})();
+		</script>
+</head><body class="trans-fantasy context-scoreboard games-ad-none">
+<!--[if IE 6]><div class="ie ie6"><![endif]-->
+<!--[if IE 7]><div class="ie ie7"><![endif]-->
+<!--[if IE 8]><div class="ie ie8"><![endif]-->
+<div class="bg-elements">
+<table class="maincontainertbl" cellpadding="0" cellspacing="0"><tr><td class="maincontainertblcell" valign="top" id="maincontainertblcell"><div id="header" class="container">
+<!-- ////////// start: Transitional Header ////////// --><div class="top-bar">
+<!-- begin uni login -->
+<script type="text/javascript">
+var returnURL = document.location.href;
+var anCV = "";
+var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign In','signout':'Sign Out','heliumdown':'Login Temporarily Unavailable','activateinsider':'Activate Insider'};
+</script>
+
+
+<form id="form-memberarea">
+<input type="hidden" name="language" id="language" value="en"/>
+<input type="hidden" name="affiliateName" id="memberAreaAffiliateName" value="espn_fantgames"/>
+<input type="hidden" name="regFormId" id="regFormId" value="espn_ffl"/>
+</form>
+<div class="signin" id="signin"></div>
+<script>espn.memberservices.welcome();</script><div class="nav-edition editions">
+<label>EDITIONS:</label>
+<ul class="main">
+	<li class="e-usa"><a href="http://espn.go.com/" name="&amp;lpos=editionsnav&amp;lid=usa">USA</a></li>
+	<li class="e-deportes"><a href="http://www.espn.com?country-view=us&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=deportes" class="{langPref:'spanish'}">DEPORTES</a></li>
+	<li class="last dropdown">
+	<ul class="">
+	<li class="selected">More</li>
+        <li><a href="http://www.espn.com?country-view=ar&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=argentina">Argentina</a></li>
+	<li><a href="http://www.espn.com.au" name="&amp;lpos=editionsnav&amp;lid=australia">Australia</a></li>
+	<li><a href="http://www.espn.com.br" name="&amp;lpos=editionsnav&amp;lid=brazil">Brazil</a></li>
+        <li><a href="http://www.espn.com?country-view=co&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=colombia">Colombia</a></li>
+        <li><a href="http://www.espn.com?country-view=mx&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=mexico">Mexico</a></li>
+	<li><a href="http://www.espn.co.uk/" name="&amp;lpos=editionsnav&amp;lid=uk">United Kingdom</a></li>
+        <li><a href="http://www.espn.com?country-view=ve&lang-view=es" name="&amp;lpos=editionsnav&amp;lid=venezuela">Venezuela</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<div class="nav-edition">
+<label>CITIES:</label>
+<ul class="main">
+	<li class="e-boston"><a href="http://espn.go.com/boston/" name="&amp;lpos=citynav&amp;lid=boston">BOSTON</a></li>
+	<li class="e-chicago"><a href="http://espn.go.com/chicago/" name="&amp;lpos=citynav&amp;lid=chicago">CHICAGO</a></li>
+	<li class="e-dallas"><a href="http://espn.go.com/dallas/" name="&amp;lpos=citynav&amp;lid=dallas">DALLAS</a></li>
+	<li class="e-losangeles"><a href="http://espn.go.com/los-angeles/" name="&amp;lpos=citynav&amp;lid=losangeles">LOS ANGELES</a></li>
+	<li class="last e-newyork"><a href="http://espn.go.com/new-york/" name="&amp;lpos=citynav&amp;lid=newyork">NEW YORK</a></li>
+</ul>
+</div></div>
+<div class="espn-logo">
+<h1>
+<a href="http://espn.go.com" class="espn">ESPN</a>
+<img src="http://g.espncdn.com/s/ffllm/14/images/shell/bgHead_leaguemanager.png" height="69">
+</h1>
+</div>
+<div class="presby">
+
+<!-- begin ad tag (tile=1) -->
+<script language="JavaScript" type="text/javascript">
+var adSegments = espn.core.ad_segments();
+var pipedAdSegments = adSegments.replace(/;/g, "|").substring(0,adSegments.length-1);
+var adURI = "espn.us.com.games/football" + ";pgn=while%28atCAE%29%7BdoWork%3Dfalse%3B%7DScoreboard%3AWeek1;pgtyp=scoreboard;lang=en;gm=ffl;pos=SponsoredByLogoHeader;mnr=f;" + adSegments + "u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=while%28atCAE%29%7BdoWork%3Dfalse%3B%7DScoreboard%3AWeek1|pgtyp=scoreboard|lang=en|gm=ffl|pos=SponsoredByLogoHeader|mnr=f|" + pipedAdSegments + ";dcopt=ist;sz=150x45;tile=1;ord=1838342" + "?";
+document.write('<script language="JavaScript" src="http://ad.Doubleclick.net/adj/' + adURI + '" type="text/javascript"><\/script>');
+</script><noscript><a href="http://ad.doubleclick.net/jump/espn.us.com.games/football;pgn=while%28atCAE%29%7BdoWork%3Dfalse%3B%7DScoreboard%3AWeek1;pgtyp=scoreboard;lang=en;gm=ffl;pos=SponsoredByLogoHeader;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=while%28atCAE%29%7BdoWork%3Dfalse%3B%7DScoreboard%3AWeek1|pgtyp=scoreboard|lang=en|gm=ffl|pos=SponsoredByLogoHeader|mnr=f|;dcopt=ist;sz=150x45;tile=1;ord=1838342" target="_blank"><img src="http://ad.doubleclick.net/ad/espn.us.com.games/football;pgn=while%28atCAE%29%7BdoWork%3Dfalse%3B%7DScoreboard%3AWeek1;pgtyp=scoreboard;lang=en;gm=ffl;pos=SponsoredByLogoHeader;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=while%28atCAE%29%7BdoWork%3Dfalse%3B%7DScoreboard%3AWeek1|pgtyp=scoreboard|lang=en|gm=ffl|pos=SponsoredByLogoHeader|mnr=f|;dcopt=ist;sz=150x45;tile=1;ord=1838342" border="0" alt=""></a></noscript>
+<!-- End ad tag -->
+
+</div>	  <div id="shop">
+	  	<a class="shop-btn" href="http://espnshop.com/entry.point?target=Z&amp;source=ESPN_HPHEADERLINK:SHOPBUTTONHEADER:6_1_10" name="&lpos=sitenavdefault&lid=sitenav_shopbutton">Shop</a>
+	  </div>
+	  <div id="nav-main-search">
+<form id="searchBox" name="searchBox" action="http://search.espn.go.com/results" method="get" accept-charset="utf-8" class="clearfix">
+<div class="clearfix">
+<input autocomplete="off" class="text ui-autocomplete-input" type="text" placeholder="Search" name="searchString" id="searchString" role="textbox" aria-autocomplete="list" aria-haspopup="true"><input type="hidden" name="page" id="page" value="null">
+<input type="hidden" name="fromForm" value="true">
+<input class="submit" type="submit" value="">
+</div>
+</form>
+</div>
+</div>
+<div id="subheader"><div id="content-wrapper">
+<div id="content" class="container">
+<div>
+
+<!--[if lte IE 6]>
+<div class="span-6" id="browser-alert-wrapper" style="display: none;">
+	<div class="mod-container mod-no-header-footer browser-alert">
+		<div class="mod-content">
+			<div class="gradient-container">
+				<h1><span>Your Web Browser</span> is no longer supported</h1>
+				<p>To experience everything that ESPN.com has to offer, we recommend that you upgrade to a newer version of your web browser. Click the upgrade button to the right or <a href="http://espn.go.com/espn/news/story?id=5630562">learn more</a>.</p>
+				<ul>
+					<li><a class="btn-upgrade" href="'+browserUrl+'">Upgrade</a></li>
+					<li><a class="btn-faq" href="http://espn.go.com/espn/news/story?id=5630562">FAQs</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	(function($) {
+		  setTimeout(function () {
+				var $alertWrapper = $('#browser-alert-wrapper'),
+					  browserAlertOptOut = espn.cookie.get('browseralert');
+				if (browserAlertOptOut != 'true') {
+					  $("<a class=\"btn-close\" href=\"#\">Close</a>").bind('click', function (e) {
+							$alertWrapper.hide();
+							espn.cookie.set('browseralert','true',30);
+							return false;
+					  }).appendTo('.gradient-container',$alertWrapper);
+					  $alertWrapper.show();
+					  espn.cookie.set('browseralert','true');
+				}
+		  },100);
+	})(jQuery);
+</script>
+<![endif]-->
+<div class="header-ad"><div class="header-ad-wrapper" style="display:inline-block">
+
+<!-- begin ad tag (tile=2) -->
+<script language="JavaScript" type="text/javascript">
+var adSegments = espn.core.ad_segments();
+var pipedAdSegments = adSegments.replace(/;/g, "|").substring(0,adSegments.length-1);
+var adURI = "espn.us.com.games/football" + ";pgn=leaders;pgtyp=scoreboard;lang=en;gm=ffl;pos=pencil_top;mnr=f;" + adSegments + "u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=leaders|pgtyp=scoreboard|lang=en|gm=ffl|pos=pencil_top|mnr=f|" + pipedAdSegments + ";dcopt=ist;sz=970x66,924x50,728x90;tile=2;ord=1838342" + "?";
+document.write('<script language="JavaScript" src="http://ad.Doubleclick.net/adj/' + adURI + '" type="text/javascript"><\/script>');
+</script><noscript><a href="http://ad.doubleclick.net/jump/espn.us.com.games/football;pgn=leaders;pgtyp=scoreboard;lang=en;gm=ffl;pos=pencil_top;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=leaders|pgtyp=scoreboard|lang=en|gm=ffl|pos=pencil_top|mnr=f|;dcopt=ist;sz=970x66,924x50,728x90;tile=2;ord=1838342" target="_blank"><img src="http://ad.doubleclick.net/ad/espn.us.com.games/football;pgn=leaders;pgtyp=scoreboard;lang=en;gm=ffl;pos=pencil_top;mnr=f;u=swid={17E41D49-22E5-409E-9268-4C67795784F1}|pgn=leaders|pgtyp=scoreboard|lang=en|gm=ffl|pos=pencil_top|mnr=f|;dcopt=ist;sz=970x66,924x50,728x90;tile=2;ord=1838342" border="0" alt=""></a></noscript>
+<!-- End ad tag -->
+
+</div></div><div class="nav-main-breadcrumbs-row" style="height: 28px;">
+<div class="nav-main-breadcrumbs">
+<a href="http://espn.go.com">ESPN</a> &raquo; <a href="http://games.espn.go.com/ffl/frontpage">Free Fantasy Football</a> &raquo; <a href="/ffl/leagueoffice?leagueId=1441295">while(atCAE){doWork = false;}</a> &raquo; <a title="LOL Clinton-Dix (Josh Gachnang)" href="/ffl/clubhouse?leagueId=1441295&amp;teamId=2&amp;seasonId=2014" target="_top">LOL Clinton-Dix</a></div>
+<div class="playerSearchDiv"><form class="playerSearchForm" name="playerSearch" id="playerSearch" action="/ffl/freeagency" onsubmit="return playerSuggester.submitSelectedPlayer();" method="GET"><div><input type="hidden" name="leagueId" value="1441295"><input type="hidden" name="teamId" value="2"><input type="hidden" name="avail" value="-1"><input type="hidden" name="slotCategoryGroup" value="-1">Find a Player: <input class="playerSearchNameInput" type="text" id="playerName" name="search" onkeyup="playerSuggester.handleKeyUp(event, this.value);" value="Last Name" style="color:#999;" onfocus="playerSuggester.focus();" onblur="playerSuggester.blur();"></div></form><div style="margin: 0px;"><div id="playerSuggestions" style="display: none;" onmouseover="playerSuggester.suggestDivOver();" onmouseout="playerSuggester.suggestDivOut();"></div></div></div><script type="text/javascript">playerSearchObj=new Object();playerSearchObj.varName = "playerSuggester";playerSearchObj.suggestDiv = "playerSuggestions";playerSearchObj.inputField = "playerName";playerSearchObj.cssPrefix = "";playerSearchObj.statId = null;playerSearchObj.chartSplitType = null;var playerSuggester = new PlayerSuggester(playerSearchObj);</script><div class="comparePlayersLinkDiv"><a id="comparePlayersLauncher" href="" instance="_comparePlayers" content="ajax#/ffl/playertable/prebuilt/compareplayers?leagueId=1441295&teamId=2&playerCompare=true" class="flexpop" modal="true" fpopStyle="modal">Compare Players</a> (<span id="comparePlayersCount">0</span>)</div><div class="clear"></div></div>
+<div class="games-nav"><ul id="games-tabs"><li class=" "><a href="/ffl/leagueoffice?leagueId=1441295&seasonId=2014">League</a></li><li class=" "><a href="/ffl/clubhouse?leagueId=1441295&teamId=2&seasonId=2014">My Team</a></li><li class=" "><a href="/ffl/freeagency?leagueId=1441295&teamId=2&seasonId=2014">Players</a></li><li class=" "><a href="/ffl/standings?leagueId=1441295&seasonId=2014">Standings</a></li><li class="games-on "><a href="/ffl/scoreboard?leagueId=1441295&seasonId=2014">Scoreboard</a></li><li class=" games-teams-btn"><a aria-haspopup="true" href="#">Teams</a><div class="clear"></div><ul id="games-tabs1"><li><a href="/ffl/clubhouse?leagueId=1441295&amp;teamId=1&amp;seasonId=2014">Team Bittner <span class="alt-info">(BITT)</span></a></li><li><a href="/ffl/clubhouse?leagueId=1441295&amp;teamId=2&amp;seasonId=2014">LOL Clinton-Dix <span class="alt-info">(DIX)</span></a></li><li><a href="/ffl/clubhouse?leagueId=1441295&amp;teamId=3&amp;seasonId=2014">Team Oney <span class="alt-info">(ONEY)</span></a></li><li><a href="/ffl/clubhouse?leagueId=1441295&amp;teamId=4&amp;seasonId=2014">Team Siegler <span class="alt-info">(SIEG)</span></a></li><li><a href="/ffl/clubhouse?leagueId=1441295&amp;teamId=5&amp;seasonId=2014">Schmaltz's Alt <span class="alt-info">(BEER)</span></a></li><li><a href="/ffl/clubhouse?leagueId=1441295&amp;teamId=6&amp;seasonId=2014">Big TD's <span class="alt-info">(TITs)</span></a></li><li><a href="/ffl/clubhouse?leagueId=1441295&amp;teamId=7&amp;seasonId=2014">Team Sheffer <span class="alt-info">(SHEF)</span></a></li><li><a href="/ffl/clubhouse?leagueId=1441295&amp;teamId=8&amp;seasonId=2014">Team 8 <span class="alt-info">(TM8)</span></a></li></ul></li><li class="games-myfntsyteam-btn" style="position: absolute; left: 849px;"><a href="#" aria-haspopup="true">My Fantasy Teams<img height="4" align="top" width="7" border="0" src="http://g.espncdn.com/s/ffllm/14/images/shell/yellow_dropdwn_arrow.png"/></a><div class="clear"></div><ul id="games-tabs2" style="left: -73px;"><li><a href="/ffl/tools/editmyteams?leagueId=1441295" class="edit-list-option">Edit This List</a></li><li><a href="/ffl/clubhouse?leagueId=634821&teamId=11&seasonId=2014">Whore Island Ocelots<br><span class="alt-info">WII ARE WHAT'S UP DOC</span></a></li><li><a href="/ffl/clubhouse?leagueId=844419&teamId=8&seasonId=2014">Johnny Superbowl<br><span class="alt-info">Colledge Rox</span></a></li><li><a href="/ffl/clubhouse?leagueId=1268962&teamId=8&seasonId=2014">Mingo Unchained<br><span class="alt-info">Dusty's Rusty Rangers</span></a></li><li><a href="/ffl/clubhouse?leagueId=902760&teamId=11&seasonId=2014">Turn Down For Watt<br><span class="alt-info">Slashertraxx14</span></a></li><li><a href="/ffl/clubhouse?leagueId=1441295&teamId=2&seasonId=2014">LOL Clinton-Dix<br><span class="alt-info">while(atCAE){doWork = false;}</span></a></li></ul></li></ul></div><div class="gamesmain container">
+<div class="games-innercol">
+<div class="games-innercol2">
+<div class="games-fullcol games-fullcol-extramargin"><div class="games-pageheader"><div style="float:left;"></div><div style="float:left;"><h1>while(atCAE){doWork = false;} Scoreboard <em>Week 1</em></h1></div><div class="clear"></div></div><div style="float:right; text-align:right;"><br /><a href="http://scores.espn.go.com/nfl/scoreboard" target="_blank">NFL Scoreboard</a> | <a href="/ffl/leaders?leagueId=1441295&scoringPeriodId=1">Scoring Leaders</a></div><div class="games-alert-mod alert-mod2 games-grey-alert" style="width:580px";>&#149; Page updates automatically.  <b>No need to refresh.</b><br />
+&#149; Scores are not official until Saturday afternoon.<br /></div><br><div style="padding:3px;line-height:18px;width:950px;" class="bodyCopy">
+<b>Regular Season:</b>&nbsp;&nbsp;<b>1</b> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=2" title="Week 2">2</a> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=3" title="Week 3">3</a> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=4" title="Week 4">4</a> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=5" title="Week 5">5</a> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=6" title="Week 6">6</a> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=7" title="Week 7">7</a> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=8" title="Week 8">8</a> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=9" title="Week 9">9</a> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=10" title="Week 10">10</a> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=11" title="Week 11">11</a> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=12" title="Week 12">12</a> | <a href="/ffl/scoreboard?leagueId=1441295&matchupPeriodId=13" title="Week 13">13</a><br />
+</div>
+<br />
+<div id="scoreboardMatchups"><div><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td width="49%" class="matchupContainer"><table class="ptsBased matchup"><tr id="teamscrg_1_activeteamrow"><td class="team"><div class="name"><a title="Team Bittner (Davis Bittner)" href="/ffl/clubhouse?leagueId=1441295&amp;teamId=1&amp;seasonId=2014" target="_top">Team Bittner</a> <span class="abbrev">(BITT)</span></div><div><span class="record" title="Record">(0-0)</span><span class="owners"><a href="http://games.espn.go.com/uber-challenge/entry?userID=264554202&seasonID=2014" target="_new">Davis Bittner</a></span></div></td><td class="score"title="0" id="tmTotalPts_1" width="18%">0</td></tr><tr id="teamscrg_2_activeteamrow"><td class="team"><div class="name"><a title="LOL Clinton-Dix (Josh Gachnang)" href="/ffl/clubhouse?leagueId=1441295&amp;teamId=2&amp;seasonId=2014" target="_top">LOL Clinton-Dix</a> <span class="abbrev">(DIX)</span></div><div><span class="record" title="Record">(0-0)</span><span class="owners"><a href="http://games.espn.go.com/uber-challenge/entry?userID=416618271&seasonID=2014" target="_new">Josh Gachnang</a></span></div></td><td class="score"title="0" id="tmTotalPts_2" width="18%">0</td></tr><tr><td colspan="2" class="info"><div class="boxscoreLinks">Quick Box Score | <!a href="/ffl/matchuppreview?leagueId=1441295&teamId=1&scoringPeriodId=1">Preview</a></div><table class="scoringDetails"><td class="abbrev">BITT</td><td class="labels"><div title="Players yet to Play">Yet to Play:</div><div title="Players In Play">In Play:</div><div title="Minutes Remaining">Mins Left:</div><div title="Projected Total">Proj Total:</div><div title="Game Line">Line:</div><div>Top Scorer:</div></td><td class="playersPlayed"><div id="team_ytp_1">0</div><div id="team_ip_1">0</div><div id="team_pmr_1">0</div><div id="team_liveproj_1">0</div><div>Even</div><div id="team_topscorer_1">None</div></td><td class="homeTeam abbrev">DIX</td><td class="labels"><div title="Players yet to Play">Yet to Play:</div><div title="Players In Play">In Play:</div><div title="Minutes Remaining">Mins Left:</div><div title="Projected Total">Proj Total:</div><div title="Game Line">Line:</div><div>Top Scorer:</div></td><td class="playersPlayed"><div id="team_ytp_2">0</div><div id="team_ip_2">0</div><div id="team_pmr_2">0</div><div id="team_liveproj_2">0</div><div>Even</div><div id="team_topscorer_2">None</div></td></table></td></tr></table></td><td width="2%">&nbsp;</td><td width="49%"><table class="ptsBased matchup"><tr id="teamscrg_3_activeteamrow"><td class="team"><div class="name"><a title="Team Oney (Jake Oney)" href="/ffl/clubhouse?leagueId=1441295&amp;teamId=3&amp;seasonId=2014" target="_top">Team Oney</a> <span class="abbrev">(ONEY)</span></div><div><span class="record" title="Record">(0-0)</span><span class="owners"><a href="http://games.espn.go.com/uber-challenge/entry?userID=546914313&seasonID=2014" target="_new">Jake Oney</a></span></div></td><td class="score"title="0" id="tmTotalPts_3" width="18%">0</td></tr><tr id="teamscrg_4_activeteamrow"><td class="team"><div class="name"><a title="Team Siegler (Dan Siegler)" href="/ffl/clubhouse?leagueId=1441295&amp;teamId=4&amp;seasonId=2014" target="_top">Team Siegler</a> <span class="abbrev">(SIEG)</span></div><div><span class="record" title="Record">(0-0)</span><span class="owners"><a href="http://games.espn.go.com/uber-challenge/entry?userID=411342512&seasonID=2014" target="_new">Dan Siegler</a></span></div></td><td class="score"title="0" id="tmTotalPts_4" width="18%">0</td></tr><tr><td colspan="2" class="info"><div class="boxscoreLinks">Quick Box Score | <!a href="/ffl/matchuppreview?leagueId=1441295&teamId=3&scoringPeriodId=1">Preview</a></div><table class="scoringDetails"><td class="abbrev">ONEY</td><td class="labels"><div title="Players yet to Play">Yet to Play:</div><div title="Players In Play">In Play:</div><div title="Minutes Remaining">Mins Left:</div><div title="Projected Total">Proj Total:</div><div title="Game Line">Line:</div><div>Top Scorer:</div></td><td class="playersPlayed"><div id="team_ytp_3">0</div><div id="team_ip_3">0</div><div id="team_pmr_3">0</div><div id="team_liveproj_3">0</div><div>Even</div><div id="team_topscorer_3">None</div></td><td class="homeTeam abbrev">SIEG</td><td class="labels"><div title="Players yet to Play">Yet to Play:</div><div title="Players In Play">In Play:</div><div title="Minutes Remaining">Mins Left:</div><div title="Projected Total">Proj Total:</div><div title="Game Line">Line:</div><div>Top Scorer:</div></td><td class="playersPlayed"><div id="team_ytp_4">0</div><div id="team_ip_4">0</div><div id="team_pmr_4">0</div><div id="team_liveproj_4">0</div><div>Even</div><div id="team_topscorer_4">None</div></td></table></td></tr></table></td></tr><tr><td width="49%" class="matchupContainer"><table class="ptsBased matchup"><tr id="teamscrg_5_activeteamrow"><td class="team"><div class="name"><a title="Schmaltz's Alt (Henry Schmaltz)" href="/ffl/clubhouse?leagueId=1441295&amp;teamId=5&amp;seasonId=2014" target="_top">Schmaltz's Alt</a> <span class="abbrev">(BEER)</span></div><div><span class="record" title="Record">(0-0)</span><span class="owners"><a href="http://games.espn.go.com/uber-challenge/entry?userID=347745341&seasonID=2014" target="_new">Henry Schmaltz</a></span></div></td><td class="score"title="0" id="tmTotalPts_5" width="18%">0</td></tr><tr id="teamscrg_6_activeteamrow"><td class="team"><div class="name"><a title="Big TD's (Benjamin Chang)" href="/ffl/clubhouse?leagueId=1441295&amp;teamId=6&amp;seasonId=2014" target="_top">Big TD's</a> <span class="abbrev">(TITs)</span></div><div><span class="record" title="Record">(0-0)</span><span class="owners"><a href="http://games.espn.go.com/uber-challenge/entry?userID=441604505&seasonID=2014" target="_new">Benjamin Chang</a></span></div></td><td class="score"title="0" id="tmTotalPts_6" width="18%">0</td></tr><tr><td colspan="2" class="info"><div class="boxscoreLinks">Quick Box Score | <!a href="/ffl/matchuppreview?leagueId=1441295&teamId=5&scoringPeriodId=1">Preview</a></div><table class="scoringDetails"><td class="abbrev">BEER</td><td class="labels"><div title="Players yet to Play">Yet to Play:</div><div title="Players In Play">In Play:</div><div title="Minutes Remaining">Mins Left:</div><div title="Projected Total">Proj Total:</div><div title="Game Line">Line:</div><div>Top Scorer:</div></td><td class="playersPlayed"><div id="team_ytp_5">0</div><div id="team_ip_5">0</div><div id="team_pmr_5">0</div><div id="team_liveproj_5">0</div><div>Even</div><div id="team_topscorer_5">None</div></td><td class="homeTeam abbrev">TITs</td><td class="labels"><div title="Players yet to Play">Yet to Play:</div><div title="Players In Play">In Play:</div><div title="Minutes Remaining">Mins Left:</div><div title="Projected Total">Proj Total:</div><div title="Game Line">Line:</div><div>Top Scorer:</div></td><td class="playersPlayed"><div id="team_ytp_6">0</div><div id="team_ip_6">0</div><div id="team_pmr_6">0</div><div id="team_liveproj_6">0</div><div>Even</div><div id="team_topscorer_6">None</div></td></table></td></tr></table></td><td width="2%">&nbsp;</td><td width="49%"><table class="ptsBased matchup"><tr id="teamscrg_7_activeteamrow"><td class="team"><div class="name"><a title="Team Sheffer (Brad Sheffer)" href="/ffl/clubhouse?leagueId=1441295&amp;teamId=7&amp;seasonId=2014" target="_top">Team Sheffer</a> <span class="abbrev">(SHEF)</span></div><div><span class="record" title="Record">(0-0)</span><span class="owners"><a href="http://games.espn.go.com/uber-challenge/entry?userID=546932335&seasonID=2014" target="_new">Brad Sheffer</a></span></div></td><td class="score"title="0" id="tmTotalPts_7" width="18%">0</td></tr><tr id="teamscrg_8_activeteamrow"><td class="team"><div class="name"><a title="Team 8" href="/ffl/clubhouse?leagueId=1441295&amp;teamId=8&amp;seasonId=2014" target="_top">Team 8</a> <span class="abbrev">(TM8)</span></div><div><span class="record" title="Record">(0-0)</span><span class="owners"></span></div></td><td class="score"title="0" id="tmTotalPts_8" width="18%">0</td></tr><tr><td colspan="2" class="info"><div class="boxscoreLinks">Quick Box Score | <!a href="/ffl/matchuppreview?leagueId=1441295&teamId=7&scoringPeriodId=1">Preview</a></div><table class="scoringDetails"><td class="abbrev">SHEF</td><td class="labels"><div title="Players yet to Play">Yet to Play:</div><div title="Players In Play">In Play:</div><div title="Minutes Remaining">Mins Left:</div><div title="Projected Total">Proj Total:</div><div title="Game Line">Line:</div><div>Top Scorer:</div></td><td class="playersPlayed"><div id="team_ytp_7">0</div><div id="team_ip_7">0</div><div id="team_pmr_7">0</div><div id="team_liveproj_7">0</div><div>Even</div><div id="team_topscorer_7">None</div></td><td class="homeTeam abbrev">TM8</td><td class="labels"><div title="Players yet to Play">Yet to Play:</div><div title="Players In Play">In Play:</div><div title="Minutes Remaining">Mins Left:</div><div title="Projected Total">Proj Total:</div><div title="Game Line">Line:</div><div>Top Scorer:</div></td><td class="playersPlayed"><div id="team_ytp_8">0</div><div id="team_ip_8">0</div><div id="team_pmr_8">0</div><div id="team_liveproj_8">0</div><div>Even</div><div id="team_topscorer_8">None</div></td></table></td></tr></table></td></tr></table></div></div><br /><br />
+<div id="chatContainer" class="scoreboardChatContainer"><div class="smackboardTitle" style="height:20px;">The Week 1 Smack Board</div><table class="tableBody" id="chatTable" cellpadding="0" cellspacing="0" width="100%"><tr><td id="chatDivCell"><div id="chatDiv" style="height: 180px;"><div id="connectingSpinner" style="display:none;"><img src="http://g.espncdn.com/s/ffllm/14/images/playerTableTabLoad.gif" /><span style="margin-left: 5px;"> Connecting ...</span></div></div></td></tr></table><br><input type="text" autocomplete="off" class="select" id="chatInput" disabled="true" value="Please wait while the Smack Board loads..." /><div id="chatSubmitDiv"><a id="chatSubmitButton" class="chatSubmitButtonEnabled" onclick="return false;" href="#"></a></div></div><div style="clear:both; padding-left:12px;margin-top:15px;">&nbsp;</div><span id="chatSwf"></span><br clear="all" />
+<script type="text/javascript" src="http://g.espncdn.com/ffl/static/js/chatter?v=25"></script>
+
+<script type="text/javascript">
+
+var chat = new Chat({userId:36300379,memberId:36300379,memberName:escape("Josh Gachnang")}, 240, {chatEl: document.getElementById('chatDiv'),chatStateEl: document.getElementById('chatState'),inputEl: document.getElementById('chatInput'),joinedUsersEl: document.getElementById('chatUsers'),userCountEl: document.getElementById('currentUserCount'),submitButton: document.getElementById('chatSubmitButton')});
+chat.initializeSession("fDE0NDEyOTV8MHwxfDIwMTQxfDB8cA==", {sessionName:escape("The Week 1 Smack Board"), routeCode:"1441295", filterMessages:false, leagueId:1441295});
+
+</script><br />
+<br />
+<br><div style="padding: 3px;" class="bodyCopy">
+<span class="note"><b>Note:</b> Live statistics during gamedays are subject to change and should be considered unofficial. Live scoring requires the most recent version of Flash to be installed and javascript to be enabled in your browser.</span>
+</div>
+<div class="games-footercol"><div class="faqft_bg"><div class="faqft_header"><a href="/ffl/content?page=fflrulesindex2014" target="_blank"><div class="faqft_hdimage_fh"></div></a><div class="faqft_hdimage_hl"></div></div><div id="faq_qlinks" class="faq_qlinks"><ul><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=i-drafted-a-team-but-now-cannot-find-it-anywhere&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_scoreboard@i-drafted-a-team-but-now-cannot-find-it-anywhere">I drafted a team but now cannot find it anywhere.  Where is it?</a></li><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=when-do-standings-update&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_scoreboard@when-do-standings-update">When do standings update?</a></li></ul><ul><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=why-are-some-stats-missing-or-incorrect&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_scoreboard@why-are-some-stats-missing-or-incorrect">Why are some stats missing or incorrect?</a></li><li><a href="" class="flexpop" content="ajax#/ffl/resources/help/faq?name=why-cant-i-connect-to-smack-boards-espn-live-scoring&popup=true" cache="true" instance="_faq" omniturePageName="help_faq_popup_from_scoreboard@why-cant-i-connect-to-smack-boards-espn-live-scoring">Why can't I connect to Smack Boards / ESPN live scoring?</a></li></ul></ul><div class="clear"></div><div class="faqft_ft"><img src="http://games-ak.espn.go.com/s/lm/images/arrow.jpg"><a style="text-decoration:none;" href="/ffl/content?page=fflrulesfaq2014" target="_blank">MORE FAQ'S</a></div></div></div>
+<script type="text/javascript">
+function showHideFAQs() {
+	if (jQuery('#faq_qlinks').is(':visible')) {	
+		jQuery('#faq_qlinks').hide();
+		jQuery("#faqft_moreless_btn").html("Expand Help Topics +");
+	} else { 
+		jQuery('#faq_qlinks').show(); 
+		jQuery("#faqft_moreless_btn").html("Collapse Help Topics -");
+	}
+}
+</script><div class="OUTBRAIN" data-src="http://games.espn.go.com/ffl/scoreboard?leagueId=1441295&seasonId=2014" data-widget-id="AR_9" data-ob-template="espn" style="width:956px;"></div><script type="text/javascript" async="async" src="http://widgets.outbrain.com/outbrain.js"></script></div></div>
+<br><br>
+</div>
+</div>
+</div>
+<!-- ////////// start: Transitional Footer ////////// -->
+<!--start transitional elements wrapper -->
+<div class="transitional-elements">
+<!--[if IE 6]><div class="ie6"><![endif]-->
+<!--[if IE 7]><div class="ie7"><![endif]-->
+<!--[if IE 8]><div class="ie8"><![endif]-->
+<div id="trans-footer" class="container">
+<p><strong><a href="http://www.espn.com">ESPN.com</a></strong>  |  <a href="https://r.espn.go.com/espn/memberServices">Member Services</a> | <a href="http://games.espn.go.com/frontpage">Fantasy Games</a> | <a href="http://games.espn.go.com/ffl/content?page=fflrulesindex2014">Help</a> | <a href="http://preferences.truste.com/2.0/?type=espn&affiliateId=148" onclick="window.open('http://preferences.truste.com/2.0/?type=espn&affiliateId=148','popup','width=986,height=878,scrollbars=yes,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">Interest-Based Ads</a> | <a href="http://games.espn.go.com/ffl/feedback">Give Us Your Feedback</a></p>
+	
+<p>Call <strong>1-888-549-ESPN</strong> for help on all things Fantasy</p>
+
+<p>Copyright &copy;2014 ESPN Internet Ventures.  <a href="http://disneytermsofuse.com/">Terms of Use</a>  and <a href="http://disney.go.com/corporate/privacy/pp_espn.html">Privacy Policy and Safety Information/Your California Privacy Rights</a> are applicable to this site.<br><br>Officially Licensed Product of NFL PLAYERS. Visit <a href="http://www.nflplayers.com" target="new">www.nflplayers.com</a>.</p></div>
+<!-- end transitional elements wrapper -->
+<!--[if lte IE 8]></div><![endif]-->
+</div>
+<!-- ////////// end: Transitional Footer ////////// -->
+</div>
+<div id="nav-wrapper" class="container">
+<div id="nav-wrapper-container">
+<div id="nav-main">
+<p><!-- begin site nav --></p>
+<ul class="top" id="nav-main-list"><!-- start: Menuitem :: MyTAB -->
+<li class="last myespn" id="menu-myespn"><a class="myespn" ref="#">MyESPN</a></li>
+<!-- start: Menuitem :: NFL -->
+<li class="sport-menu default t-nfl" data-sportid="28" id="menu-nfl"><a href="http://espn.go.com/nfl/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nfl">NFL</a></li>
+<!-- start: Menuitem :: MLB -->
+<li class="sport-menu default t-mlb" data-sportid="10" id="menu-mlb"><a href="http://espn.go.com/mlb/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_mlb">MLB</a></li>
+<!-- start: Menuitem :: NBA -->
+<li class="sport-menu default t-nba" data-sportid="46" id="menu-nba"><a href="http://espn.go.com/nba/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nba">NBA</a></li>
+<!-- start: Menuitem :: NHL -->
+<li class="sport-menu default t-nhl" data-sportid="90" id="menu-nhl"><a href="http://espn.go.com/nhl/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nhl">NHL</a></li>
+<!-- start: Menuitem :: NCAA FB -->
+<li class="sport-menu default t-ncf" data-sportid="23" id="menu-ncf"><a href="http://espn.go.com/college-football/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_ncf">NCAAF</a></li>
+<!-- start: Menuitem :: NCAA BB -->
+<li class="sport-menu default t-ncb" data-sportid="41" id="menu-ncb"><a href="http://espn.go.com/mens-college-basketball/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_ncb">NCAAM</a></li>
+<!-- start: Menuitem :: NASCAR -->
+<li class="sport-menu default t-nascar" data-sportid="2020" id="menu-nascar"><a href="http://espn.go.com/racing/nascar/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_nascar">NASCAR</a></li>
+<!-- start: Menuitem :: SOCCER -->
+<li class="sport-menu default t-soccer" data-sportid="600" id="menu-soccer"><a href="http://espnfc.us/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_soccer">SOCCER</a></li>
+<!-- start: Menuitem :: GOLF -->
+<li class="sport-menu t-golf" data-sportid="1106" id="menu-golf" style="display: none;"><a href="http://espn.go.com/golf/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_golfl">GOLF</a></li>
+<!-- start: Menuitem :: TENNIS -->
+<li class="sport-menu t-tennis" data-sportid="850" id="menu-tennis"><a href="http://espn.go.com/tennis/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_tennis">TENNIS</a></li>
+<!-- start: Menuitem :: BOXING-->
+<li class="sport-menu t-boxing" data-sportid="1000" id="menu-boxing" style="display: none;"><a href="http://espn.go.com/boxing/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_boxing">BOXING</a></li>
+<!-- start: Menuitem :: MMA -->
+<li class="sport-menu t-mma" data-sportid="3301" id="menu-mma" style="display: none;"><a href="http://espn.go.com/mma/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_mma">MMA</a></li>
+<!-- start: Menuitem :: ALL SPORTS -->
+<li class="nav-allsports t-allsports" id="menu-allsports"><a href="http://espn.go.com/sports/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_allsports">MORE</a></li>
+<!-- start: Menuitem :: INSIDER -->
+<li class="sport-menu t-insider" id="menu-insider" style="display: none;"><a href="http://insider.espn.go.com/insider/index" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_insider">INSIDER</a></li>
+<!-- start: Menuitem :: SPORTSNATION -->
+<li class="sport-menu t-sportsnation" id="menu-sportsnation" style="display: none;"><a href="http://espn.go.com/sportsnation/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_sportsnation">SN</a></li>
+<!-- start: Menuitem :: RADIO & MORE -->
+<li class="right-menu two-line last t-radio" id="menu-radio"><a href="http://espn.go.com/espnradio/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_radioandmore">RADIO<span>&amp; MORE</span></a></li>
+<!-- start: Menuitem :: espnW & PLAYBOOK -->
+<li class="right-menu two-line t-page2" id="menu-page2"><a href="http://espn.go.com/espnw/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_espnwandxgames" target="_blank">espnW<span>&amp; X GAMES</span></a></li>
+<!-- start: Menuitem :: FANTASY & GAMES -->
+<li class="right-menu two-line t-fantasy selected" id="menu-fantasy"><a href="http://games.espn.go.com/frontpage" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_fantasy">FANTASY<span>&amp; GAMES</span></a></li>
+<!-- start: Menuitem :: WATCH -->
+<li class="right-menu t-watch" id="menu-watch"><a href="http://espn.go.com/video/" name="&amp;lpos=sitenavdefault&amp;lid=sitenav_watch">WATCH</a></li>
+</ul>
+<!-- end site nav --></div>
+<div class="nav-main-secondary">
+<ul>
+<div class="nav-main-secondary"><ul><div class="nav-main-secondary">
+<ul>
+<li class="subnav-frontpage"><a href="http://games.espn.go.com/frontpage/football">Fantasy Football</a></li>
+<li class="subnav-create"><a href="http://games.espn.go.com/ffl/welcome">Join a League</a></li>
+<li class="subnav-mock"><a href="http://games.espn.go.com/ffl/livedraftlobby">Live Draft Lobby</a></li>
+<!--<li class="subnav-mock"><a href="http://games.espn.go.com/ffl/mockdraftlobby">Mock Draft Lobby</a></li>-->
+<li class="subnav-draftkit"><a href="http://games.espn.go.com/frontpage/ffldraftkit">Draft Kit</a></li>
+<!-- <li class="subnav-tools-projections-sortable"><a href="http://games.espn.go.com/ffl/tools/projections?seasonId=2013">Weekly Projections</a></li> -->
+<li class="subnav-tools-season-projections"><a href="http://games.espn.go.com/ffl/tools/projections?display=alt">Projections</a></li>
+<li class="subnav-resources-playernews"><a href="http://games.espn.go.com/ffl/livedraftresults">ADP</a></li>
+<li class="subnav-addeddropped"><a href="http://games.espn.go.com/ffl/addeddropped">Added/Dropped</a></li>
+<!-- <li><a href="http://games.espn.go.com/frontpage/fantasyRankings">Weekly Rankings</a></li>-->
+<li class="subnav-scoring"><a href="http://games.espn.go.com/ffl/leaders?leagueId=1441295">Scoring Leaders</a></li>
+<!--<li class="subnav-resources-playernews"><a href="http://games.espn.go.com/ffl/resources/playernews">Player News</a></li>-->
+<!--<li class="subnav-pa"><a href="http://games.espn.go.com/ffl/pointsagainst?leagueId=1441295">Points Against</a></li>-->
+<li class="subnav-apps"><a href="http://espn.go.com/mobile/products/products?id=8244799">Apps</a></li>
+<!--<li class="subnav-forum"><a href="http://games.espn.go.com/frontpage/forums#!/category/1313609200-908-35">Forums</a></li>-->
+<!--<li class="subnav-leaderboards"><a href="http://games.espn.go.com/ffl/resources/leaderboard?leagueId=1441295">Leaderboards</a></li>-->
+<li class="subnav-faq"><a href="http://games.espn.go.com/ffl/content?page=fflrulesfaq2014">FAQ</a></li>
+<li class="subnav-toolkit"><a href="http://games.espn.go.com/ffl/fantasyfootballtoolkit?leagueId=1441295">Toolkit</a></li>
+<li class="expandable"><a href="javascript:void(0);"><span>More</span></a>   
+<div>
+<dl style="border:none;">
+<dd><a href="https://w1.buysub.com/pubs/ES/ESP/2014_FantasyFootballGuide.jsp?cds_page_id=137362&cds_mag_code=ESP&id=1402340759599&lsid=41601405595017238&vid=1&cds_response_key=FFG2014P9">Fantasy Football Draft Guide</a></dd>
+<!--<dd><a href="http://games.espn.go.com/frontpage/ffldraftkit">Draft Kit</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/fantasyfootballtoolkit?leagueId=1441295">Toolkit</a></dd>-->
+<dd><a href="http://espn.go.com/fantasy/football/story/_/page/NFLDK2K14cheatsheetcentral/2014-fantasy-football-cheat-shappseets-player-rankings-draft-board-standard-ppr">Cheat Sheet Central</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/tools/undroppables">Undroppables</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/pointsagainst?leagueId=1441295">Points Against</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/resources/playernews">Player News</a></dd>
+<!-- <dd><a href="http://games.espn.go.com/ffl/pointsagainst?leagueId=1441295">Points Against</a></dd> -->
+<dd><a href="http://games.espn.go.com/ffl/tools/statcorrections">Stat Corrections</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/livedraftresults">Average Draft Position</a></dd>
+<dd><a href="http://games.espn.go.com/ffl/resources/leaderboard?leagueId=1441295">Leaderboards</a></dd> 
+<dd><a href="http://insider.espn.go.com/insider/fantasy/football/valuecalculator">Custom Dollar Value Generator<img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>
+<dd><a href="http://games.espn.go.com/ffl/content?page=fflrulesindex2014">Rules</a></dd>
+<dd><a href="http://insider.espn.go.com/insider/fantasy/football/rosteradvisor/index">Roster Advisor <img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>
+<dd><a href="http://insider.espn.go.com/insider/eliminator/survivalguide">Eliminator Survivor Guide <img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>
+<dd><a href="http://espn.go.com/fantasy/football/story/_/id/9547260/fantasy-football-tools-espn-insiders">Fantasy Football Insider Tools <img width="8" height="9" style="margin-left:3px;" alt="Insider" src="http://a.espncdn.com/i/design07/mast/tinyin.gif" /></a></dd>
+<dd><a href="http://games.espn.go.com/frontpage/forums#!/category/1313609200-908-35">Forums</a></dd>
+
+</dl>  
+</div> 
+</li> 
+</ul>
+</div></ul></div></ul>
+</div>
+<script>espn.core.init.nav();</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</td></tr></table>
+</div>
+
+
+<!-- SiteCatalyst code version: H.21.3 Copyright 1997-2010 Omniture, Inc. http://www.omniture.com -->
+<script type="text/javascript">
+	var undef = 'undefined'
+	,s_account="wdgespfantasy"
+	,omniPageName = "fantasy:football:ffl:scoreboard"
+	
+	,insiderStatus = ""
+	,anGen = ""
+	,anYear = ""
+	,anDateString = ""
+	,anLoginStatus = ""
+	,callOmniture = function(){
+		/*-- core story s_omni properties --*/
+		if (typeof anCV != "undefined"){anParseLoginBarInfo(anCV);}
+		s_omni.pageName="football:ffl:scoreboard";
+		s_omni.server = window.location.host; // Server from the Host
+		s_omni.channel = "football";
+		s_omni.prop1 = "fantasy";
+		s_omni.prop4 = "game-lm-free-custom";
+		s_omni.prop5 = "football:ffl";
+		s_omni.prop11 = (insiderStatus !== null) ? insiderStatus + ":premium-no" : "premium-no";
+		s_omni.prop17 = "en";
+		s_omni.prop21 = anDateString;
+		s_omni.prop22 = anGen;
+		s_omni.prop25 = "football";
+		s_omni.prop29 = anLoginStatus;
+		s_omni.prop30 = "n";
+		s_omni.hier1 = "football:ffl:scoreboard";
+		s_omni.eVar7 = anYear + ":" + anGen + ":" + anLoginStatus + ":" + s_omni.prop11 + ":";
+		s_omni.eVar9 = "en";
+		s_omni.eVar13 = "football:ffl:scoreboard";
+		s_omni.eVar19 = "football";
+		
+		if (s_omni.prop11=="anonymous:premium-yes" || s_omni.prop11=="insider-no:premium-yes" && typeof s_omni.prop4!="undefined" &&
+			(s_omni.prop4=="story" || s_omni.prop4=="blog")) {
+			if (typeof s_omni.events != "undefined" && s_omni.events!="") {
+				s_omni.events = s_omni.events+",event8" }
+			else { s_omni.events="event8" }
+		}
+		anDebugCase = "ver_15Feb11_0_";
+		/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+		
+		var s_code = s_omni.t();
+		if(s_code) {
+			var sci = new Image(1,1);
+			sci.onload = function() {console.log("loaded no append")};
+			sci.src = s_code;
+		}
+		
+	};
+	
+
+
+	if (typeof(s_omni) === 'undefined') {
+		jQuery(function($) {
+			// we want to load the analytics files from the cache if possible - so, let's use full $.ajax() calls
+			$.ajax({
+				type:'GET',
+				url: 'http://a.espncdn.com/combiner/c?js=analytics/sOmni.js,analytics/analytics.js,analytics/externalnielsen.js',
+				dataType: 'script',
+				cache: true,
+				success: function() {
+					var lgSrc;
+					if(typeof anCV !== undef && anCV === '' && document.getElementById('form-memberarea') != null) {
+						lgSrc = 'https://r.espn.go.com/members/util/getUserInfo?cb=runOmnitureIndependently';
+						$.getScript(lgSrc); // we don't want this to be cached - so we'll use the $.getScript() method
+					} else {
+						callOmniture();
+					}
+				}
+			});
+		});
+	}
+
+
+</script>
+<!-- End SiteCatalyst code version: H.21. -->
+
+<!-- Begin comScore Tag -->
+<script type="text/javascript">
+	jQuery(function($) {
+		if(typeof window._comscore === 'undefined') {
+			window._comscore = window._comscore || [];
+			window._comscore.push({ c1: "2", c2: "3000005" });
+			jQuery.getScript((document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js");
+		}
+	});
+</script>
+<!-- End comScore Tag --></body>
+</html>
