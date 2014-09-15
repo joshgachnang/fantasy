@@ -1,6 +1,6 @@
 import unittest
 
-from httmock import urlmatch, HTTMock
+import httmock
 
 import lineup
 import standings
@@ -8,59 +8,73 @@ import team
 
 
 class TestLineup(unittest.TestCase):
-    @urlmatch(netloc=r'http\:\/\/games\.espn\.go\.com\/ffl\/clubhouse\?.')
-    def lineup_mock(url, request):
+    @httmock.all_requests
+    def lineup_mock(self, url, request):
         return open('test_data/lineup.html').read()
 
     def test_lineup(self):
-        url = ('http://games.espn.go.com/ffl/clubhouse?leagueId=844419'
-               '&teamId=8&seasonId=2013')
-        with HTTMock(self.lineup_mock):
-            players = lineup.scrape(url)
+        expected_player = {
+            'slot': u'QB',
+            'name': u'Nick Foles',
+            'ownership_change': u'+0',
+            'average': u'17.7',
+            'last_points': u'17.4',
+            'player_rank': u'13',
+            'opponent_rank': u'--',
+            'projected_points': u'--',
+            'team': u'Phi',
+            'position': u'QB',
+            'percent_starting': u'67.2',
+            'percent_own': u'88.4',
+            'points': u'282.6'}
+        with httmock.HTTMock(self.lineup_mock):
+            players = lineup.scrape(1, 1, 2014)
         self.assertEqual(21, len(players))
+        self.assertEqual(expected_player, players[0])
 
 
 class TestStandings(unittest.TestCase):
-    @urlmatch(netloc=r'http\:\/\/games\.espn\.go\.com\/ffl\/standings\?.')
-    def standings_mock(url, request):
+    @httmock.all_requests
+    def standings_mock(self, url, request):
         return open('test_data/standings.html').read()
 
     def test_standings(self):
-        url = ('http://games.espn.go.com/ffl/standings?leagueId=844419'
-               '&seasonId=2013')
-        with HTTMock(self.standings_mock):
-            teams = standings.scrape(url)
+        expected_team = {'streak': u'W4',
+                         'games_behind': u'--',
+                         'name': 'Hoyer The Destroyed',
+                         'points_against': u'1382',
+                         'wins': u'11', 'losses': u'3',
+                         'division_record': u'11-3-0',
+                         'home_record': u'6-1-0',
+                         'points_for': u'1744.1',
+                         'away_record': u'5-2-0',
+                         'owner': 'Josh Gachnang)',
+                         'ties': u'0',
+                         'percentage': u'.786'}
+
+        with httmock.HTTMock(self.standings_mock):
+            teams = standings.scrape(1, 2014)
         self.assertEqual(8, len(teams))
+        self.assertEqual(expected_team, teams[0])
 
 
-class TeamScoreboard(unittest.TestCase):
-    @urlmatch(netloc=r'http://games.espn.go.com/ffl/clubhous\?.')
-    def team_mock(selfurl, request):
-        return open('test_data/team.html')
-    
+class TestScoreboard(unittest.TestCase):
+    @httmock.all_requests
+    def team_mock(self, url, request):
+        return open('test_data/team.html').read()
+
     def test_team(self):
         expected = {'abbr': u'DIX',
                     'league': u'while(atCAE){doWork = false;}',
                     'name': u'LOL Clinton-Dix ',
-                    'owner': u'Josh Gachnang'}
-        url = ('http://games.espn.go.com/ffl/clubhouse?leagueId=1441295'
-               '&teamId=2&seasonId=2014')
-        with HTTMock(self.team_mock):
-            team_data = team.scrape(url)
+                    'owner': u'Josh Gachnang',
+                    'opponent': "Gordon's Cars  'N Cannabis  (Dan Siegler)",
+                    'position': u'3rd',
+                    'record': u'1-0'}
+        with httmock.HTTMock(self.team_mock):
+            team_data = team.scrape(1, 1, 2014)
         self.assertEqual(expected, team_data)
 
-
-# class TestScoreboard(unittest.TestCase):
-# @urlmatch(netloc=r'http\:\/\/games\.espn\.go\.com\/ffl\/scoringPeriodId\?.')
-#     def scoreboard_mock(url, request):
-#         return open('test_data/scoreboard.html').read()
-#
-#     def test_scoreboard(self):
-#         url = ('http://games.espn.go.com/ffl/scoreboard?leagueId=844419'
-#                '&scoringPeriodId=17')
-#         # with HTTMock(self.scoreboard_mock):
-#         scores = scoreboard.scrape(url)
-#         self.assertEqual(8, len(scores))
 
 if __name__ == '__main__':
     unittest.main()
