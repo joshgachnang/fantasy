@@ -5,6 +5,8 @@ Tools for scraping fantasy stats, current Fantasy Football from ESPN.
 
 Currently supports Python 2.7, 3.3, 3.4, and PyPy.
 
+Released under MIT License
+
 [![Build Status](https://travis-ci.org/pcsforeducation/fantasy.svg)](https://travis-ci.org/pcsforeducation/fantasy)
 
 
