@@ -17,18 +17,21 @@ def get_team_info(soup):
     data['record'] = list(record.find_all('h4')[0].children)[1].strip()
 
     opponent = soup.find_all('div', 'games-univ-mod5')[0]
-    data['opponent'] = list(opponent.find_all('li', 'games-firstlist')[0].children)[2].attrs['title']
+    data['opponent'] = (list(opponent.find_all('li', 'games-firstlist')[0]
+                             .children)[2].attrs['title'])
 
     return data
 
 
 def scrape(league_id, team_id, year):
-    url = ('http://games.espn.go.com/ffl/clubhouse?leagueId={league}'
-           '&teamId={team}&seasonId={year}'.format(**{
+    kwargs = {
         'league': league_id,
         'team': team_id,
         'year': year
-    }))
+    }
+    url = ('http://games.espn.go.com/ffl/clubhouse?leagueId={league}'
+           '&teamId={team}&seasonId={year}'.format(**kwargs))
+
     content = requests.get(url).content
     soup = BeautifulSoup(content)
     return get_team_info(soup)

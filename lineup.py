@@ -1,5 +1,4 @@
 import logging
-import sys
 
 from bs4 import BeautifulSoup
 import requests
@@ -30,9 +29,9 @@ class InvalidPlayerRow(ValueError):
 def scrape(league_id, team_id, year):
     url = "http://games.espn.go.com/ffl/clubhouse?leagueId={league}&teamId=" \
           "{team}&seasonId={year}".format(**
-          {'league': league_id,
-           'team': team_id,
-           'year': year})
+                                          {'league': league_id,
+                                           'team': team_id,
+                                           'year': year})
     content = requests.get(url).content
     soup = BeautifulSoup(content)
     return _get_players(soup)
@@ -81,7 +80,7 @@ def _get_players(soup):
             except InvalidPlayerRow:
                 continue
         elif ('playerTableBgRowHead' in row.attrs['class'] or
-                      'playerTableBgRowSubhead' in row.attrs['class']):
+              'playerTableBgRowSubhead' in row.attrs['class']):
             # Ignore headers
             pass
         else:

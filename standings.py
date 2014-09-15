@@ -1,5 +1,3 @@
-import sys
-
 from bs4 import BeautifulSoup
 import requests
 
@@ -60,7 +58,7 @@ def _get_standings(soup):
     return standings.values()
 
 
-def scrape(league_id,  year):
+def scrape(league_id, year):
     url = "http://games.espn.go.com/ffl/standings?leagueId={league}" \
           "&seasonId={year}".format(league=league_id, year=year)
     content = requests.get(url).content
